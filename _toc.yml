@@ -4,32 +4,9 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Fluidos
+  - caption: Transporte de fluidos
     chapters:
-    - file: p1/c1/intro-fluidos
-    - file: p1/c2/bernoulli
+    - file: p1/c1/fundamentos-y-analisis-dim
       sections:
-      - file: p1/c2/e1
-      - file: p1/c2/e2
-    - file: p1/c3/perdidas_de_carga
-      sections:
-      - file: p1/c3/e1
-    - file: p1/c4/bombas
-      sections:
-      - file: p1/c4/e1
-      - file: p1/c4/e2
-      - file: p1/c4/e3
-  - caption: Transferencia de calor
-    chapters:
-    - file: p2/c1/intro-calor
-    - file: p2/c2/transferencia
-      sections:
-      - file: p2/c2/e1
-      - file: p2/c2/e2
-    - file: p2/c3/superficies
-    sections:
-    - file: p2/c3/e1
-  - caption: Intercambiadores de calor
-    chapters:
-    - file: p3/c1/intro-itc
-
+      - file: p1/c1/e1_1_1
+      - file: p1/c1/e1_1_2
