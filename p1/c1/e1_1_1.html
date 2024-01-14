@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Ejercicio 1 &#8212; Libro OOUU-1</title>
+    <title>Ejercicio 1: Momentum y Fuerza &#8212; Libro OOUU-1</title>
   
   
   
@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c1/e1_1_1';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -171,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1: Momentum y Fuerza</a></li>
 <li class="toctree-l2"><a class="reference internal" href="e1_1_2.html">Ejercicio 2</a></li>
 </ul>
 </li>
@@ -358,7 +360,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejercicio 1</h1>
+    <h1>Ejercicio 1: Momentum y Fuerza</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -372,30 +374,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1">
-<h1>Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permalink to this heading">#</a></h1>
-<p><img alt="Fig1" src="../../_images/e1_1_1_IMAGEN.png" /></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-momentum-y-fuerza">
+<h1>Ejercicio 1: Momentum y Fuerza<a class="headerlink" href="#ejercicio-1-momentum-y-fuerza" title="Permalink to this heading">#</a></h1>
+<p>La ecuación de <code class="docutils literal notranslate"><span class="pre">Bernoulli</span></code> proviene de un equilibrio entre la fuerza que ejerce la variación de presión, el peso del fluido y la <code class="docutils literal notranslate"><span class="pre">variación</span> <span class="pre">de</span> <span class="pre">Momentum</span></code> a lo largo de la tubería (Si se ignora el efecto de la fricción en la superficie de la tubería). Para entender mejor la relación de Momentum y fuerza, su profesor le propone el siguiente caso:</p>
+<p>Un flujo de agua a 25°C con densidad <span class="math notranslate nohighlight">\(\rho = 997.05 \hspace{1mm}(kg/m^3)\)</span> baja a velocidad constante por un sistema de tuberías hasta alcanzar un codo, cambiando su trayectoria. Este codo se encuentra sujetado por un fierro metálico. Si la velocidad del flujo es <span class="math notranslate nohighlight">\(u = 3 \hspace{1mm}(m/s)\)</span>, ¿A qué fuerza se somete el fierro metálico considerando únicamente el efecto de la variación de Momentum producido por el flujo?</p>
 <figure class="align-center" id="figura-1">
 <img alt="../../_images/e1_1_1_IMAGEN.png" src="../../_images/e1_1_1_IMAGEN.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Tubería y codo</span><a class="headerlink" href="#figura-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Training</p></th>
-<th class="head"><p>Validation</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>5</p></td>
-</tr>
-<tr class="row-odd"><td><p>13720</p></td>
-<td><p>2744</p></td>
-</tr>
-</tbody>
-</table>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La respuesta es&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La respuesta es 11
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
