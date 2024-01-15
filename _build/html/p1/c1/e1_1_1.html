@@ -370,6 +370,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a></li>
 </ul>
             </nav>
@@ -384,6 +385,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-momentum-y-fuerza">
 <h1>Ejercicio 1: Momentum y Fuerza<a class="headerlink" href="#ejercicio-1-momentum-y-fuerza" title="Permalink to this heading">#</a></h1>
+<section id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
 <p>La ecuación de <code class="docutils literal notranslate"><span class="pre">Bernoulli</span></code> proviene de un equilibrio entre la fuerza que ejerce la variación de presión, el peso del fluido y la <code class="docutils literal notranslate"><span class="pre">variación</span> <span class="pre">de</span> <span class="pre">Momentum</span></code> a lo largo de la tubería (Si se ignora el efecto de la fricción en la superficie de la tubería). Para entender mejor la relación de Momentum y fuerza, su profesor le propone el siguiente caso:</p>
 <p>Un flujo de agua a 25°C con densidad <span class="math notranslate nohighlight">\(\rho = 997.05 \hspace{1mm}(kg/m^3)\)</span> baja a velocidad constante por un sistema de tuberías cilíndricas hasta alcanzar un codo, cambiando su trayectoria. Este codo se encuentra sujetado por un fierro metálico. Si la velocidad del flujo es <span class="math notranslate nohighlight">\(u = 3 \hspace{1mm}(m/s)\)</span>, ¿A qué fuerza se somete el codo considerando únicamente el efecto de la variación de Momentum producido por el flujo?</p>
 <figure class="align-center" id="figura-1">
@@ -396,6 +399,7 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Como muestra la figura: El diámetro de la tubería es constante y de 8 cm, la tubería que baja se encuentra inclinada 60° respecto al eje X y la que sube se encuentra a 30°</p>
 </div>
+</section>
 <section id="solucion">
 <h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-cell tag_remove-input docutils container">
@@ -416,26 +420,26 @@ u &amp;= 3 \; \;\textrm{(m/s)}
 d &amp;= 0.080 \; \;\textrm{(m)}
 \\[10pt]
 &amp; \textrm{El área transversal por el cual pasa el flujo es}\\[10pt]
-A &amp;= \pi \cdot \left( \frac{ d }{ 2 } \right) ^{ 2 }  = 3.142 \cdot \left( \frac{ 0.080 }{ 2 } \right) ^{ 2 } &amp;= 0.005 \; \;\textrm{(m2)}
+A &amp;= \pi \cdot \left( \frac{ d }{ 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \left( \frac{ 0.080 }{ 2 } \right) ^{ 2 } \\&amp;= 0.005 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 &amp; \textrm{Luego la variación de Momentum vendrá dada por,}\\[10pt]
-M &amp;= \rho \cdot \left( u \right) ^{ 2 } \cdot A  = 997.050 \cdot \left( 3 \right) ^{ 2 } \cdot 0.005 &amp;= 45.105 \; \;\textrm{(N)}
+M &amp;= \rho \cdot \left( u \right) ^{ 2 } \cdot A \\&amp;= 997.050 \cdot \left( 3 \right) ^{ 2 } \cdot 0.005 \\&amp;= 45.105 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 &amp; \textrm{Ya que la tubería se encuentra inclinada, debemos descomponer el vector de fuerzas en su eje X e Y.}\\[10pt]
 &amp; \textrm{Para la sección de la tubería que baja la fuerza que ejerce va en la dirección de aceleración del fluido.}\\[10pt]
-M_{Ybaja} &amp;= \left( - M \right) \cdot \sin \left( \frac{ \pi }{ 3 } \right)  = \left( - 45.105 \right) \cdot \sin \left( \frac{ 3.142 }{ 3 } \right) &amp;= -39.062 \; \;\textrm{(N)}
+M_{Ybaja} &amp;= \left( - M \right) \cdot \sin \left( \frac{ \pi }{ 3 } \right) \\&amp;= \left( - 45.105 \right) \cdot \sin \left( \frac{ 3.142 }{ 3 } \right) \\&amp;= -39.062 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
-M_{Xbaja} &amp;= M \cdot \cos \left( \frac{ \pi }{ 3 } \right)  = 45.105 \cdot \cos \left( \frac{ 3.142 }{ 3 } \right) &amp;= 22.553 \; \;\textrm{(N)}
+M_{Xbaja} &amp;= M \cdot \cos \left( \frac{ \pi }{ 3 } \right) \\&amp;= 45.105 \cdot \cos \left( \frac{ 3.142 }{ 3 } \right) \\&amp;= 22.553 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 &amp; \textrm{ De manera análoga para la tubería que sube.}\\[10pt]
-M_{Ysube} &amp;= M \cdot \sin \left( \frac{ \pi }{ 6 } \right)  = 45.105 \cdot \sin \left( \frac{ 3.142 }{ 6 } \right) &amp;= 22.553 \; \;\textrm{(N)}
+M_{Ysube} &amp;= M \cdot \sin \left( \frac{ \pi }{ 6 } \right) \\&amp;= 45.105 \cdot \sin \left( \frac{ 3.142 }{ 6 } \right) \\&amp;= 22.553 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
-M_{Xsube} &amp;= M \cdot \cos \left( \frac{ \pi }{ 6 } \right)  = 45.105 \cdot \cos \left( \frac{ 3.142 }{ 6 } \right) &amp;= 39.062 \; \;\textrm{(N)}
+M_{Xsube} &amp;= M \cdot \cos \left( \frac{ \pi }{ 6 } \right) \\&amp;= 45.105 \cdot \cos \left( \frac{ 3.142 }{ 6 } \right) \\&amp;= 39.062 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 &amp; \textrm{ Finalmente, la fuerza total que ejerce el fluido sobre el codo es,}\\[10pt]
-F_{Y} &amp;= M_{Ybaja} + M_{Ysube}  = -39.062 + 22.553 &amp;= -16.510 \; \;\textrm{(N)}
+F_{Y} &amp;= M_{Ybaja} + M_{Ysube} \\&amp;= -39.062 + 22.553 \\&amp;= -16.510 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
-F_{X} &amp;= M_{Xbaja} + M_{Xsube}  = 22.553 + 39.062 &amp;= 61.615 \; \;\textrm{(N)}
+F_{X} &amp;= M_{Xbaja} + M_{Xsube} \\&amp;= 22.553 + 39.062 \\&amp;= 61.615 \; \;\textrm{(N)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -498,6 +502,7 @@ F_{X} &amp;= M_{Xbaja} + M_{Xsube}  = 22.553 + 39.062 &amp;= 61.615 \; \;\textrm
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a></li>
 </ul>
   </nav></div>
