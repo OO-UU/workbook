@@ -392,11 +392,12 @@ document.write(`
 <h1>Ejercicio 2: Hidroestática<a class="headerlink" href="#ejercicio-2-hidroestatica" title="Permalink to this heading">#</a></h1>
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Usted cuenta con un estanque conectado a dos tuberías abiertas. Una de ellas se encuentra expuesta a la presión atmosférica, mientras que la otra percibe una presión de <span class="math notranslate nohighlight">\(253 kPa\)</span>. Este sistema se compone de 3 fluidos inmiscibles, el fluido A con densidad de <span class="math notranslate nohighlight">\(\rho_A = 1306 \hspace{1mm}(kg/m^3)\)</span>, el fluido B con <span class="math notranslate nohighlight">\(\rho_B = 8970.15 \hspace{1mm}(kg/m^3)\)</span> y el fluido C con <span class="math notranslate nohighlight">\(\rho_C = 2588 \hspace{1mm}(kg/m^3)\)</span>. En la figura se observan las dimensiones del sistema, con las cuales se le pide encontrar la altura X de la tubería en donde se encuentra el fluido A. Para esto responda lo siguiente:</p>
+<p>Usted cuenta con un estanque conectado a dos tuberías abiertas. Una de ellas se encuentra expuesta a la presión atmosférica, mientras que la otra percibe una presión de <span class="math notranslate nohighlight">\(253 kPa\)</span>. Este sistema se compone de 3 fluidos inmiscibles, el fluido A con densidad de <span class="math notranslate nohighlight">\(\rho_A = 1306 \hspace{1mm}(kg/m^3)\)</span>, el fluido B con <span class="math notranslate nohighlight">\(\rho_B = 2588 \hspace{1mm}(kg/m^3)\)</span> y el fluido C con <span class="math notranslate nohighlight">\(\rho_C = 8970.15 \hspace{1mm}(kg/m^3)\)</span>. En la figura se observan las dimensiones del sistema, con las cuales se le pide encontrar la altura X de la tubería en donde se encuentra el fluido A. Para esto responda lo siguiente:</p>
 <ol class="arabic simple">
 <li><p>Marque los puntos en los cuales usted encuentre conveniente igualar las presiones del sistema completo.</p></li>
 <li><p>Calcule la altura X en metros.</p></li>
 </ol>
+<p>Asuma la gravedad como <span class="math notranslate nohighlight">\(g = 9.8 \hspace{1mm}(m/s^2)\)</span></p>
 <figure class="align-center" id="figura-1">
 <img alt="../../_images/img1_1_2.png" src="../../_images/img1_1_2.png" />
 <figcaption>
@@ -416,7 +417,52 @@ document.write(`
 </section>
 <section id="inciso-2">
 <h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
-<p>hola</p>
+<div class="cell tag_hide-cell tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \textrm{ Sabemos del enunciado lo siguiente:}\\[10pt]
+p_{1} &amp;= 202650 \; \;\textrm{(Pa)}
+\\[10pt]
+p_{4} &amp;= 195300 \; \;\textrm{(Pa)}
+\\[10pt]
+g &amp;= 9.800 \; \;\textrm{(m/s2)}
+\\[10pt]
+\rho_{A} &amp;= 1306 \; \;\textrm{(kg/m3)}
+\\[10pt]
+\rho_{B} &amp;= 2588 \; \;\textrm{(kg/m3)}
+\\[10pt]
+\rho_{C} &amp;= 8970.150 \; \;\textrm{(kg/m3)}
+\\[10pt]
+&amp; \textrm{ Primero, calculamos la diferencia de presiones entre el punto 1 y el 2.}\\[10pt]
+&amp; \textrm{ Para esto, necesitamos saber la altura que hay entre ambos. La parte vertical es:}\\[10pt]
+h_{vert} &amp;= 3 \; \;\textrm{(m)}
+\\[10pt]
+&amp; \textrm{ Mientras que la parte inclinada llega hasta el punto 2, cuya altura en el eje Y es:}\\[10pt]
+h_{incl} &amp;= \left( 5 - \frac{ 1 }{ \sin \left( \frac{ \pi }{ 4 } \right) } \right) \cdot \sin \left( \frac{ \pi }{ 4 } \right) \\&amp;= \left( 5 - \frac{ 1 }{ \sin \left( \frac{ 3.142 }{ 4 } \right) } \right) \cdot \sin \left( \frac{ 3.142 }{ 4 } \right) \\&amp;= 2.536 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+&amp; \textrm{ Notese que le restamos el trozo de la tubería que esta compuesta por el fluido C.}\\[10pt]
+&amp; \textrm{ Tal que la presión en el punto 2 será}\\[10pt]
+p_{2} &amp;= p_{1} + g \cdot \left( h_{vert} + h_{incl} \right) \cdot \rho_{B} \\&amp;= 202650 + 9.800 \cdot \left( 3 + 2.536 \right) \cdot 2588 \\&amp;= 343044.425 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+&amp; \textrm{ La presión en los puntos 2 y 2* son equivalentes.}\\[10pt]
+&amp; \textrm{ Luego la presión en el punto 3 será}\\[10pt]
+p_{3} &amp;= p_{2} - g \cdot 1 \cdot \rho_{C} \\&amp;= 343044.425 - 9.800 \cdot 1 \cdot 8970.150 \\&amp;= 255136.955 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+&amp; \textrm{ Luego entre el punto 3 y el 4, y despejando X llegamos a}\\[10pt]
+&amp; \textrm{ la siguiente expresión.}\\[10pt]
+X &amp;= \frac{ p_{3} - p_{4} }{ g \cdot \rho_{A} } - 2 \\&amp;= \frac{ 255136.955 - 195300 }{ 9.800 \cdot 1306 } - 2 \\&amp;= 2.675 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
 </section>
 </section>
 </section>
