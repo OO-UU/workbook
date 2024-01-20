@@ -1,10 +1,8 @@
-# Operaciones Unitarias I
+*Operaciones Unitarias I*
 
+# Libro de ejercicios para Operaciones Unitarias 1
 Este es un compilado de ejercicios para el curso de operaciones unitarias I.
 
-## Índice
-
-Todo lo que busques lo puedes encontrar a través de los enlaces que se encuentran a continuación.
-
+*Índice*
 ```{tableofcontents}
 ```
