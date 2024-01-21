@@ -10,14 +10,9 @@ parts:
     - file: p1/c1/fundamentos-y-analisis-dim
       sections:
       - file: p1/c1/e1_1_1
-        title: Ejercicio 1 - Momentum y Fuerza
       - file: p1/c1/e1_1_2
-        title: Ejercicio 2 - Hidroestática 1
       - file: p1/c1/e1_1_3
-        title: Ejercicio 3 - Hidroestática 2
     - file: p1/c2/tuberias-y-bombas
       sections:
       - file: p1/c2/prueba
-        title: Prueba
       - file: p1/c2/prueba2
-        title: Prueba 2
