@@ -379,7 +379,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -395,12 +399,12 @@ document.write(`
 <h1>Esto es una prueba<a class="headerlink" href="#esto-es-una-prueba" title="Permalink to this heading">#</a></h1>
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Un estanque cilíndrico de diámetro <span class="math notranslate nohighlight">\(d_e=10\hspace{1mm}(m)\)</span> se llena de agua hasta alcanzar los <span class="math notranslate nohighlight">\(25\hspace{1mm}(m)\)</span> de altura. En su parte inferior se encuentra una tubería conectada a una válvula. Al abrir la válvula, el agua fluye por la tubería y el estanque se vacía. La tubería tiene un área transversal circular y con diámetro <span class="math notranslate nohighlight">\(d_t=35\hspace{1mm}(cm)\)</span>. Ignore las pérdidas de carga por fricción y sigularidades. Calcule:</p>
+<p>Un estanque cilíndrico de diámetro <span class="math notranslate nohighlight">\(d_e=10\hspace{1mm}(m)\)</span> se llena de agua hasta alcanzar los <span class="math notranslate nohighlight">\(25\hspace{1mm}(m)\)</span> de altura. En su parte inferior se encuentra una tubería conectada a una válvula. Al abrir la válvula, el agua fluye por la tubería y el estanque se vacía. La tubería tiene un área transversal circular y con diámetro <span class="math notranslate nohighlight">\(d_t=13\hspace{1mm}(cm)\)</span>. Ignore las pérdidas de carga por fricción y singularidades. Además, suponga que la presión en la tubería es igual a la presión del estanque. Calcule:</p>
 <ol class="arabic simple">
-<li><p>La velocidad del fluido que sale por la tubería al momento de abrir la válvula.</p></li>
+<li><p>El caudal que sale por la tubería al momento de abrir la válvula.</p></li>
 <li><p>El tiempo que se demora el estanque en vaciarse por completo.</p></li>
 </ol>
-<p><a class="reference internal" href="#parte1-cap2-ej1-solucion"><span class="std std-ref">Ver solución</span></a></p>
+<p><a class="reference internal" href="#part1-cap2-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
 <p><br/><br/>
 <br/><br/>
 <br/><br/>
@@ -411,8 +415,98 @@ document.write(`
 <br/><br/></p>
 </section>
 <section id="solucion">
-<span id="parte1-cap2-ej1-solucion"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
-<p>hola</p>
+<span id="part1-cap2-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<section id="inciso-1">
+<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
+<p>Tenemos que la <code class="docutils literal notranslate"><span class="pre">ecuación</span> <span class="pre">de</span> <span class="pre">Bernoulli</span></code>
+$<span class="math notranslate nohighlight">\( \frac{p_A}{g\rho} + H_A + \frac{u_A^2}{2g} = \frac{p_B}{g\rho} + H_B + \frac{u_B^2}{2g}\)</span><span class="math notranslate nohighlight">\(
+Aplicada al caso descrito
+\)</span><span class="math notranslate nohighlight">\( H_A = \frac{u_B^2}{2g} \)</span><span class="math notranslate nohighlight">\(
+Y luego despejando para la velocidad en el punto inferior (B), nos queda como
+\)</span><span class="math notranslate nohighlight">\(
+u_B = \sqrt{2gH_A}
+\)</span>$ (part1:cap2:ex1:eq1)
+Finalmente resolviendo:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+H_{A} &amp;= 25 \; \;\textrm{(m)}
+\\[10pt]
+g &amp;= 9.800 \; \;\textrm{(m/s2)}
+\\[10pt]
+u_{B} &amp;= \sqrt { 2 \cdot g \cdot H_{A} } \\&amp;= \sqrt { 2 \cdot 9.800 \cdot 25 } \\&amp;= 22.136 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego, el caudal será
+$<span class="math notranslate nohighlight">\(
+Q = u_BA
+\)</span>$ (part1:cap2:ex1:eq2)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+d_t = 0.13 #m 
+A = pi*(d_t/2)**2 #m2
+Q = u_B*A #m3/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{t} &amp;= 0.130 \; \;\textrm{(m)}
+\\[10pt]
+A &amp;= \pi \cdot \left( \frac{ d_{t} }{ 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \left( \frac{ 0.130 }{ 2 } \right) ^{ 2 } \\&amp;= 0.013 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= u_{B} \cdot A \\&amp;= 22.136 \cdot 0.013 \\&amp;= 0.294 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-2">
+<h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
+<p>El caudal también puede ser escrito como
+$<span class="math notranslate nohighlight">\(Q = - \frac{dV}{dt}\)</span><span class="math notranslate nohighlight">\(
+Ya que el diámetro del estanque se mantiene constante
+\)</span><span class="math notranslate nohighlight">\(Q = -\pi\left(\frac{d_e}{2}\right)^2\frac{dH_A}{dt}\)</span><span class="math notranslate nohighlight">\(
+Al reemplazar la ecuación {eq}`part1:cap2:ex1:eq1` en {eq}`part1:cap2:ex1:eq2` e igualando
+\)</span><span class="math notranslate nohighlight">\( \sqrt{2gH_A}\left(\pi\left(\frac{d_t}{2}\right)^2\right) = -\pi\left(\frac{d_e}{2}\right)^2\frac{dH_A}{dt}\)</span><span class="math notranslate nohighlight">\(
+Reordenando los términos
+\)</span><span class="math notranslate nohighlight">\( -H_A^{-\frac{1}{2}}dH_A = \sqrt{2g}\left(\frac{d_t}{d_e}\right)^2dt \)</span><span class="math notranslate nohighlight">\(
+Inicialmente la altura del líquido es de \)</span>25\hspace{1mm}(m)<span class="math notranslate nohighlight">\( hasta que en el tiempo final se vacía
+\)</span><span class="math notranslate nohighlight">\( -\int_{25}^{0}H_A^{-\frac{1}{2}}dH_A = \sqrt{2g}\left(\frac{d_t}{d_e}\right)^2 \int_0^{t_T}dt\)</span><span class="math notranslate nohighlight">\(
+Finalmente
+\)</span><span class="math notranslate nohighlight">\( t_T = 2\sqrt{\frac{25}{2g}}\left(\frac{d_e}{d_t}\right)^2\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+d_e = 10 #m
+t_T = 2*sqrt(25/2*g)*(d_e/d_t)**2 #s
+## O
+t = t_T/3600 #h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{e} &amp;= 10 \; \;\textrm{(m)}
+\\[10pt]
+t_{T} &amp;= 2 \cdot \sqrt { \frac{ 25 }{ 2 } \cdot g } \cdot \left( \frac{ d_{e} }{ d_{t} } \right) ^{ 2 } \\&amp;= 2 \cdot \sqrt { \frac{ 25 }{ 2 } \cdot 9.800 } \cdot \left( \frac{ 10 }{ 0.130 } \right) ^{ 2 } \\&amp;= 130981.915 \; \;\textrm{(s)}\\[10pt]
+\\[10pt]
+&amp; \textrm{ O}\\[10pt]
+t &amp;= \frac{ t_{T} }{ 3600 } \\&amp;= \frac{ 130981.915 }{ 3600 } \\&amp;= 36.384 \; \;\textrm{(h)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -480,7 +574,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
