@@ -16,3 +16,5 @@ parts:
       sections:
       - file: p1/c2/prueba
       - file: p1/c2/prueba2
+  - caption: Ejercicios en clases
+    - file: ec/IIQ2013_C1
