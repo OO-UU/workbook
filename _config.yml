@@ -2,7 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Libro OOUU-1
-author: Ignacio Tabilo
+author: Equipo Docente, Operaciones Unitarias
+copyright: "2024"
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
