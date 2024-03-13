@@ -17,11 +17,10 @@ parts:
       - file: p1/c2/prueba
       - file: p1/c2/prueba2
   - caption: Ejercicios en clases
-    numbered: false
     chapters:
     - file: ec/IIQ2013_C1
-      title: Clase 1
     - file: ec/IIQ2013_C2
-      title: Clase 2
     - file: ec/IIQ2013_C3
-      title: Clase 3
+  - caption: Documentación del curso
+    chapters:
+    - file: doc/documentacion
