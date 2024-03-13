@@ -19,3 +19,5 @@ parts:
   - caption: Ejercicios en clases
     chapters:
     - file: ec/IIQ2013_C1
+    - file: ec/IIQ2013_C2
+    - file: ec/IIQ2013_C3
