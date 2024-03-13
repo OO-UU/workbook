@@ -16,11 +16,11 @@ parts:
       sections:
       - file: p1/c2/prueba
       - file: p1/c2/prueba2
-  - caption: Ejercicios en clases
+  - caption: Ejercicios adicionales
     chapters:
-    - file: ec/IIQ2013_C1
-    - file: ec/IIQ2013_C2
-    - file: ec/IIQ2013_C3
-  - caption: Documentación del curso
-    chapters:
+    - file: ec/intro_ejclases
+      sections:
+      - file: ec/IIQ2013_C1
+      - file: ec/IIQ2013_C2
+      - file: ec/IIQ2013_C3
     - file: doc/documentacion
