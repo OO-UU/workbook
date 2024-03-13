@@ -5,7 +5,6 @@ format: jb-book
 root: intro
 parts:
   - caption: Transporte de fluidos
-    maxdepth: 3
     chapters:
     - file: p1/c1/fundamentos-y-analisis-dim
       sections:
@@ -19,5 +18,8 @@ parts:
   - caption: Ejercicios en clases
     chapters:
     - file: ec/IIQ2013_C1
+      title: Clase 1
     - file: ec/IIQ2013_C2
+      title: Clase 2
     - file: ec/IIQ2013_C3
+      title: Clase 3
