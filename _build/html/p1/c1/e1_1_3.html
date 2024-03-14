@@ -179,14 +179,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías, singularidades y ordenamientos</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c2/prueba.html">Esto es una prueba</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c2/prueba2.html">Esta es una prueba 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios en clases</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
 </ul>
 
     </div>
@@ -415,19 +419,37 @@ document.write(`
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Sistema de tuberías y estanque.</span><a class="headerlink" href="#figura-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p><a class="reference internal" href="#part1-cap1-ex3-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
 </section>
 <section id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part1-cap1-ex3-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paquetes utilizados</span>
+<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="inciso-1">
 <h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<div class="toggle docutils container">
 <figure class="align-center" id="figura-3">
 <img alt="../../_images/img1_1_3-sol.png" src="../../_images/img1_1_3-sol.png" />
 </figure>
-</div>
 </section>
 <section id="inciso-2">
 <h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
+<p>Sabemos del enunciado lo siguiente:</p>
 <div class="cell tag_hide-cell tag_remove-input docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
@@ -438,7 +460,6 @@ document.write(`
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-&amp; \textrm{ Sabemos del enunciado lo siguiente:}\\[10pt]
 p_{1} &amp;= 202650 \; \;\textrm{(Pa)}
 \\[10pt]
 p_{4} &amp;= 195300 \; \;\textrm{(Pa)}
@@ -450,29 +471,96 @@ g &amp;= 9.800 \; \;\textrm{(m/s2)}
 \rho_{B} &amp;= 2588 \; \;\textrm{(kg/m3)}
 \\[10pt]
 \rho_{C} &amp;= 8970.150 \; \;\textrm{(kg/m3)}
-\\[10pt]
-&amp; \textrm{ Primero, calculamos la diferencia de presiones entre el punto 1 y el 2.}\\[10pt]
-&amp; \textrm{ Para esto, necesitamos saber la altura que hay entre ambos. La parte vertical es:}\\[10pt]
-h_{vert} &amp;= 3 \; \;\textrm{(m)}
-\\[10pt]
-&amp; \textrm{ Mientras que la parte inclinada llega hasta el punto 2, cuya altura en el eje Y es:}\\[10pt]
-h_{incl} &amp;= \left( 5 - \frac{ 1 }{ \sin \left( \frac{ \pi }{ 4 } \right) } \right) \cdot \sin \left( \frac{ \pi }{ 4 } \right) \\&amp;= \left( 5 - \frac{ 1 }{ \sin \left( \frac{ 3.142 }{ 4 } \right) } \right) \cdot \sin \left( \frac{ 3.142 }{ 4 } \right) \\&amp;= 2.536 \; \;\textrm{(m)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ Notese que le restamos el trozo de la tubería que esta compuesta por el fluido C.}\\[10pt]
-&amp; \textrm{ Tal que la presión en el punto 2 será}\\[10pt]
-p_{2} &amp;= p_{1} + g \cdot \left( h_{vert} + h_{incl} \right) \cdot \rho_{B} \\&amp;= 202650 + 9.800 \cdot \left( 3 + 2.536 \right) \cdot 2588 \\&amp;= 343044.425 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ La presión en los puntos 2 y 2* son equivalentes.}\\[10pt]
-&amp; \textrm{ Luego la presión en el punto 3 será}\\[10pt]
-p_{3} &amp;= p_{2} - g \cdot 1 \cdot \rho_{C} \\&amp;= 343044.425 - 9.800 \cdot 1 \cdot 8970.150 \\&amp;= 255136.955 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ Luego entre el punto 3 y el 4, y despejando X llegamos a}\\[10pt]
-&amp; \textrm{ la siguiente expresión.}\\[10pt]
-X &amp;= \frac{ p_{3} - p_{4} }{ g \cdot \rho_{A} } - 2 \\&amp;= \frac{ 255136.955 - 195300 }{ 9.800 \cdot 1306 } - 2 \\&amp;= 2.675 \; \;\textrm{(m)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </details>
+</div>
+<p>Primero, calculamos la diferencia de presiones entre el punto 1 y el 2. Para esto, necesitamos saber la altura que hay entre ambos.
+La parte vertical es:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+h_vert = 3 #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+h_{vert} &amp;= 3 \; \;\textrm{(m)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>Mientras que la parte inclinada llega hasta el punto 2, cuya altura en el eje Y es:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+h_incl = (5 - 1/sin(pi/4))*sin(pi/4) #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{incl} &amp;= \left( 5 - \frac{ 1 }{ \sin \left( \frac{ \pi }{ 4 } \right) } \right) \cdot \sin \left( \frac{ \pi }{ 4 } \right) \\&amp;= \left( 5 - \frac{ 1 }{ \sin \left( \frac{ 3.142 }{ 4 } \right) } \right) \cdot \sin \left( \frac{ 3.142 }{ 4 } \right) \\&amp;= 2.536 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Notese que le restamos el trozo de la tubería que esta compuesta por el fluido C. Tal que la presión en el punto 2 será:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+p_2 = p_1 + g*(h_vert+h_incl)*rho_B #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{2} &amp;= p_{1} + g \cdot \left( h_{vert} + h_{incl} \right) \cdot \rho_{B} \\&amp;= 202650 + 9.800 \cdot \left( 3 + 2.536 \right) \cdot 2588 \\&amp;= 343044.425 \; \;\textrm{(Pa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>La presión en los puntos 2 y 2* son equivalentes. Luego la presión en el punto 3 será:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+p_3 = p_2 - g*1*rho_C #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{3} &amp;= p_{2} - g \cdot 1 \cdot \rho_{C} \\&amp;= 343044.425 - 9.800 \cdot 1 \cdot 8970.150 \\&amp;= 255136.955 \; \;\textrm{(Pa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego entre el punto 3 y el 4, y despejando X llegamos a la siguiente expresión.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+X = (p_3-p_4)/(g*rho_A) - 2 #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+X &amp;= \frac{ p_{3} - p_{4} }{ g \cdot \rho_{A} } - 2 \\&amp;= \frac{ 255136.955 - 195300 }{ 9.800 \cdot 1306 } - 2 \\&amp;= 2.675 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
 </div>
 </section>
 </section>

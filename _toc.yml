@@ -14,13 +14,12 @@ parts:
       - file: p1/c1/e1_1_3
     - file: p1/c2/tuberias-y-bombas
       sections:
-      - file: p1/c2/prueba
-      - file: p1/c2/prueba2
+      - file: p1/c2/e1_2_1
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases
       sections:
       - file: ec/IIQ2013_C1
       - file: ec/IIQ2013_C2
-      - file: ec/IIQ2013_C3
+      #- file: ec/IIQ2013_C3
     - file: doc/documentacion

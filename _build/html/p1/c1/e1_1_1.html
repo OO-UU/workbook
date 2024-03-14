@@ -179,14 +179,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías, singularidades y ordenamientos</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c2/prueba.html">Esto es una prueba</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c2/prueba2.html">Esta es una prueba 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios en clases</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
 </ul>
 
     </div>
@@ -411,51 +415,144 @@ document.write(`
 <p class="admonition-title">Información sobre la figura</p>
 <p>El diámetro de la tubería es constante y de 8 cm, la tubería que baja se encuentra inclinada 60° respecto al eje X y la que sube se encuentra a 30°</p>
 </div>
+<p><a class="reference internal" href="#part1-cap1-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
 </section>
 <section id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_hide-cell tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
+<span id="part1-cap1-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paquetes utilizados</span>
+<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">radians</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Del enunciado obtenemos los siguientes datos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+rho = 997.05 #kg/m3
+u = 3 #m/s
+d = 0.08 #m
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-&amp; \textrm{Del enunciado obtenemos los siguientes datos}\\[10pt]
 \rho &amp;= 997.050 \; \;\textrm{(kg/m3)}
 \\[10pt]
 u &amp;= 3 \; \;\textrm{(m/s)}
 \\[10pt]
 d &amp;= 0.080 \; \;\textrm{(m)}
-\\[10pt]
-&amp; \textrm{El área transversal por el cual pasa el flujo es}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>El área transversal por el cual pasa el flujo es</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+A = pi*(d/2)**2 #m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 A &amp;= \pi \cdot \left( \frac{ d }{ 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \left( \frac{ 0.080 }{ 2 } \right) ^{ 2 } \\&amp;= 0.005 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-&amp; \textrm{Luego la variación de Momentum vendrá dada por,}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego la variación de Momentum vendrá dada por</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+M = rho*u**2*A #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 M &amp;= \rho \cdot \left( u \right) ^{ 2 } \cdot A \\&amp;= 997.050 \cdot \left( 3 \right) ^{ 2 } \cdot 0.005 \\&amp;= 45.105 \; \;\textrm{(N)}\\[10pt]
-\\[10pt]
-&amp; \textrm{Ya que la tubería se encuentra inclinada, debemos descomponer el vector de fuerzas en su eje X e Y.}\\[10pt]
-&amp; \textrm{Para la sección de la tubería que baja la fuerza que ejerce va en la dirección de aceleración del fluido.}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Ya que la tubería se encuentra inclinada, debemos descomponer el vector de fuerzas en su eje X e Y. Para la sección de la tubería que baja la fuerza que ejerce va en la dirección de aceleración del fluido.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+M_Ybaja = -M*sin(pi/3) #N
+M_Xbaja = M*cos(pi/3) #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 M_{Ybaja} &amp;= \left( - M \right) \cdot \sin \left( \frac{ \pi }{ 3 } \right) \\&amp;= \left( - 45.105 \right) \cdot \sin \left( \frac{ 3.142 }{ 3 } \right) \\&amp;= -39.062 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 M_{Xbaja} &amp;= M \cdot \cos \left( \frac{ \pi }{ 3 } \right) \\&amp;= 45.105 \cdot \cos \left( \frac{ 3.142 }{ 3 } \right) \\&amp;= 22.553 \; \;\textrm{(N)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ De manera análoga para la tubería que sube.}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>De manera análoga para la tubería que sube.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+M_Ysube = M*sin(pi/6) #N
+M_Xsube = M*cos(pi/6) #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 M_{Ysube} &amp;= M \cdot \sin \left( \frac{ \pi }{ 6 } \right) \\&amp;= 45.105 \cdot \sin \left( \frac{ 3.142 }{ 6 } \right) \\&amp;= 22.553 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 M_{Xsube} &amp;= M \cdot \cos \left( \frac{ \pi }{ 6 } \right) \\&amp;= 45.105 \cdot \cos \left( \frac{ 3.142 }{ 6 } \right) \\&amp;= 39.062 \; \;\textrm{(N)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ Finalmente, la fuerza total que ejerce el fluido sobre el codo es,}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Finalmente, la fuerza total que ejerce el fluido sobre el codo es,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+F_Y = M_Ybaja + M_Ysube #N
+F_X = M_Xbaja + M_Xsube #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 F_{Y} &amp;= M_{Ybaja} + M_{Ysube} \\&amp;= -39.062 + 22.553 \\&amp;= -16.510 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 F_{X} &amp;= M_{Xbaja} + M_{Xsube} \\&amp;= 22.553 + 39.062 \\&amp;= 61.615 \; \;\textrm{(N)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
-</details>
 </div>
 </section>
 </section>
