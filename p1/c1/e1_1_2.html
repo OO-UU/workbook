@@ -179,14 +179,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías, singularidades y ordenamientos</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c2/prueba.html">Esto es una prueba</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c2/prueba2.html">Esta es una prueba 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios en clases</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
 </ul>
 
     </div>
@@ -400,20 +404,43 @@ document.write(`
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
 <p>La Fuerza de Submarinos designó una operación de investigación en la profundidades de la <code class="docutils literal notranslate"><span class="pre">fosa</span> <span class="pre">de</span> <span class="pre">Atacama</span></code> para entender mejor la fauna marina de estas zonas inexploradas. Para realizar dicha investigación, se cuenta con un submarino que tiene una ventana ciruclar de <span class="math notranslate nohighlight">\(25 \hspace{1mm}(cm)\)</span> de diámetro en la parte inferior del submarino, la cual está diseñada para soportar <span class="math notranslate nohighlight">\(600 \hspace{1mm}(kN)\)</span> de fuerza. Considere que la presión dentro del submarino es igual a la presión atmosférica. Además la fosa de Atacama alcanza los <span class="math notranslate nohighlight">\(8069 \hspace{1mm}(m)\)</span> de profundidad, y la densidad del agua marina es de <span class="math notranslate nohighlight">\(\rho = 1028 \hspace{1mm}(kg/m^3)\)</span>. ¿Se romperá la ventana suponiendo que el submarino alcanza la máxima profundidad? En caso de que sí se rompa, ¿Cuál es la fuerza mínima que debería soportar?</p>
+<p><a class="reference internal" href="#part1-cap1-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
 </section>
 <section id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_hide-cell tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
+<span id="part1-cap1-ex2-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paquetes utilizados</span>
+<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El enunciado nos entrega la siguiente información</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+g = 9.8 #m/s2
+d = 25 #cm
+H = 8069 #m
+rho = 1028 #kg/m3
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-&amp; \textrm{ Sean}\\[10pt]
 g &amp;= 9.800 \; \;\textrm{(m/s2)}
 \\[10pt]
 d &amp;= 25 \; \;\textrm{(cm)}
@@ -421,14 +448,58 @@ d &amp;= 25 \; \;\textrm{(cm)}
 H &amp;= 8069 \; \;\textrm{(m)}
 \\[10pt]
 \rho &amp;= 1028 \; \;\textrm{(kg/m3)}
-\\[10pt]
-&amp; \textrm{ Ya que la presión exterior es igual a la atmosférica. La presión que siente la ventana es}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Ya que la presión exterior es igual a la atmosférica. La presión que siente la ventana es</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+p_v = g*H*rho #N/m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 p_{v} &amp;= g \cdot H \cdot \rho \\&amp;= 9.800 \cdot 8069 \cdot 1028 \\&amp;= 81290333.600 \; \;\textrm{(N/m2)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ El área de la ventana será}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>El área de la ventana será</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+A = pi*(d/100/2)**2 #m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 A &amp;= \pi \cdot \left( \frac{ d }{ 100 } \cdot \frac{1} { 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \left( \frac{ 25 }{ 100 } \cdot \frac{1} { 2 } \right) ^{ 2 } \\&amp;= 0.049 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ Luego la fuerza que percibe la ventana será}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego la fuerza que percibe la ventana será</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+F = p_v*A # N
+## Por lo tanto, la ventana deberá soportar una fuerza mayor o igual a
+F #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
 F &amp;= p_{v} \cdot A \\&amp;= 81290333.600 \cdot 0.049 \\&amp;= 3990329.919 \; \;\textrm{(N)}\\[10pt]
 \\[10pt]
 &amp; \textrm{ Por lo tanto, la ventana deberá soportar una fuerza mayor o igual a}\\[10pt]
@@ -436,7 +507,6 @@ F &amp;= 3990329.919 \; \;\textrm{(N)}
 \end{aligned}
 \end{split}\]</div>
 </div>
-</details>
 </div>
 </section>
 </section>
