@@ -4,5 +4,13 @@ En esta plataforma, nos dedicamos a recopilar una amplia variedad de ejercicios 
 
 Pueden utilizar el siguiente índice para buscar ejercicios específicos, y visualizar de mejor manera el contenido de la página.
 
+<br/><br/>
+
+## Índice
+
 ```{tableofcontents}
 ```
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
