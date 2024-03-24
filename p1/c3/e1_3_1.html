@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ejercicio 1: Fluidos pseudoplásticos y dilatantes &#8212; Libro OOUU-1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c3/e1_3_1';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Ejercicios clases IIQ2013" href="../../ec/intro_ejclases.html" />
+    <link rel="prev" title="Fluidos no Newtonianos" href="fluidos-no-newtonianos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Libro OOUU-1 - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Libro OOUU-1 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducción al libro de ejercicios
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/p1/c3/e1_3_1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ejercicio 1: Fluidos pseudoplásticos y dilatantes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-fluidos-pseudoplasticos-y-dilatantes">
+<h1>Ejercicio 1: Fluidos pseudoplásticos y dilatantes<a class="headerlink" href="#ejercicio-1-fluidos-pseudoplasticos-y-dilatantes" title="Permalink to this heading">#</a></h1>
+<p>Se tiene una mezcla líquida de dos fluidos desconocidos. Esta mezcla es un fluido no Newtoniano que sigue la <strong>ley de potencia</strong>. Se sabe que la densidad de este fluido es de <span class="math notranslate nohighlight">\(\rho=1234.3\hspace{1mm}(kg/m^3)\)</span> y que su viscosidad aparente cerca de la pared de la tubería es <span class="math notranslate nohighlight">\(\mu_{a,w}=52\hspace{1mm}(cP)\)</span>. Además, se obtuvo experimentalmente un perfil de velocidades de dicho fluido en una tubería.</p>
+<ol class="arabic simple">
+<li><p>Encuentre el esfuerzo de corte cerca de la pared <span class="math notranslate nohighlight">\(t_w\)</span>.</p></li>
+<li><p>Mediante un ajuste, encuentre los valores de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(k\)</span> para el fluido y compruebe si es pseudoplástico o dilatante. Ya que usted no sabe el tipo de fluido, asuma inicialmente para su ajuste que <span class="math notranslate nohighlight">\(n=1\)</span> y <span class="math notranslate nohighlight">\(k=0.1\)</span>.</p></li>
+<li><p>Calcule si durante el experimento el flujo era turbulento o laminar.</p></li>
+</ol>
+<div id="container">
+    <div id="datadiv">
+        <table>
+            <caption> Resultados experimentales.
+            </caption>
+            <tr>
+                <th>r (m)</th>
+                <th>v (m/s)</th>
+            </tr>
+            <tr>
+                <td>0.10</td>
+                <td>0.000</td>
+            </tr>
+            <tr>
+                <td>0.09</td>
+                <td>0.383</td>
+            </tr>
+            <tr>
+                <td>0.08</td>
+                <td>0.749</td>
+            </tr>
+            <tr>
+                <td>0.07</td>
+                <td>1.097</td>
+            </tr>
+            <tr>
+                <td>0.06</td>
+                <td>1.425</td>
+            </tr>
+            <tr>
+                <td>0.05</td>
+                <td>1.733</td>
+            </tr><tr>
+                <td>0.04</td>
+                <td>2.017</td>
+            </tr>
+            <tr>
+                <td>0.03</td>
+                <td>2.273</td>
+            </tr>
+            <tr>
+                <td>0.02</td>
+                <td>2.497</td>
+            </tr>
+            <tr>
+                <td>0.01</td>
+                <td>2.679</td>
+            </tr>
+            <tr>
+                <td>0.00</td>
+                <td>2.790</td>
+            </tr>
+        </table>
+    </div>
+    <div id="imgdiv">
+        <img src="./images/img1_3_1" width="200px"/>
+    </div>
+</div>
+<p><a class="reference internal" href="#part1-cap3-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
+<section id="solucion">
+<span id="part1-cap3-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paquetes utilizados</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="inciso-1">
+<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
+<p>Sabemos que para fluidos no Newtonianos la relación entre esfuerzo de corte <span class="math notranslate nohighlight">\((\tau)\)</span> y tasa de corte <span class="math notranslate nohighlight">\((\dot{\gamma})\)</span> es la siguiente.</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = -k\left(\dot{\gamma}\right)^{n}
+\]</div>
+<p>A esta ecuación se le conoce como la <strong>ley de potencia</strong>. En donde <span class="math notranslate nohighlight">\(k\)</span> representa el índice de consistencia y <span class="math notranslate nohighlight">\(n\)</span> el índice de la ley de potencia. Sin embargo, al no tener información del fluido, carecemos de los valores para dichos parámetros. En el enunciado, en cambio, nos entregan el valor para la viscosidad aparente.</p>
+<div class="math notranslate nohighlight">
+\[
+\mu_a = k\left(\dot{\gamma}\right)^{n-1}
+\]</div>
+<p>Si unimos esta ecuación con la ley de potencia, y la aplicamos en la pared, se obtiene lo siguiente.</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_w = \mu_{a,w}\left(\dot{\gamma}\right) = \mu_{a,w}\left(\frac{dv}{dr}\right)
+\]</div>
+<p>En la pared la velocidad del fluido es 0. Entonces, de la tabla se pueden elegir el primer y segundo valor para una aproximación de la tasa de corte (<em>shear rate</em>). Luego nos queda lo siguiente.</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_w = \frac{52}{1000}\left(\frac{0.383-0}{0.01}\right)
+\]</div>
+<p>Obtenemos que el esfuerzo de corte (<em>shear stress</em>) cerca de la pared es aproximadamente <span class="math notranslate nohighlight">\(\tau_w=1.9916\hspace{1mm}(Pa)\)</span>.</p>
+</section>
+<section id="inciso-2">
+<h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
+<p>Para aquellos fluidos que cumplen con la <strong>ley de potencia</strong>, el perfil de velocidad a lo largo de una tubería puede obtenerse en función del radio.</p>
+<div class="math notranslate nohighlight">
+\[
+v = \left(\frac{\tau_w}{k}\right)^{\frac{1}{n}}\frac{nR}{1+n}\left(1-\left(\frac{r}{R}\right)^{\frac{1}{n}+1}\right)
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(R\)</span> representa el radio de la tubería y <span class="math notranslate nohighlight">\(r\)</span> el radio para un punto específico. Notar que <span class="math notranslate nohighlight">\(R=r\)</span> en la pared.</p>
+<p>Ya que contamos con datos experimentales, podemos realizar una curva de ajuste que encuentre los parámetros de <span class="math notranslate nohighlight">\(n\)</span> y de <span class="math notranslate nohighlight">\(k\)</span> que mejor representan al fluido.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definimos nuestra función</span>
+<span class="k">def</span> <span class="nf">funcion_de_velocidad</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="c1"># Del enunciado y del inciso anterior sabemos:</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">tau_w</span> <span class="o">=</span> <span class="mf">1.9916</span>
+    <span class="c1"># Ecuación de perfil de velocidad</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">tau_w</span><span class="o">/</span><span class="n">k</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">R</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">n</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># De la tabla recuperamos los datos experimentales</span>
+<span class="n">r_exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#m</span>
+<span class="n">v_exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.383</span><span class="p">,</span><span class="mf">0.749</span><span class="p">,</span><span class="mf">1.097</span><span class="p">,</span><span class="mf">1.425</span><span class="p">,</span><span class="mf">1.733</span><span class="p">,</span><span class="mf">2.017</span><span class="p">,</span><span class="mf">2.273</span><span class="p">,</span><span class="mf">2.497</span><span class="p">,</span><span class="mf">2.679</span><span class="p">,</span><span class="mf">2.790</span><span class="p">])</span> <span class="c1">#m/s</span>
+
+<span class="c1"># Ajustar los parámetros a los datos experimentares</span>
+<span class="c1">## Supuesto inicial</span>
+<span class="n">parametros_iniciales</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span>  <span class="c1"># (n,k)</span>
+
+<span class="c1">## Ajuste</span>
+<span class="n">params</span><span class="p">,</span> <span class="n">covarianza</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">funcion_de_velocidad</span><span class="p">,</span> <span class="n">r_exp</span><span class="p">,</span> <span class="n">v_exp</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">parametros_iniciales</span><span class="p">)</span>
+
+<span class="c1">## Extraer los parámetros</span>
+<span class="n">n_ajus</span><span class="p">,</span> <span class="n">k_ajus</span> <span class="o">=</span> <span class="n">params</span>
+
+<span class="c1"># Análisis de resultados</span>
+<span class="c1"># Evalua</span>
+<span class="n">v_teorica</span> <span class="o">=</span> <span class="n">funcion_de_velocidad</span><span class="p">(</span><span class="n">r_exp</span><span class="p">,</span> <span class="n">n_ajus</span><span class="p">,</span> <span class="n">k_ajus</span><span class="p">)</span>
+
+<span class="c1"># Gráfico comparativo para evaluar la calidad del ajuste</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">v_exp</span><span class="p">,</span> <span class="n">r_exp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Datos experimentales&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_teorica</span><span class="p">,</span> <span class="n">r_exp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Curva ajustada&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Velocidad (m/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Radio de la tubería (m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ajuste de la curva&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Ver los parámetros ajustados</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parámetros ajustados&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n_ajus</span><span class="si">:</span><span class="s1">6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;k:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k_ajus</span><span class="si">:</span><span class="s1">6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;(Pa*s^n)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\igtab\AppData\Local\Temp\ipykernel_20404\1857015476.py:7: RuntimeWarning: invalid value encountered in scalar power
+  return (tau_w/k)**(1/n)*(n*R/(1+n))*(1-(r/R)**(1/n+1))
+</pre></div>
+</div>
+<img alt="../../_images/9ce676c5aaa212c3498e926fee88fcf4661da49dcf2f991b75818c86fe4702ad.png" src="../../_images/9ce676c5aaa212c3498e926fee88fcf4661da49dcf2f991b75818c86fe4702ad.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parámetros ajustados
+n: 2.497884
+k: 0.000210 (Pa*s^n)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si <span class="math notranslate nohighlight">\(n&lt;1\)</span> el fluido es pseudoplástico, por el contrario, si <span class="math notranslate nohighlight">\(n&gt;1\)</span> el fluido es dilatante. En este caso <span class="math notranslate nohighlight">\(2.498&gt;1\)</span>, por lo tanto es dilatante.</p>
+</section>
+<section id="inciso-3">
+<h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
+<p>Para fluidos que cumplen con la ley de potencia tenemos que el número de Reynolds se generaliza en función de la viscosidad aparente. Esta viscosidad aparente no es equivalente a la que nos entrega el enunciado, ya que para Reynolds generalizado, ocupamos la velocidad promedio.</p>
+<div class="math notranslate nohighlight">
+\[
+Re' = \frac{\rho\bar{V}D}{\mu_a}
+\]</div>
+<p>Entonces, <span class="math notranslate nohighlight">\(\mu_a\)</span> también se calcula a partir de la velocidad promedio.</p>
+<div class="math notranslate nohighlight">
+\[
+\mu_a = k\left(\frac{3n+1}{4n}\right)^n\left(\frac{8\bar{V}}{D}\right)^{n-1}
+\]</div>
+<p>En donde la velocidad promedio se conoce a través de las propiedades del fluido y el esfuerzo de corte en la pared.</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{V} = \frac{nR}{3n+1}\left(\frac{\tau_w}{k}\right)^{\frac{1}{n}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+rho = 1234.3 #kg/m3
+tau_w = 1.9916 #Pa
+R = 0.1 #m
+v_prom = (n_ajus*R)/(3*n_ajus+1)*(tau_w/k_ajus)**(1/n_ajus) #m/s
+mu_a = k_ajus*((3*n_ajus+1)/(4*n_ajus))**n_ajus*((8*v_prom)/(2*R))**(n_ajus-1) #Pa*s
+Re = (rho*v_prom*2*R)/mu_a
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= 1234.300 \; \;\textrm{(kg/m3)}
+\\[10pt]
+\tau_{w} &amp;= 1.992 \; \;\textrm{(Pa)}
+\\[10pt]
+R &amp;= 0.100 \; \;\textrm{(m)}
+\\[10pt]
+v_{prom} &amp;= \frac{ n_{ajus} \cdot R }{ 3 \cdot n_{ajus} + 1 } \cdot \left( \frac{ \tau_{w} }{ k_{ajus} } \right) ^{ \left( \frac{ 1 }{ n_{ajus} } \right) } \\&amp;= \frac{ 2.498 \cdot 0.100 }{ 3 \cdot 2.498 + 1 } \cdot \left( \frac{ 1.992 }{ 0.000 } \right) ^{ \left( \frac{ 1 }{ 2.498 } \right) } \\&amp;= 1.149 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+\mu_{a} &amp;= k_{ajus} \cdot \left( \frac{ 3 \cdot n_{ajus} + 1 }{ 4 \cdot n_{ajus} } \right) ^{ n_{ajus} } \cdot \left( \frac{ 8 \cdot v_{prom} }{ 2 \cdot R } \right) ^{ \left( n_{ajus} - 1 \right) } \\&amp;= 0.000 \cdot \left( \frac{ 3 \cdot 2.498 + 1 }{ 4 \cdot 2.498 } \right) ^{ 2.498 } \cdot \left( \frac{ 8 \cdot 1.149 }{ 2 \cdot 0.100 } \right) ^{ \left( 2.498 - 1 \right) } \\&amp;= 0.043 \; \;\textrm{(Pa*s)}\\[10pt]
+\\[10pt]
+\mathrm{Re} &amp;= \frac{ \rho \cdot v_{prom} \cdot 2 \cdot R }{ \mu_{a} } \\&amp;= \frac{ 1234.300 \cdot 1.149 \cdot 2 \cdot 0.100 }{ 0.043 } \\&amp;= 6545.353  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Para fluidos no Newtonianos, el flujo es turbulento si se cumple <span class="math notranslate nohighlight">\(Re'&gt;2100+875(1-n)\)</span>. Por lo contrario el flujo es laminar.</p>
+<p>Calculamos el límite del intervalo y comparamos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">Re</span> <span class="o">&gt;</span> <span class="mi">2100</span><span class="o">+</span><span class="mi">875</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">n_ajus</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re&#39; (&quot;</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">Re</span><span class="si">:</span><span class="s1">6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;) es mayor que&quot;</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="p">(</span><span class="mi">2100</span><span class="o">+</span><span class="mi">875</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">n_ajus</span><span class="p">))</span><span class="si">:</span><span class="s1">6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;, por lo tanto el flujo es turbulento.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re&#39; (&quot;</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">Re</span><span class="si">:</span><span class="s1">6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;) es menor que&quot;</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="p">(</span><span class="mi">2100</span><span class="o">+</span><span class="mi">875</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">n_ajus</span><span class="p">))</span><span class="si">:</span><span class="s1">6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;, por lo tanto el flujo es laminar.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Re&#39; ( 6545.352909 ) es mayor que 789.351492 , por lo tanto el flujo es turbulento.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./p1\c3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="fluidos-no-newtonianos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Fluidos no Newtonianos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../ec/intro_ejclases.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ejercicios clases IIQ2013</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Equipo Docente, Operaciones Unitarias
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

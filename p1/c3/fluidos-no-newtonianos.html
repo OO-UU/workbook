@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Ejercicio 1: Ecuación de Bernoulli &#8212; Libro OOUU-1</title>
+    <title>Fluidos no Newtonianos &#8212; Libro OOUU-1</title>
   
   
   
@@ -62,13 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c2/e1_2_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c3/fluidos-no-newtonianos';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ejercicio 2: Pérdidas por fricción y singularidades" href="e1_2_2.html" />
-    <link rel="prev" title="Tuberías y bombas" href="tuberias-y-bombas.html" />
+    <link rel="next" title="Ejercicio 1: Fluidos pseudoplásticos y dilatantes" href="e1_3_1.html" />
+    <link rel="prev" title="Ejercicio 2: Pérdidas por fricción y singularidades" href="../c2/e1_2_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,13 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tuberias-y-bombas.html">Tuberías y bombas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1: Ecuación de Bernoulli</a></li>
-<li class="toctree-l2"><a class="reference internal" href="e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Fluidos no Newtonianos</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
 </ul>
 </li>
 </ul>
@@ -251,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/p1/c2/e1_2_1.ipynb" target="_blank"
+      <li><a href="../../_sources/p1/c3/fluidos-no-newtonianos.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -261,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -335,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejercicio 1: Ecuación de Bernoulli</h1>
+    <h1>Fluidos no Newtonianos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -345,12 +343,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenidos">Contenidos</a></li>
 </ul>
             </nav>
         </div>
@@ -362,162 +355,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-ecuacion-de-bernoulli">
-<h1>Ejercicio 1: Ecuación de Bernoulli<a class="headerlink" href="#ejercicio-1-ecuacion-de-bernoulli" title="Permalink to this heading">#</a></h1>
-<section id="enunciado">
-<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Un estanque cilíndrico de diámetro <span class="math notranslate nohighlight">\(d_e=10\hspace{1mm}(m)\)</span> se llena de agua hasta alcanzar los <span class="math notranslate nohighlight">\(25\hspace{1mm}(m)\)</span> de altura. En su parte inferior se encuentra una tubería conectada a una válvula. Al abrir la válvula, el agua fluye por la tubería y el estanque se vacía. La tubería tiene un área transversal circular y con diámetro <span class="math notranslate nohighlight">\(d_t=13\hspace{1mm}(cm)\)</span>. Ignore las pérdidas de carga por fricción y singularidades. Además, suponga que la presión en la tubería es igual a la presión de la superficie del fluido en el estanque. Calcule:</p>
-<ol class="arabic simple">
-<li><p>El caudal que sale por la tubería al momento de abrir la válvula.</p></li>
-<li><p>El tiempo que se demora el estanque en vaciarse por completo.</p></li>
-</ol>
-<p><a class="reference internal" href="#part1-cap2-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="fluidos-no-newtonianos">
+<h1>Fluidos no Newtonianos<a class="headerlink" href="#fluidos-no-newtonianos" title="Permalink to this heading">#</a></h1>
+<p>En esta sección se encuentran ejercicios sobre fluidos no Newtonianos.</p>
+<p>A continuación un listado de los ejercicios que podrá encontrar en esta sección.</p>
+<section id="contenidos">
+<h2>Contenidos<a class="headerlink" href="#contenidos" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+</ul>
+</div>
 <p><br/><br/>
 <br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
 <br/><br/></p>
-</section>
-<section id="solucion">
-<span id="part1-cap2-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paquetes utilizados</span>
-<span class="kn">import</span> <span class="nn">handcalcs.render</span>
-<span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="inciso-1">
-<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<p>Tenemos que la <code class="docutils literal notranslate"><span class="pre">ecuación</span> <span class="pre">de</span> <span class="pre">Bernoulli</span></code>,</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{p_A}{g\rho} + H_A + \frac{u_A^2}{2g} = \frac{p_B}{g\rho} + H_B + \frac{u_B^2}{2g}
-\]</div>
-<p>Aplicada al caso descrito</p>
-<div class="math notranslate nohighlight">
-\[
-H_A = \frac{u_B^2}{2g}
-\]</div>
-<p>Y luego despejando para la velocidad en el punto inferior (B), nos queda como:</p>
-<div class="math notranslate nohighlight" id="equation-part1-cap2-ex1-eq1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-part1-cap2-ex1-eq1" title="Permalink to this equation">#</a></span>\[
-u_B = \sqrt{2gH_A}
-\]</div>
-<p>Finalmente resolviendo:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-H_A = 25 #m
-g = 9.8 #m/s2
-u_B = sqrt(2*g*H_A) #m/s
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-H_{A} &amp;= 25 \; \;\textrm{(m)}
-\\[10pt]
-g &amp;= 9.800 \; \;\textrm{(m/s2)}
-\\[10pt]
-u_{B} &amp;= \sqrt { 2 \cdot g \cdot H_{A} } \\&amp;= \sqrt { 2 \cdot 9.800 \cdot 25 } \\&amp;= 22.136 \; \;\textrm{(m/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-<p>Luego, el caudal será</p>
-<div class="math notranslate nohighlight" id="equation-part1-cap2-ex1-eq2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-part1-cap2-ex1-eq2" title="Permalink to this equation">#</a></span>\[
-Q = u_BA
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-d_t = 0.13 #m 
-A = pi*(d_t/2)**2 #m2
-Q = u_B*A #m3/s
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-d_{t} &amp;= 0.130 \; \;\textrm{(m)}
-\\[10pt]
-A &amp;= \pi \cdot \left( \frac{ d_{t} }{ 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \left( \frac{ 0.130 }{ 2 } \right) ^{ 2 } \\&amp;= 0.013 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q &amp;= u_{B} \cdot A \\&amp;= 22.136 \cdot 0.013 \\&amp;= 0.294 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-</section>
-<section id="inciso-2">
-<h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
-<p>El caudal también puede ser escrito como:</p>
-<div class="math notranslate nohighlight">
-\[
-Q = - \frac{dV}{dt}
-\]</div>
-<p>Ya que el diámetro del estanque se mantiene constante</p>
-<div class="math notranslate nohighlight">
-\[
-Q = -\pi\left(\frac{d_e}{2}\right)^2\frac{dH_A}{dt}
-\]</div>
-<p>Al reemplazar la ecuación <a class="reference internal" href="#equation-part1-cap2-ex1-eq1">(1)</a> en <a class="reference internal" href="#equation-part1-cap2-ex1-eq2">(2)</a> e igualando,</p>
-<div class="math notranslate nohighlight">
-\[
-\sqrt{2gH_A}\left(\pi\left(\frac{d_t}{2}\right)^2\right) = -\pi\left(\frac{d_e}{2}\right)^2\frac{dH_A}{dt}
-\]</div>
-<p>Reordenando los términos,</p>
-<div class="math notranslate nohighlight">
-\[
--H_A^{-\frac{1}{2}}dH_A = \sqrt{2g}\left(\frac{d_t}{d_e}\right)^2dt
-\]</div>
-<p>Inicialmente la altura del líquido es de <span class="math notranslate nohighlight">\(25\hspace{1mm}(m)\)</span> hasta que en el tiempo final se vacía.</p>
-<div class="math notranslate nohighlight">
-\[
--\int_{25}^{0}H_A^{-\frac{1}{2}}dH_A = \sqrt{2g}\left(\frac{d_t}{d_e}\right)^2 \int_0^{t_T}dt
-\]</div>
-<p>Finalmente,</p>
-<div class="math notranslate nohighlight">
-\[
-t_T = 2\sqrt{\frac{25}{2g}}\left(\frac{d_e}{d_t}\right)^2
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-d_e = 10 #m
-t_T = 2*sqrt(25/2*g)*(d_e/d_t)**2 #s
-## O
-t = t_T/3600 #h
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-d_{e} &amp;= 10 \; \;\textrm{(m)}
-\\[10pt]
-t_{T} &amp;= 2 \cdot \sqrt { \frac{ 25 }{ 2 } \cdot g } \cdot \left( \frac{ d_{e} }{ d_{t} } \right) ^{ 2 } \\&amp;= 2 \cdot \sqrt { \frac{ 25 }{ 2 } \cdot 9.800 } \cdot \left( \frac{ 10 }{ 0.130 } \right) ^{ 2 } \\&amp;= 130981.915 \; \;\textrm{(s)}\\[10pt]
-\\[10pt]
-&amp; \textrm{ O}\\[10pt]
-t &amp;= \frac{ t_{T} }{ 3600 } \\&amp;= \frac{ 130981.915 }{ 3600 } \\&amp;= 36.384 \; \;\textrm{(h)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-</section>
 </section>
 </section>
 
@@ -534,7 +385,7 @@ t &amp;= \frac{ t_{T} }{ 3600 } \\&amp;= \frac{ 130981.915 }{ 3600 } \\&amp;= 36
         },
         kernelOptions: {
             name: "python3",
-            path: "./p1\c2"
+            path: "./p1\c3"
         },
         predefinedOutput: true
     }
@@ -552,20 +403,20 @@ t &amp;= \frac{ t_{T} }{ 3600 } \\&amp;= \frac{ 130981.915 }{ 3600 } \\&amp;= 36
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tuberias-y-bombas.html"
+       href="../c2/e1_2_2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tuberías y bombas</p>
+        <p class="prev-next-title">Ejercicio 2: Pérdidas por fricción y singularidades</p>
       </div>
     </a>
     <a class="right-next"
-       href="e1_2_2.html"
+       href="e1_3_1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ejercicio 2: Pérdidas por fricción y singularidades</p>
+        <p class="prev-next-title">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -584,12 +435,7 @@ t &amp;= \frac{ t_{T} }{ 3600 } \\&amp;= \frac{ 130981.915 }{ 3600 } \\&amp;= 36
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenidos">Contenidos</a></li>
 </ul>
   </nav></div>
 
