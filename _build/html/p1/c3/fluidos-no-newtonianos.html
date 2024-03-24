@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Fundamentos de los fluidos &#8212; Libro OOUU-1</title>
+    <title>Fluidos no Newtonianos &#8212; Libro OOUU-1</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c1/fundamentos-y-analisis-dim';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c3/fluidos-no-newtonianos';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ejercicio 1: Momentum y Fuerza" href="e1_1_1.html" />
-    <link rel="prev" title="Introducción al libro de ejercicios" href="../../intro.html" />
+    <link rel="next" title="Ejercicio 1: Fluidos pseudoplásticos y dilatantes" href="e1_3_1.html" />
+    <link rel="prev" title="Ejercicio 2: Pérdidas por fricción y singularidades" href="../c2/e1_2_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,10 +170,10 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Fundamentos de los fluidos</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
-<li class="toctree-l2"><a class="reference internal" href="e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -181,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Fluidos no Newtonianos</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
 </ul>
 </li>
 </ul>
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/p1/c1/fundamentos-y-analisis-dim.md" target="_blank"
+      <li><a href="../../_sources/p1/c3/fluidos-no-newtonianos.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Fundamentos de los fluidos</h1>
+    <h1>Fluidos no Newtonianos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -355,17 +355,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="fundamentos-de-los-fluidos">
-<h1>Fundamentos de los fluidos<a class="headerlink" href="#fundamentos-de-los-fluidos" title="Permalink to this heading">#</a></h1>
-<p>En esta sección se encuentran los ejercicios asociados a los fundamentos de los fluidos y la hidroestática. El propósito de estos ejercicios es aplicar algunos contenidos teóricos a la materia de transporte de fluidos.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="fluidos-no-newtonianos">
+<h1>Fluidos no Newtonianos<a class="headerlink" href="#fluidos-no-newtonianos" title="Permalink to this heading">#</a></h1>
+<p>En esta sección se encuentran ejercicios sobre fluidos no Newtonianos.</p>
 <p>A continuación un listado de los ejercicios que podrá encontrar en esta sección.</p>
 <section id="contenidos">
 <h2>Contenidos<a class="headerlink" href="#contenidos" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
-<li class="toctree-l1"><a class="reference internal" href="e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
 </ul>
 </div>
 <p><br/><br/>
@@ -387,7 +385,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./p1\c1"
+            path: "./p1\c3"
         },
         predefinedOutput: true
     }
@@ -405,20 +403,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../intro.html"
+       href="../c2/e1_2_2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introducción al libro de ejercicios</p>
+        <p class="prev-next-title">Ejercicio 2: Pérdidas por fricción y singularidades</p>
       </div>
     </a>
     <a class="right-next"
-       href="e1_1_1.html"
+       href="e1_3_1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ejercicio 1: Momentum y Fuerza</p>
+        <p class="prev-next-title">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
