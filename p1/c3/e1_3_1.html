@@ -367,11 +367,17 @@ document.write(`
 <p>Se tiene una mezcla líquida de dos fluidos desconocidos. Esta mezcla es un fluido no Newtoniano que sigue la <strong>ley de potencia</strong>. Se sabe que la densidad de este fluido es de <span class="math notranslate nohighlight">\(\rho=1234.3\hspace{1mm}(kg/m^3)\)</span> y que su viscosidad aparente cerca de la pared de la tubería es <span class="math notranslate nohighlight">\(\mu_{a,w}=52\hspace{1mm}(cP)\)</span>. Además, se obtuvo experimentalmente un perfil de velocidades de dicho fluido en una tubería.</p>
 <ol class="arabic simple">
 <li><p>Encuentre el esfuerzo de corte cerca de la pared <span class="math notranslate nohighlight">\(t_w\)</span>.</p></li>
-<li><p>Mediante un ajuste, encuentre los valores de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(k\)</span> para el fluido y compruebe si es pseudoplástico o dilatante. Ya que usted no sabe el tipo de fluido, asuma inicialmente para su ajuste que <span class="math notranslate nohighlight">\(n=1\)</span> y <span class="math notranslate nohighlight">\(k=0.1\)</span>.</p></li>
+<li><p>Mediante un ajuste (Puede usar Excel o python), encuentre los valores de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(k\)</span> para el fluido y compruebe si es pseudoplástico o dilatante. Ya que usted no sabe el tipo de fluido, asuma inicialmente para su ajuste que <span class="math notranslate nohighlight">\(n=1\)</span> y <span class="math notranslate nohighlight">\(k=0.1\)</span>.</p></li>
 <li><p>Calcule si durante el experimento el flujo era turbulento o laminar.</p></li>
 </ol>
-<table class="table table-center" id="tabla-1">
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><table class="table" id="tabla-1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Resultados experimentales</span><a class="headerlink" href="#tabla-1" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>r (m)</p></th>
 <th class="head"><p>v (m/s)</p></th>
@@ -410,6 +416,17 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p>0.00</p></td>
 <td><p>2.790</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td><figure class="align-default" id="figura-5">
+<a class="reference internal image-reference" href="../../_images/img1_3_1.png"><img alt="../../_images/img1_3_1.png" src="../../_images/img1_3_1.png" style="width: 543.0px; height: 757.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Perfil de velocidades.</span><a class="headerlink" href="#figura-5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</td>
 </tr>
 </tbody>
 </table>
@@ -513,7 +530,7 @@ v = \left(\frac{\tau_w}{k}\right)^{\frac{1}{n}}\frac{nR}{1+n}\left(1-\left(\frac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\igtab\AppData\Local\Temp\ipykernel_12272\1857015476.py:7: RuntimeWarning: invalid value encountered in scalar power
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\igtab\AppData\Local\Temp\ipykernel_29512\1857015476.py:7: RuntimeWarning: invalid value encountered in scalar power
   return (tau_w/k)**(1/n)*(n*R/(1+n))*(1-(r/R)**(1/n+1))
 </pre></div>
 </div>
@@ -575,7 +592,7 @@ v_{prom} &amp;= \frac{ n_{ajus} \cdot R }{ 3 \cdot n_{ajus} + 1 } \cdot \left( \
 \end{split}\]</div>
 </div>
 </div>
-<p>Para fluidos no Newtonianos, el flujo es turbulento si se cumple <span class="math notranslate nohighlight">\(Re'&gt;2100+875(1-n)\)</span>. Por lo contrario el flujo es laminar.</p>
+<p>Para fluidos no Newtonianos, el flujo es turbulento si se cumple <span class="math notranslate nohighlight">\(Re'&gt;2100+875(1-n)\)</span>. De lo contrario el flujo es laminar.</p>
 <p>Calculamos el límite del intervalo y comparamos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
