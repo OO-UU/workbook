@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>IIQ2013_C7 &#8212; Libro OOUU-1</title>
+    <title>IIQ2013 - Clase 7 &#8212; Libro OOUU-1</title>
   
   
   
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C4.html">IIQ2013 - Clase 4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C5.html">IIQ2013 - Clase 5</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">IIQ2013_C7</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">IIQ2013 - Clase 7</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/documentacion.html">Bibliografía de apoyo</a></li>
@@ -343,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>IIQ2013_C7</h1>
+    <h1>IIQ2013 - Clase 7</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -372,8 +372,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="iiq2013-c7">
-<h1>IIQ2013_C7<a class="headerlink" href="#iiq2013-c7" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="iiq2013-clase-7">
+<h1>IIQ2013 - Clase 7<a class="headerlink" href="#iiq2013-clase-7" title="Permalink to this heading">#</a></h1>
 <p>Un compañero desea emprender creando un innovador SPA que utiliza un aceite esencial especial con harina disuelta como exfoliante. Esta suspensión es un fluido newtoniano con una viscosidad de <span class="math notranslate nohighlight">\(8000\hspace{1mm}cP\)</span> y una densidad <span class="math notranslate nohighlight">\(\rho=880\hspace{1mm}(kg/m^3)\)</span>.</p>
 <p>En primer lugar se deben cargar las librerias que vamos a utilizar</p>
 <div class="cell docutils container">
@@ -477,10 +477,11 @@ Q &amp;= \mathrm{NQ} \cdot \left( \frac{ N }{ 60 } \right) \cdot \left( D_{a} \r
 </section>
 <section id="id3">
 <h2>Solución<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>Se debe cumplir que el número de potencia es equivalente.
-$<span class="math notranslate nohighlight">\(
-N{p,1} = N_{p,2} \Rightarrow \frac{P_1}{\rho_1N_1^3D_{a,1}^5} = \frac{P_2}{\rho_2N_2^3D_{a,2}^5}
-\)</span>$</p>
+<p>Se debe cumplir que el número de potencia es equivalente.</p>
+<div class="math notranslate nohighlight">
+\[
+N_{p,1} = N_{p,2} \Rightarrow \frac{P_1}{\rho_1N_1^3D_{a,1}^5} = \frac{P_2}{\rho_2N_2^3D_{a,2}^5}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
@@ -489,7 +490,7 @@ N_2 = N #RPM
 P_1 = 5.5 #kW
 D_a1 = 0.3 #m
 D_a2 = D_a #m
-P_2 = P_1*1000*((N_2/60)**3*D_a2**5)/((N_1/60)**3*D_a1**5) #W
+P_2 = P_1*((N_2/60)**3*D_a2**5)/((N_1/60)**3*D_a1**5) #kW
 </pre></div>
 </div>
 </div>
@@ -507,11 +508,12 @@ D_{a1} &amp;= 0.300 \; \;\textrm{(m)}
 \\[10pt]
 D_{a2} &amp;= 0.276 \; \;\textrm{(m)}
 \\[10pt]
-P_{2} &amp;= P_{1} \cdot 1000 \cdot \frac{ \left( \frac{ N_{2} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a2} \right) ^{ 5 } }{ \left( \frac{ N_{1} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a1} \right) ^{ 5 } } \\&amp;= 5.500 \cdot 1000 \cdot \frac{ \left( \frac{ 120 }{ 60 } \right) ^{ 3 } \cdot \left( 0.276 \right) ^{ 5 } }{ \left( \frac{ 180 }{ 60 } \right) ^{ 3 } \cdot \left( 0.300 \right) ^{ 5 } } \\&amp;= 1081.773 \; \;\textrm{(W)}\\[10pt]
+P_{2} &amp;= P_{1} \cdot \frac{ \left( \frac{ N_{2} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a2} \right) ^{ 5 } }{ \left( \frac{ N_{1} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a1} \right) ^{ 5 } } \\&amp;= 5.500 \cdot \frac{ \left( \frac{ 120 }{ 60 } \right) ^{ 3 } \cdot \left( 0.276 \right) ^{ 5 } }{ \left( \frac{ 180 }{ 60 } \right) ^{ 3 } \cdot \left( 0.300 \right) ^{ 5 } } \\&amp;= 1.082 \; \;\textrm{(kW)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
+<p>La alternativa correcta es la <strong>b</strong>.</p>
 </section>
 </section>
 
