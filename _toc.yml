@@ -23,6 +23,7 @@ parts:
     - file: p1/c4/agitacion-y-mezclado
       sections:
       - file: p1/c4/e1_4_1
+      - file: p1/c4/e1_4_2
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases
