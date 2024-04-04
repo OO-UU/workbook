@@ -376,7 +376,7 @@ document.write(`
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
 <p>Usted trabaja en un centro de investigación de aceites para uso industrial llamado Uncle Oil®. Recientemente, su jefe le ha pedido escalar su agitador piloto a uno industrial para masificar la producción de aceite de motor (ambos estanques cilíndricos). Considere que su agitador a escala piloto funciona a <span class="math notranslate nohighlight">\(400\hspace{1mm}RPM\)</span>, y que el motor con el que cuenta el centro de investigación para escala industrial alcanza los <span class="math notranslate nohighlight">\(130\hspace{1mm}RPM\)</span>. Usted sabe que el diámetro del agitador piloto es <span class="math notranslate nohighlight">\(D_{a,1}=15\hspace{1mm}(cm)\)</span>, y que las proporciones <span class="math notranslate nohighlight">\(S_i\)</span> se mantienen constantes e iguales a <span class="math notranslate nohighlight">\(S_1=1/3\)</span> y <span class="math notranslate nohighlight">\(S_6=3/2\)</span>. El equipo de investigación reológica, le hace entrega de la figura a continuación. Determine lo siguiente:</p>
 <ol class="arabic simple">
-<li><p>Encuentre la temperatura a la cual deberá operar el estanque industrial para que este funcione a su máxima capacidad de revoluciones. Considerando que el estanque piloto se encontraba a <span class="math notranslate nohighlight">\(20\hspace{1mm}^\circ C\)</span>. Asuma que se encuentra en régimen laminar.</p></li>
+<li><p>Encuentre la temperatura a la cual deberá operar el estanque industrial para que este funcione a su máxima capacidad de revoluciones. Considerando que el estanque piloto se encontraba a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span>. Asuma que se encuentra en régimen laminar.</p></li>
 <li><p>Calcule el volumen del estanque industrial. Considere que el escalamiento es de velocidad de punta constante.</p></li>
 <li><p>Calcule la potencia que utilizará este estanque si a escala industrial se utilizaban <span class="math notranslate nohighlight">\(3kW\)</span>.</p></li>
 </ol>
@@ -410,7 +410,7 @@ document.write(`
 </div>
 <section id="inciso-1">
 <h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<p>Del gráfico obtenemos que a <span class="math notranslate nohighlight">\(20\hspace{1mm}^\circ C\)</span> la viscosidad es <span class="math notranslate nohighlight">\(\mu\approx 280\hspace{1mm}(cP)\)</span>. Ya que nos encontramos en regimen laminar, tenemos que:
+<p>Del gráfico obtenemos que a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span> la viscosidad es <span class="math notranslate nohighlight">\(\mu\approx 280\hspace{1mm}(cP)\)</span>. Ya que nos encontramos en regimen laminar, tenemos que:
 $<span class="math notranslate nohighlight">\(
 \mu_1N_1 = \mu_2N_2
 \)</span><span class="math notranslate nohighlight">\(
@@ -440,7 +440,7 @@ N_{2} &amp;= 130 \; \;\textrm{(RPM)}
 \end{split}\]</div>
 </div>
 </div>
-<p>Del gráfico de viscosidades, notamos que para <span class="math notranslate nohighlight">\(\mu=861.5\hspace{1mm}(cP)\)</span> la temperatura debe ser <span class="math notranslate nohighlight">\(T\approx 6^\circ C\)</span>.</p>
+<p>Del gráfico de viscosidades, notamos que para <span class="math notranslate nohighlight">\(\mu=861.5\hspace{1mm}(cP)\)</span> la temperatura debe ser <span class="math notranslate nohighlight">\(T\approx 6\hspace{1mm}°C\)</span>.</p>
 </section>
 <section id="inciso-2">
 <h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
@@ -480,11 +480,12 @@ V_{2} &amp;= \pi \cdot \left( \frac{ D_{t2} }{ 2 } \right) ^{ 2 } \cdot H_{2} \\
 </section>
 <section id="inciso-3">
 <h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
-<p>La condición básica de esclamiento, nos dice que un estanque debe manterer su potencia por unidad de volumen constante. Entonces:
-$<span class="math notranslate nohighlight">\(
+<p>La condición básica de esclamiento, nos dice que un estanque debe manterer su potencia por unidad de volumen constante. Entonces:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{P_1}{V_1} = \frac{P_2}{V_2}
-\)</span>$
-Calculamos el volumen a escala piloto.</p>
+\]</div>
+<p>Calculamos el volumen a escala piloto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
