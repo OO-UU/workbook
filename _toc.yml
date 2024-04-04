@@ -33,4 +33,5 @@ parts:
       - file: ec/IIQ2013_C3
       - file: ec/IIQ2013_C4
       - file: ec/IIQ2013_C5
+      - file: ec/IIQ2013_C7
     - file: doc/documentacion
