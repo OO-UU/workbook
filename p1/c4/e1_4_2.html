@@ -379,14 +379,33 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Encuentre la temperatura a la cual deberá operar el estanque industrial para que este funcione a su máxima capacidad de revoluciones. Considerando que el estanque piloto se encontraba a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span>. Asuma que se encuentra en régimen laminar.</p></li>
 <li><p>Calcule el volumen del estanque industrial. Considere que el escalamiento es de velocidad de punta constante.</p></li>
-<li><p>Calcule la potencia que utilizará este estanque si a escala industrial se utilizaban <span class="math notranslate nohighlight">\(3kW\)</span>.</p></li>
+<li><p>Calcule la potencia que utilizará este estanque si a escala industrial se utilizaban <span class="math notranslate nohighlight">\(3kW\)</span>. <em>Hint: el número de potencia se mantendrá constante.</em></p></li>
 </ol>
-<figure class="align-center" id="figura-1-4-2">
-<a class="reference internal image-reference" href="../../_images/img1_4_2.png"><img alt="../../_images/img1_4_2.png" src="../../_images/img1_4_2.png" style="width: 675.6px; height: 601.6px;" /></a>
+<table class="table table-center">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 46%" />
+<col style="width: 46%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><figure class="align-default" id="figura-1-4-2">
+<a class="reference internal image-reference" href="../../_images/img1_4_2.png"><img alt="../../_images/img1_4_2.png" src="../../_images/img1_4_2.png" style="width: 337.8px; height: 300.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Viscosidad vs temperatura.</span><a class="headerlink" href="#figura-1-4-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Viscosidad vs temperatura para aceite de motor.</span><a class="headerlink" href="#figura-1-4-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</td>
+<td><figure class="align-default" id="figura-1-4-2-2">
+<a class="reference internal image-reference" href="../../_images/img1_4_2-2.png"><img alt="../../_images/img1_4_2-2.png" src="../../_images/img1_4_2-2.png" style="width: 322.20000000000005px; height: 267.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Densidad vs temperatura para aceite de motor.</span><a class="headerlink" href="#figura-1-4-2-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
 <p><a class="reference internal" href="#part1-cap4-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
 <p><br/><br/>
 <br/><br/>
@@ -481,20 +500,19 @@ V_{2} &amp;= \pi \cdot \left( \frac{ D_{t2} }{ 2 } \right) ^{ 2 } \cdot H_{2} \\
 </section>
 <section id="inciso-3">
 <h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
-<p>La condición básica de esclamiento, nos dice que un estanque debe manterer su potencia por unidad de volumen constante. Entonces:</p>
+<p>Se debe cumplir que el número de potencia es equivalente.</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{P_1}{V_1} = \frac{P_2}{V_2}
+N_{p,1} = N_{p,2} \Rightarrow \frac{P_1}{\rho_1N_1^3D_{a,1}^5} = \frac{P_2}{\rho_2N_2^3D_{a,2}^5}
 \]</div>
-<p>Calculamos el volumen a escala piloto.</p>
+<p>Recordar que la temperatura del agitador industrial se encuentra aproximadamente a <span class="math notranslate nohighlight">\(6\hspace{1mm}°C\)</span>, a esa temperatura la densidad del aceite será <span class="math notranslate nohighlight">\(\rho_2\approx 887.5\hspace{1mm}(kg/m^3)\)</span>. Y en las condiciones iniciales a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span> la densidad <span class="math notranslate nohighlight">\(\rho_1\approx 878\hspace{1mm}(kg/m^3)\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
 P_1 = 3 #kW
-D_t1 = 3*D_a1 #m
-H_1 = 3/2*D_t1 #m
-V_1 = pi*(D_t1/2)**2*H_1 #m$^3$
-P_2 = P_1*V_2/V_1 #kW
+rho_1 = 878 #kg/m$^3$
+rho_2 = 887.5 #kg/m$^3$
+P_2 = P_2 = P_1*(rho_2*(N_2/60)**3*D_a2**5)/(rho_1*(N_1/60)**3*D_a1**5) #kW
 </pre></div>
 </div>
 </div>
@@ -504,13 +522,11 @@ P_2 = P_1*V_2/V_1 #kW
 \begin{aligned}
 P_{1} &amp;= 3 \; \;\textrm{(kW)}
 \\[10pt]
-D_{t1} &amp;= 3 \cdot D_{a1} \\&amp;= 3 \cdot 0.150 \\&amp;= 0.450 \; \;\textrm{(m)}\\[10pt]
+\rho_{1} &amp;= 878 \; \;\textrm{(kg/m$^3$)}
 \\[10pt]
-H_{1} &amp;= \frac{ 3 }{ 2 } \cdot D_{t1} \\&amp;= \frac{ 3 }{ 2 } \cdot 0.450 \\&amp;= 0.675 \; \;\textrm{(m)}\\[10pt]
+\rho_{2} &amp;= 887.500 \; \;\textrm{(kg/m$^3$)}
 \\[10pt]
-V_{1} &amp;= \pi \cdot \left( \frac{ D_{t1} }{ 2 } \right) ^{ 2 } \cdot H_{1} \\&amp;= 3.142 \cdot \left( \frac{ 0.450 }{ 2 } \right) ^{ 2 } \cdot 0.675 \\&amp;= 0.107 \; \;\textrm{(m$^3$)}\\[10pt]
-\\[10pt]
-P_{2} &amp;= P_{1} \cdot \frac{ V_{2} }{ V_{1} } \\&amp;= 3 \cdot \frac{ 3.127 }{ 0.107 } \\&amp;= 87.392 \; \;\textrm{(kW)}\\[10pt]
+P_{2} &amp;= P_{2} \\&amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a2} \right) ^{ 5 } }{ \rho_{1} \cdot \left( \frac{ N_{1} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a1} \right) ^{ 5 } } \\&amp;= 28.710 \\&amp;= 3 \cdot \frac{ 887.500 \cdot \left( \frac{ 130 }{ 60 } \right) ^{ 3 } \cdot \left( 0.462 \right) ^{ 5 } }{ 878 \cdot \left( \frac{ 400 }{ 60 } \right) ^{ 3 } \cdot \left( 0.150 \right) ^{ 5 } } \\&amp;= 28.710 \; \;\textrm{(kW)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
