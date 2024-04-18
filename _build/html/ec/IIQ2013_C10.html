@@ -409,21 +409,25 @@ p_1 = 2.6E6 # Pa
 M_w = 0.002 # kg/mol
 R = 8.314 # J/molK
 T = 293 #K
-rho_1 = p1*M_w/(R*T) # kg/m$^3$
+rho_1 = p_1*M_w/(R*T) # kg/m$^3$
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">R</span> <span class="o">=</span> <span class="mf">8.314</span> <span class="c1"># J/molK</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">293</span> <span class="c1">#K</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">rho_1</span> <span class="o">=</span> <span class="n">p1</span><span class="o">*</span><span class="n">M_w</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="p">)</span> <span class="c1"># kg/m$^3$</span>
-
-<span class="ne">NameError</span>: name &#39;p1&#39; is not defined
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{1} &amp;= 2600000.000 \; \;\textrm{(Pa)}
+\\[10pt]
+M_{w} &amp;= 0.002 \; \;\textrm{(kg/mol)}
+\\[10pt]
+R &amp;= 8.314 \; \;\textrm{(J/molK)}
+\\[10pt]
+T &amp;= 293 \; \;\textrm{(K)}
+\\[10pt]
+\rho_{1} &amp;= p_{1} \cdot \frac{ M_{w} }{ R \cdot T } \\&amp;= 2600000.000 \cdot \frac{ 0.002 }{ 8.314 \cdot 293 } \\&amp;= 2.135 \; \;\textrm{(kg/m$^3$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
 <p>La alternativa correcta es la <strong>b</strong>.</p>
@@ -510,18 +514,22 @@ GA = sqrt(-k_1/k_2) #kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">L</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#m</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">D</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="c1">#m</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">k_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="n">rho_1</span><span class="p">))</span><span class="o">*</span><span class="p">((</span><span class="n">p_2</span><span class="o">/</span><span class="n">p_1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">k_2</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="n">D</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">p_2</span><span class="o">/</span><span class="n">p_1</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">GA</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">k_1</span><span class="o">/</span><span class="n">k_2</span><span class="p">)</span> <span class="c1">#kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$</span>
-
-<span class="ne">NameError</span>: name &#39;rho_1&#39; is not defined
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{2} &amp;= 2000000.000 \; \;\textrm{(Pa)}
+\\[10pt]
+L &amp;= 500 \; \;\textrm{(m)}
+\\[10pt]
+D &amp;= 0.050 \; \;\textrm{(m)}
+\\[10pt]
+k_{1} &amp;= \left( \frac{ p_{1} }{ \frac{ 2 }{ \rho_{1} } } \right) \cdot \left( \left( \frac{ p_{2} }{ p_{1} } \right) ^{ 2 } - 1 \right) \\&amp;= \left( \frac{ 2600000.000 }{ \frac{ 2 }{ 2.135 } } \right) \cdot \left( \left( \frac{ 2000000.000 }{ 2600000.000 } \right) ^{ 2 } - 1 \right) \\&amp;= -1133003.996  \\[10pt]
+\\[10pt]
+k_{2} &amp;= \left( \left( 2 \cdot f \cdot \frac{ L }{ D } \right) - \mathrm{np.log} { \left( \frac{ p_{2} }{ p_{1} } \right) } \right) \\&amp;= \left( \left( 2 \cdot 0.005 \cdot \frac{ 500 }{ 0.050 } \right) - np.log { \left( \frac{ 2000000.000 }{ 2600000.000 } \right) } \right) \\&amp;= 102.409  \\[10pt]
+\\[10pt]
+\mathrm{GA} &amp;= \sqrt { \frac{ \left( - k_{1} \right) }{ k_{2} } } \\&amp;= \sqrt { \frac{ \left( - -1133003.996 \right) }{ 102.409 } } \\&amp;= 105.183 \; \;\textrm{(kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
 <p>La alternativa correcta es la <strong>a</strong>.</p>
