@@ -35,4 +35,6 @@ parts:
       - file: ec/IIQ2013_C5
       - file: ec/IIQ2013_C7
       - file: ec/IIQ2013_C8
+      - file: ec/IIQ2013_C9
+      - file: ec/IIQ2013_C10
     - file: doc/documentacion
