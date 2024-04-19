@@ -381,7 +381,7 @@ document.write(`
 <h1>Ejercicio 1: Fluidos compresibles en tuberías<a class="headerlink" href="#ejercicio-1-fluidos-compresibles-en-tuberias" title="Permalink to this heading">#</a></h1>
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Usted cuenta con una tubería de acero galvanizado <span class="math notranslate nohighlight">\((\varepsilon = 0.15~mm)\)</span> horizontal de <span class="math notranslate nohighlight">\(70~\text{mm}\)</span> diámetro y <span class="math notranslate nohighlight">\(1~\text{km}\)</span> de largo, la cual desea utilizar para transportar metano a <span class="math notranslate nohighlight">\(40\text{°C}\)</span> cuyo peso molecular es de <span class="math notranslate nohighlight">\(16.04~(\text{g/mol})\)</span>. El metano se encuentra inicialmente a <span class="math notranslate nohighlight">\(48~\text{MPa}\)</span>. Asuma que no hay trabajo de eje en el sistema y que el metano se comporta como un gas ideal. Usted desconoce el tipo de flujo del sistema (adiabático, isotérmico o politrópico), no obstante, tiene la relación para gases de Van der Waals:</p>
+<p>Usted cuenta con una tubería de acero galvanizado <span class="math notranslate nohighlight">\((\varepsilon = 0.15~mm)\)</span> horizontal de <span class="math notranslate nohighlight">\(70~\text{mm}\)</span> diámetro y <span class="math notranslate nohighlight">\(1~\text{km}\)</span> de largo, la cual desea utilizar para transportar metano a <span class="math notranslate nohighlight">\(40\text{°C}\)</span> cuyo peso molecular es de <span class="math notranslate nohighlight">\(16.04~(\text{g/mol})\)</span>. El metano se encuentra inicialmente a <span class="math notranslate nohighlight">\(48~\text{MPa}\)</span>. Asuma que no hay trabajo de eje en el sistema y que el metano se comporta como un gas ideal. Usted desconoce el tipo de flujo del sistema (adiabático, isotérmico o politrópico), no obstante, tiene la siquiente relación para gases:</p>
 <div class="math notranslate nohighlight">
 \[
 pv + \psi p^2 = cte
@@ -392,9 +392,18 @@ pv + \psi p^2 = cte
 <li><p>La expresión del balance de energía.</p></li>
 <li><p>El flujo másico del sistema <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
 </ol>
+<p><a class="reference internal" href="../c4/e1_4_1.html#part1-cap4-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
 </section>
 <section id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part1-cap5-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paquetes utilizados</span>
@@ -432,15 +441,19 @@ v\cdot dp + V\cdot dV = -\left(\left(du + p\cdot dv\right) -  \frac{dQ}{dm}\righ
 \[
 \int_{p_1}^{p_2}\frac{dp}{v}
 \]</div>
-<p>Ya que en el enunciado nos dicen que <span class="math notranslate nohighlight">\(pv +v^2 =cte\)</span>. Entonces podemos despejar <span class="math notranslate nohighlight">\(v\)</span> en función de <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p>Ya que en el enunciado nos dicen que <span class="math notranslate nohighlight">\(pv +\psi p^2 =cte\)</span>. Entonces podemos despejar <span class="math notranslate nohighlight">\(v\)</span> en función de <span class="math notranslate nohighlight">\(p\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
-pv+\psi p^2 = p_1v_1+\psi p_1^2 \hspace{1.5cm} \Rightarrow \hspace{1.5cm} v = \frac{p_1v_1 + \psi p_1^2 - \psi p^2}{p} \hspace{1.5cm} \Rightarrow \hspace{1.5cm} \frac{1}{v} = \frac{p}{p_1v_1 + \psi p_1^2 - \psi p^2}
+pv+\psi p^2 = p_1v_1+\psi p_1^2 ~ \Rightarrow ~ v = \frac{p_1v_1 + \psi p_1^2 - \psi p^2}{p} ~ \Rightarrow ~ \frac{1}{v} = \frac{p}{p_1v_1 + \psi p_1^2 - \psi p^2}
 \]</div>
 <p>Luego</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{p_1}^{p_2} \frac{p}{p_1v_1 + \psi p_1^2 - \psi p^2} dp = -\frac{1}{2\psi}\left.\left[\ln\left(p_1v_1+\psi p_1^2-\psi p^2\right)\right]\right|_{p_1}^{p_2} = -\frac{1}{2\psi}\left[\ln\left(\psi p_1^2+p_1v_1-\psi p_2^2\right) - \ln\left(p_1v_1\right)\right] = -\frac{1}{2\psi}\left[\ln\left(\frac{p_1v_1+\psi(p_1^2 - p_2^2)}{p_1v_1}\right)\right]
+\int_{p_1}^{p_2} \frac{p}{p_1v_1 + \psi p_1^2 - \psi p^2} dp = -\frac{1}{2\psi}\left.\left[\ln\left(p_1v_1+\psi p_1^2-\psi p^2\right)\right]\right|_{p_1}^{p_2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= -\frac{1}{2\psi}\left[\ln\left(\psi p_1^2+p_1v_1-\psi p_2^2\right) - \ln\left(p_1v_1\right)\right] = -\frac{1}{2\psi}\left[\ln\left(\frac{p_1v_1+\psi(p_1^2 - p_2^2)}{p_1v_1}\right)\right]
 \]</div>
 <p>Luego, reemplazamos el término <span class="math notranslate nohighlight">\(\ln(v_2/v_1)\)</span> utilizando la expresión para <span class="math notranslate nohighlight">\(v\)</span> encontrada anteriormente.</p>
 <div class="math notranslate nohighlight">
