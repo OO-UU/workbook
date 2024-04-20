@@ -381,12 +381,12 @@ document.write(`
 <h1>Ejercicio 1: Fluidos compresibles en tuberías<a class="headerlink" href="#ejercicio-1-fluidos-compresibles-en-tuberias" title="Permalink to this heading">#</a></h1>
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Usted cuenta con una tubería de acero galvanizado <span class="math notranslate nohighlight">\((\varepsilon = 0.15~mm)\)</span> horizontal de <span class="math notranslate nohighlight">\(70~\text{mm}\)</span> diámetro y <span class="math notranslate nohighlight">\(1~\text{km}\)</span> de largo, la cual desea utilizar para transportar metano a <span class="math notranslate nohighlight">\(40\text{°C}\)</span> cuyo peso molecular es de <span class="math notranslate nohighlight">\(16.04~(\text{g/mol})\)</span>. El metano se encuentra inicialmente a <span class="math notranslate nohighlight">\(48~\text{MPa}\)</span>. Asuma que no hay trabajo de eje en el sistema y que el metano se comporta como un gas ideal. Usted desconoce el tipo de flujo del sistema (adiabático, isotérmico o politrópico), no obstante, tiene la siquiente relación para gases:</p>
+<p>Usted cuenta con una tubería de acero galvanizado <span class="math notranslate nohighlight">\((\varepsilon = 0.15~mm)\)</span> horizontal de <span class="math notranslate nohighlight">\(70~\text{mm}\)</span> diámetro y <span class="math notranslate nohighlight">\(1~\text{km}\)</span> de largo, la cual desea utilizar para transportar metano a <span class="math notranslate nohighlight">\(40\text{°C}\)</span> cuyo peso molecular es de <span class="math notranslate nohighlight">\(16.04~(\text{g/mol})\)</span>. El metano se encuentra inicialmente a <span class="math notranslate nohighlight">\(48~\text{MPa}\)</span>. Asuma que no hay trabajo de eje en el sistema y que el metano se comporta como un gas ideal. Usted desconoce el tipo de flujo del sistema (adiabático, isotérmico o isoentrópico), no obstante, tiene la siguiente relación para gases:</p>
 <div class="math notranslate nohighlight">
 \[
 pv + \psi p^2 = cte
 \]</div>
-<p>Usted sabe que la presión a la salida del sistema es de <span class="math notranslate nohighlight">\(5~\text{MPa}\)</span>. Con <span class="math notranslate nohighlight">\(\psi = 4\times10^{-4}~(\text{m}^3/\text{mol}\cdot\text{Pa})\)</span>.</p>
+<p>Usted sabe que la presión a la salida del sistema es de <span class="math notranslate nohighlight">\(5~\text{MPa}\)</span>. Con <span class="math notranslate nohighlight">\(\psi = 4\times10^{-4}~(\text{m}^3/\text{kg}\cdot\text{Pa})\)</span>.</p>
 <p>Encuentre lo siguiente:</p>
 <ol class="arabic simple">
 <li><p>La expresión del balance de energía.</p></li>
@@ -486,7 +486,7 @@ k_3  = 2f\frac{L}{D_{eq}}
 \[
 -k_1 + \left(\frac{G}{A}\right)^2(k_2+k_3) = 0 \hspace{1.5cm}\Rightarrow\hspace{1.5cm} \left(\frac{G}{A}\right)^2 = \frac{k_1}{k_2+k_3}
 \]</div>
-<p>Para <span class="math notranslate nohighlight">\(k_1\)</span> y <span class="math notranslate nohighlight">\(k_2\)</span>, encontramos el volumen molar <span class="math notranslate nohighlight">\(v_1\)</span>.</p>
+<p>Para <span class="math notranslate nohighlight">\(k_1\)</span> y <span class="math notranslate nohighlight">\(k_2\)</span>, encontramos el volumen másico <span class="math notranslate nohighlight">\(v_1\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 v_1 = \frac{RT}{M_Wp_1}
@@ -498,7 +498,7 @@ R = 8.314 #J/mol$\cdot$K
 M_W = 0.01604 #kg/mol
 T = 313.15 #K
 p_1 = 48e6 #Pa
-v_1 = (R*T)/(M_W*p_1) #m$^3$/mol
+v_1 = (R*T)/(M_W*p_1) #m$^3$/kg
 </pre></div>
 </div>
 </div>
@@ -514,7 +514,7 @@ T &amp;= 313.150 \; \;\textrm{(K)}
 \\[10pt]
 p_{1} &amp;= 48000000.000 \; \;\textrm{(Pa)}
 \\[10pt]
-v_{1} &amp;= \frac{ R \cdot T }{ M_{W} \cdot p_{1} } \\&amp;= \frac{ 8.314 \cdot 313.150 }{ 0.016 \cdot 48000000.000 } \\&amp;= 0.003 \; \;\textrm{(m$^3$/mol)}\\[10pt]
+v_{1} &amp;= \frac{ R \cdot T }{ M_{W} \cdot p_{1} } \\&amp;= \frac{ 8.314 \cdot 313.150 }{ 0.016 \cdot 48000000.000 } \\&amp;= 0.003 \; \;\textrm{(m$^3$/kg)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
