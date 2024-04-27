@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>IIQ2013 - Clase 10 &#8212; Libro OOUU-1</title>
+    <title>IIQ2013 - Clase 11 &#8212; Libro OOUU-1</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ec/IIQ2013_C10';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ec/IIQ2013_C11';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="IIQ2013 - Clase 11" href="IIQ2013_C11.html" />
-    <link rel="prev" title="IIQ2013 - Clase 9" href="IIQ2013_C9.html" />
+    <link rel="next" title="IIQ2013 - Clase 12" href="IIQ2013_C12.html" />
+    <link rel="prev" title="IIQ2013 - Clase 10" href="IIQ2013_C10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -208,8 +208,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C7.html">IIQ2013 - Clase 7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C8.html">IIQ2013 - Clase 8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C9.html">IIQ2013 - Clase 9</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">IIQ2013 - Clase 10</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IIQ2013_C11.html">IIQ2013 - Clase 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IIQ2013_C10.html">IIQ2013 - Clase 10</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">IIQ2013 - Clase 11</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C12.html">IIQ2013 - Clase 12</a></li>
 </ul>
 </li>
@@ -268,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ec/IIQ2013_C10.ipynb" target="_blank"
+      <li><a href="../_sources/ec/IIQ2013_C11.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>IIQ2013 - Clase 10</h1>
+    <h1>IIQ2013 - Clase 11</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,44 +379,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="iiq2013-clase-10">
-<h1>IIQ2013 - Clase 10<a class="headerlink" href="#iiq2013-clase-10" title="Permalink to this heading">#</a></h1>
-<p>Se bombea hidrógeno <span class="math notranslate nohighlight">\(\left(\mathrm{H}_2\right)\)</span> desde un depósito a <span class="math notranslate nohighlight">\(\mathrm{p}_1=2.6 \mathrm{~MPa}\)</span>, a través una cañería horizontal de acero de <span class="math notranslate nohighlight">\(D=\)</span> <span class="math notranslate nohighlight">\(50 \mathrm{~mm}\)</span> de diámetro y <span class="math notranslate nohighlight">\(L=500 \mathrm{~m}\)</span> de largo, y cuya rugosidad relativa es <span class="math notranslate nohighlight">\(\varepsilon / \mathrm{D}=0.001\)</span>. Interesa conocer el flujo másico del <span class="math notranslate nohighlight">\(\mathrm{H}_2\)</span> si las condiciones del flujo son isotérmicas (la temperatura del gas es <span class="math notranslate nohighlight">\(T=293 \mathrm{~K}\)</span> ) y la presión de descarga es <span class="math notranslate nohighlight">\(\mathrm{p}_2=2 \mathrm{~MPa}\)</span> a la salida de la cañería.</p>
-<p>En primer lugar se deben cargar las librerias que vamos a utilizar</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="iiq2013-clase-11">
+<h1>IIQ2013 - Clase 11<a class="headerlink" href="#iiq2013-clase-11" title="Permalink to this heading">#</a></h1>
+<p>Considere aire (<span class="math notranslate nohighlight">\(\gamma = 1.4\)</span>) procedente de un depósito o estanque que fluye a través de una tubería recta de gran longitud y provista con aislación térmica (no ocurre transferencia de calor con los alrededores). La presión y temperatura en el estanque son <span class="math notranslate nohighlight">\(p_1 = 20~\text{atm}\)</span> y <span class="math notranslate nohighlight">\(T_1 = 555.6~\text{K}\)</span>, respectivamente (<span class="math notranslate nohighlight">\( \rho = 12.72 \text{kg/m}^3\)</span>). Además, se sabe que el número de Mach a la entrada de la tubería es <span class="math notranslate nohighlight">\(Ma_1 = 0.05\)</span>.</p>
+<p>Librerias a utilizar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span>
-<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
 <span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
-<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">log</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="problema-1">
 <h2>Problema 1<a class="headerlink" href="#problema-1" title="Permalink to this heading">#</a></h2>
-<p>La densidad del gas <span class="math notranslate nohighlight">\(\left(\rho_1=1 / v_1\right)\)</span> en el depósito es la siguiente:</p>
-<p>(a) <span class="math notranslate nohighlight">\(\rho_1&gt;10 \mathrm{~kg} / \mathrm{m}^3\)</span></p>
-<p>(b) <span class="math notranslate nohighlight">\(1&lt;\rho_1 \leq 10 \mathrm{~kg} / \mathrm{m}^3\)</span></p>
-<p>(c) <span class="math notranslate nohighlight">\(0.1&lt;\rho_1 \leq 1.0 \mathrm{~kg} / \mathrm{m}^3\)</span></p>
-<p>(d) <span class="math notranslate nohighlight">\(\rho_1 \leq 0.1 \mathrm{~kg} / \mathrm{m}^3\)</span></p>
+<p>La velocidad a la entrada de la tubería (<span class="math notranslate nohighlight">\(V_1\)</span>) es aproximadamente la siguiente:</p>
+<p>(a) <span class="math notranslate nohighlight">\(V_1\)</span> &lt; 1 m/s <br />
+(b) 1 m/s &lt; <span class="math notranslate nohighlight">\(V_1\)</span> ≤ 10 m/s <br />
+(c) 10 m/s &lt; <span class="math notranslate nohighlight">\(V_1\)</span> ≤ 100 m/s <br />
+(d) <span class="math notranslate nohighlight">\(V_1\)</span> &gt; 100 m/s</p>
 </section>
 <section id="solucion">
 <h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
-<p>Ocupando la ecuación del gas ideal:</p>
+<p>Sabemos que:</p>
 <div class="math notranslate nohighlight">
 \[
-P v=\frac{R T}{M_W} \Rightarrow \frac{1}{v}=\rho=\frac{p \cdot M_W}{R T}
+Ma_1 = \frac{V_1}{c_1} \Rightarrow V_1 = Ma_1\sqrt{\frac{\gamma RT_1}{MW}}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-p_1 = 2.6E6 # Pa
-M_w = 0.002 # kg/mol
-R = 8.314 # J/molK
-T = 293 #K
-rho_1 = p_1*M_w/(R*T) # kg/m$^3$
+Ma_1 = 0.05
+gamma = 1.4
+R = 8.314 #J/mol$\cdot$K
+T_1 = 555.6 #K
+MW = 0.028 #kg/mol
+V_1 = Ma_1*sqrt((gamma*R*T_1)/MW) #m/s
 </pre></div>
 </div>
 </div>
@@ -424,99 +423,49 @@ rho_1 = p_1*M_w/(R*T) # kg/m$^3$
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-p_{1} &amp;= 2600000.000 \; \;\textrm{(Pa)}
+\mathrm{Ma}_{1} &amp;= 0.050 \; 
 \\[10pt]
-M_{w} &amp;= 0.002 \; \;\textrm{(kg/mol)}
+\gamma &amp;= 1.400 \; 
 \\[10pt]
-R &amp;= 8.314 \; \;\textrm{(J/molK)}
+R &amp;= 8.314 \; \;\textrm{(J/mol$\cdot$K)}
 \\[10pt]
-T &amp;= 293 \; \;\textrm{(K)}
+T_{1} &amp;= 555.600 \; \;\textrm{(K)}
 \\[10pt]
-\rho_{1} &amp;= p_{1} \cdot \frac{ M_{w} }{ R \cdot T } \\&amp;= 2600000.000 \cdot \frac{ 0.002 }{ 8.314 \cdot 293 } \\&amp;= 2.135 \; \;\textrm{(kg/m$^3$)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-<p>La alternativa correcta es la <strong>b</strong>.</p>
-</section>
-<section id="problema-2">
-<h2>Problema 2<a class="headerlink" href="#problema-2" title="Permalink to this heading">#</a></h2>
-<p>Un valor aproximado para el valor del factor de fricción de Fanning <span class="math notranslate nohighlight">\((f)\)</span> en la tubería es el siguiente:</p>
-<p>(a) <span class="math notranslate nohighlight">\(f&gt;0.0065\)</span></p>
-<p>(b) <span class="math notranslate nohighlight">\(0.0055&lt;f \leq 0.0065\)</span></p>
-<p>(c) <span class="math notranslate nohighlight">\(0.0045&lt;f \leq 0.0055\)</span></p>
-<p>(d) <span class="math notranslate nohighlight">\(f \leq 0.0045\)</span></p>
-</section>
-<section id="id1">
-<h2>Solución<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>Se utilizará la ecuación de Nevers asumiendo que el Número de Reynolds tiene a <span class="math notranslate nohighlight">\(\infty\)</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-eps_d = 0.001
-Re = math.inf
-f = 0.001375 * (1 + (2e4 * eps_d + 1e6/Re)**(1/3))
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{eps}_{d} &amp;= 0.001 \; 
+\mathrm{MW} &amp;= 0.028 \; \;\textrm{(kg/mol)}
 \\[10pt]
-\mathrm{Re} &amp;= inf \; 
-\\[10pt]
-f &amp;= 0.001375 \cdot \left( 1 + \left( 2 \times 10 ^ {4} \cdot \mathrm{eps}_{d} + \frac{ 1 \times 10 ^ {6} }{ \mathrm{Re} } \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \right) \\&amp;= 0.001375 \cdot \left( 1 + \left( 2 \times 10 ^ {4} \cdot 0.001 + \frac{ 1 \times 10 ^ {6} }{ inf } \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \right) \\&amp;= 0.005  \\[10pt]
+V_{1} &amp;= \mathrm{Ma}_{1} \cdot \sqrt { \frac{ \gamma \cdot R \cdot T_{1} }{ \mathrm{MW} } } \\&amp;= 0.050 \cdot \sqrt { \frac{ 1.400 \cdot 8.314 \cdot 555.600 }{ 0.028 } } \\&amp;= 24.029 \; \;\textrm{(m/s)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
 <p>La alternativa correcta es la <strong>c</strong>.</p>
 </section>
-<section id="problema-3">
-<h2>Problema 3<a class="headerlink" href="#problema-3" title="Permalink to this heading">#</a></h2>
-<p>Un valor aproximado para el flujo másico del gas por unidad de área transversal de la tubería (G/A) es el siguiente:</p>
-<p>(a)  <span class="math notranslate nohighlight">\(G / A&gt;50 \mathrm{~kg} \mathrm{~s}^{-1} \mathrm{~m}^{-2}\)</span></p>
-<p>(b)  <span class="math notranslate nohighlight">\(5&lt;\mathrm{G} / \mathrm{A} \leq 50 \mathrm{~kg} \mathrm{~s}^{-1} \mathrm{~m}^{-2}\)</span></p>
-<p>(c)  <span class="math notranslate nohighlight">\(0.5&lt;\mathrm{G} / \mathrm{A} \leq 5 \mathrm{~kg} \mathrm{~s}^{-1} \mathrm{~m}^{-2}\)</span></p>
-<p>(d)  <span class="math notranslate nohighlight">\(G / A \leq 0.5 \mathrm{~kg} \mathrm{~s}^{-1} \mathrm{~m}^{-2}\)</span></p>
+<section id="problema-2">
+<h2>Problema 2<a class="headerlink" href="#problema-2" title="Permalink to this heading">#</a></h2>
+<p>¿Cuáles son los valores de la temperatura (<span class="math notranslate nohighlight">\(T^*\)</span>) y presión (<span class="math notranslate nohighlight">\(P^*\)</span>) al momento de alcanzarse la velocidad sónica en la tubería?</p>
+<p>(a) <span class="math notranslate nohighlight">\(T^* \approx\)</span> 350 K y <span class="math notranslate nohighlight">\(p^* \approx\)</span> 0,5 atm <br />
+(b) <span class="math notranslate nohighlight">\(T^* \approx\)</span> 450 K y <span class="math notranslate nohighlight">\(p^* \approx\)</span> 1 atm <br />
+(c) <span class="math notranslate nohighlight">\(T^* \approx\)</span> 550 K y <span class="math notranslate nohighlight">\(p^* \approx\)</span> 1,5 atm <br />
+(d) <span class="math notranslate nohighlight">\(T^* \approx\)</span> 650 K y <span class="math notranslate nohighlight">\(p^* \approx\)</span> 2 atm</p>
 </section>
-<section id="id2">
-<h2>Solución<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>Para flujo isotérmico</p>
+<section id="id1">
+<h2>Solución<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Ya que nos encontramos frente a un flujo adiabático:</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{P_1}^{P_2} \frac{d p}{v} \hspace{2cm} \rightarrow \hspace{2cm} \frac{p_1}{2v_1}\left[\left(\frac{p_2}{p_1}\right)^2-1\right]
+\frac{T}{T^*} = \frac{\gamma+1}{2+(\gamma-1)Ma^2}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\ln\left(\frac{v_2}{v_1}\right) \hspace{2cm} \rightarrow \hspace{2cm} -\ln\left(\frac{p_2}{p_1}\right)
-\]</div>
-<p>De tal manera que el balance de energía queda representado de la siguiente manera.</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{p_1}{2v_1}\left[\left(\frac{p_2}{p_1}\right)^2-1\right] + \left(\frac{G}{A}\right)^2\left(2f\frac{L}{D_{eq}}-\ln\left(\frac{p_2}{p_1}\right)\right) = 0
-\]</div>
-<p>Para simplificar cálculos</p>
-<div class="math notranslate nohighlight">
-\[
-k_1 = \frac{p_1}{2v_1}\left[\left(\frac{p_2}{p_1}\right)^2-1\right]
-\]</div>
-<p>Y también</p>
-<div class="math notranslate nohighlight">
-\[
-k_2 = \left(2f\frac{L}{D_{eq}}-\ln\left(\frac{p_2}{p_1}\right)\right)
+\frac{p}{p^*} = \frac{1}{Ma}\sqrt{\frac{\gamma+1}{2+(\gamma-1)Ma^2}}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-p_2 = 2e6 #Pa
-L = 500 #m
-D = 0.05 #m
-k_1 = (p_1/(2/rho_1))*((p_2/p_1)**2-1)
-k_2 = ((2*f*L/D)-np.log(p_2/p_1))
-GA = sqrt(-k_1/k_2) #kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$
+p_1 = 20 #atm
+rho = 12.72 #kg/m$^3$
+T = T_1 * ((gamma+1)/(2+(gamma-1)*Ma_1**2))**-1 #K
+P = p_1 * (1/Ma_1 * sqrt((gamma+1)/(2+(gamma-1)*Ma_1**2)))**-1 #atm
 </pre></div>
 </div>
 </div>
@@ -524,22 +473,116 @@ GA = sqrt(-k_1/k_2) #kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-p_{2} &amp;= 2000000.000 \; \;\textrm{(Pa)}
+p_{1} &amp;= 20 \; \;\textrm{(atm)}
 \\[10pt]
-L &amp;= 500 \; \;\textrm{(m)}
+\rho &amp;= 12.720 \; \;\textrm{(kg/m$^3$)}
 \\[10pt]
-D &amp;= 0.050 \; \;\textrm{(m)}
+T &amp;= T_{1} \cdot \left( \frac{ \gamma + 1 }{ 2 + \left( \gamma - 1 \right) \cdot \left( \mathrm{Ma}_{1} \right) ^{ 2 } } \right) ^{ -1 } \\&amp;= 555.600 \cdot \left( \frac{ 1.400 + 1 }{ 2 + \left( 1.400 - 1 \right) \cdot \left( 0.050 \right) ^{ 2 } } \right) ^{ -1 } \\&amp;= 463.232 \; \;\textrm{(K)}\\[10pt]
 \\[10pt]
-k_{1} &amp;= \left( \frac{ p_{1} }{ \frac{ 2 }{ \rho_{1} } } \right) \cdot \left( \left( \frac{ p_{2} }{ p_{1} } \right) ^{ 2 } - 1 \right) \\&amp;= \left( \frac{ 2600000.000 }{ \frac{ 2 }{ 2.135 } } \right) \cdot \left( \left( \frac{ 2000000.000 }{ 2600000.000 } \right) ^{ 2 } - 1 \right) \\&amp;= -1133003.996  \\[10pt]
-\\[10pt]
-k_{2} &amp;= \left( \left( 2 \cdot f \cdot \frac{ L }{ D } \right) - \mathrm{np.log} { \left( \frac{ p_{2} }{ p_{1} } \right) } \right) \\&amp;= \left( \left( 2 \cdot 0.005 \cdot \frac{ 500 }{ 0.050 } \right) - np.log { \left( \frac{ 2000000.000 }{ 2600000.000 } \right) } \right) \\&amp;= 102.409  \\[10pt]
-\\[10pt]
-\mathrm{GA} &amp;= \sqrt { \frac{ \left( - k_{1} \right) }{ k_{2} } } \\&amp;= \sqrt { \frac{ \left( - -1133003.996 \right) }{ 102.409 } } \\&amp;= 105.183 \; \;\textrm{(kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$)}\\[10pt]
+P &amp;= p_{1} \cdot \left( \frac{ 1 }{ \mathrm{Ma}_{1} } \cdot \sqrt { \frac{ \gamma + 1 }{ 2 + \left( \gamma - 1 \right) \cdot \left( \mathrm{Ma}_{1} \right) ^{ 2 } } } \right) ^{ -1 } \\&amp;= 20 \cdot \left( \frac{ 1 }{ 0.050 } \cdot \sqrt { \frac{ 1.400 + 1 }{ 2 + \left( 1.400 - 1 \right) \cdot \left( 0.050 \right) ^{ 2 } } } \right) ^{ -1 } \\&amp;= 0.913 \; \;\textrm{(atm)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
-<p>La alternativa correcta es la <strong>a</strong>.</p>
+<p>La anternativa más cercana a nuestros resultados es la <strong>b</strong>.</p>
+</section>
+<section id="problema-3">
+<h2>Problema 3<a class="headerlink" href="#problema-3" title="Permalink to this heading">#</a></h2>
+<p>Dado un valor <span class="math notranslate nohighlight">\(4 f L^*/D = 400\)</span>, el flux de aire (<span class="math notranslate nohighlight">\(G/A\)</span>) a la entrada del conducto es aproximadamente la siguiente:</p>
+<p>(a) <span class="math notranslate nohighlight">\(G/A\)</span> &lt; 280 kg/s<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^2\)</span> <br />
+(b) 280 &lt; <span class="math notranslate nohighlight">\(G/A\)</span> ≤ 380 kg/s<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^2\)</span> <br />
+(c) 380 &lt; <span class="math notranslate nohighlight">\(G/A\)</span> ≤ 480 kg/s<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^2\)</span> <br />
+(d) <span class="math notranslate nohighlight">\(G/A\)</span> ≤ 480 kg/s<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^2\)</span></p>
+</section>
+<section id="id2">
+<h2>Solución<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Notamos que la razón de presiones es alta. Comparando con las condiciones de flujo máximo, se itera <span class="math notranslate nohighlight">\(Ma\)</span> para encontrar las condiciones en que se cumpla:</p>
+<div class="math notranslate nohighlight">
+\[
+400 = \frac{1-Ma^2}{\gamma Ma^2} + \left(\frac{\gamma+1}{2\gamma}\right)\ln\left(\frac{2(\gamma+1)Ma^2}{2+(\gamma-1)Ma^2}\right)
+\]</div>
+<p>Como estimación inicial, utilizamos la condición del enunciado <span class="math notranslate nohighlight">\(Ma = 0.05\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Ma = 0.05
+fLD_estimado = (1-Ma**2)/(gamma*Ma**2) + ((gamma+1)/(2*gamma))*log((2*(gamma+1)*Ma**2)/(2+(gamma-1)*Ma**2))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Ma} &amp;= 0.050 \; 
+\\[10pt]
+\mathrm{fLD}_{estimado} &amp;= \frac{ 1 - \left( \mathrm{Ma} \right) ^{ 2 } }{ \gamma \cdot \left( \mathrm{Ma} \right) ^{ 2 } } + \left( \frac{ \gamma + 1 }{ 2 \cdot \gamma } \right) \cdot \ln \left( \frac{ 2 \cdot \left( \gamma + 1 \right) \cdot \left( \mathrm{Ma} \right) ^{ 2 } }{ 2 + \left( \gamma - 1 \right) \cdot \left( \mathrm{Ma} \right) ^{ 2 } } \right) \\&amp;= \frac{ 1 - \left( 0.050 \right) ^{ 2 } }{ 1.400 \cdot \left( 0.050 \right) ^{ 2 } } + \left( \frac{ 1.400 + 1 }{ 2 \cdot 1.400 } \right) \cdot \ln \left( \frac{ 2 \cdot \left( 1.400 + 1 \right) \cdot \left( 0.050 \right) ^{ 2 } }{ 2 + \left( 1.400 - 1 \right) \cdot \left( 0.050 \right) ^{ 2 } } \right) \\&amp;= 280.614  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Segunda estimación <span class="math notranslate nohighlight">\(Ma = 0.04\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Ma = 0.04
+fLD_estimado = (1-Ma**2)/(gamma*Ma**2) + ((gamma+1)/(2*gamma))*log((2*(gamma+1)*Ma**2)/(2+(gamma-1)*Ma**2))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Ma} &amp;= 0.040 \; 
+\\[10pt]
+\mathrm{fLD}_{estimado} &amp;= \frac{ 1 - \left( \mathrm{Ma} \right) ^{ 2 } }{ \gamma \cdot \left( \mathrm{Ma} \right) ^{ 2 } } + \left( \frac{ \gamma + 1 }{ 2 \cdot \gamma } \right) \cdot \ln \left( \frac{ 2 \cdot \left( \gamma + 1 \right) \cdot \left( \mathrm{Ma} \right) ^{ 2 } }{ 2 + \left( \gamma - 1 \right) \cdot \left( \mathrm{Ma} \right) ^{ 2 } } \right) \\&amp;= \frac{ 1 - \left( 0.040 \right) ^{ 2 } }{ 1.400 \cdot \left( 0.040 \right) ^{ 2 } } + \left( \frac{ 1.400 + 1 }{ 2 \cdot 1.400 } \right) \cdot \ln \left( \frac{ 2 \cdot \left( 1.400 + 1 \right) \cdot \left( 0.040 \right) ^{ 2 } }{ 2 + \left( 1.400 - 1 \right) \cdot \left( 0.040 \right) ^{ 2 } } \right) \\&amp;= 440.946  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Tercera estimación <span class="math notranslate nohighlight">\(Ma = 0.042\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Ma = 0.042
+fLD_estimado = (1-Ma**2)/(gamma*Ma**2) + ((gamma+1)/(2*gamma))*log((2*(gamma+1)*Ma**2)/(2+(gamma-1)*Ma**2))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Ma} &amp;= 0.042 \; 
+\\[10pt]
+\mathrm{fLD}_{estimado} &amp;= \frac{ 1 - \left( \mathrm{Ma} \right) ^{ 2 } }{ \gamma \cdot \left( \mathrm{Ma} \right) ^{ 2 } } + \left( \frac{ \gamma + 1 }{ 2 \cdot \gamma } \right) \cdot \ln \left( \frac{ 2 \cdot \left( \gamma + 1 \right) \cdot \left( \mathrm{Ma} \right) ^{ 2 } }{ 2 + \left( \gamma - 1 \right) \cdot \left( \mathrm{Ma} \right) ^{ 2 } } \right) \\&amp;= \frac{ 1 - \left( 0.042 \right) ^{ 2 } }{ 1.400 \cdot \left( 0.042 \right) ^{ 2 } } + \left( \frac{ 1.400 + 1 }{ 2 \cdot 1.400 } \right) \cdot \ln \left( \frac{ 2 \cdot \left( 1.400 + 1 \right) \cdot \left( 0.042 \right) ^{ 2 } }{ 2 + \left( 1.400 - 1 \right) \cdot \left( 0.042 \right) ^{ 2 } } \right) \\&amp;= 399.525  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Estamos lo suficientemente cerca del resultado correcto, entonces calculamos.</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{G'}{A}\right)_{max} = \rho_1c_1Ma
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+GA_max = rho*sqrt((gamma*R*T_1)/MW)*Ma #kg/m$^2\cdot$s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{GA}_{max} &amp;= \rho \cdot \sqrt { \frac{ \gamma \cdot R \cdot T_{1} }{ \mathrm{MW} } } \cdot \mathrm{Ma} \\&amp;= 12.720 \cdot \sqrt { \frac{ 1.400 \cdot 8.314 \cdot 555.600 }{ 0.028 } } \cdot 0.042 \\&amp;= 256.748 \; \;\textrm{(kg/m$^2\cdot$s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Por lo tanto la alternativa correcta es la <strong>a</strong>.</p>
 </section>
 </section>
 
@@ -574,20 +617,20 @@ k_{2} &amp;= \left( \left( 2 \cdot f \cdot \frac{ L }{ D } \right) - \mathrm{np.
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="IIQ2013_C9.html"
+       href="IIQ2013_C10.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">IIQ2013 - Clase 9</p>
+        <p class="prev-next-title">IIQ2013 - Clase 10</p>
       </div>
     </a>
     <a class="right-next"
-       href="IIQ2013_C11.html"
+       href="IIQ2013_C12.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">IIQ2013 - Clase 11</p>
+        <p class="prev-next-title">IIQ2013 - Clase 12</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
