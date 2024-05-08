@@ -415,18 +415,21 @@ document.write(`
 </div>
 <section id="inciso-1">
 <h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<p>En primer lugar, se calcula el número de Mach a la entrada de la tubería (<span class="math notranslate nohighlight">\(Ma_1\)</span>).<br />
-$<span class="math notranslate nohighlight">\(
+<p>En primer lugar, se calcula el número de Mach a la entrada de la tubería (<span class="math notranslate nohighlight">\(Ma_1\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{G}{A} = Ma_1\frac{c}{v} = Ma_1 c\rho
-\)</span>$</p>
-<p>Se puede asumir que el argón es un gas ideal, luego su densidad será obtenida mediante la ecuación de gases ideales.<br />
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Se puede asumir que el argón es un gas ideal, luego su densidad será obtenida mediante la ecuación de gases ideales.</p>
+<div class="math notranslate nohighlight">
+\[
 pv = \frac{RT}{\text{PM}_\text{Ar}} \Rightarrow \rho = \frac{p\text{PM}_\text{Ar}}{RT}
-\)</span>$</p>
-<p>Cuya velocidad del sonido será:<br />
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Cuya velocidad del sonido será:</p>
+<div class="math notranslate nohighlight">
+\[
 c = \sqrt{\frac{\gamma RT}{\text{PM}_\text{Ar}}}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> sci_not params 3
@@ -481,10 +484,11 @@ c &amp;= \sqrt { \frac{ \gamma \cdot R \cdot T_{1} }{ \mathrm{PM}_{Ar} } } \\&am
 \end{split}\]</div>
 </div>
 </div>
-<p>Con los resultados obtenidos, se puede despejar el número de Mach a la entrada de la tubería.<br />
-$<span class="math notranslate nohighlight">\(
+<p>Con los resultados obtenidos, se puede despejar el número de Mach a la entrada de la tubería.</p>
+<div class="math notranslate nohighlight">
+\[
 Ma_1 = \frac{G}{A}\frac{1}{c\rho}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
@@ -504,10 +508,11 @@ A &amp;= \pi \cdot \left( \frac{ D }{ 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \l
 \end{split}\]</div>
 </div>
 </div>
-<p>A continuación, podemos calcular el factor de fricción utilizando la ecuación de <em>Colebrook-White</em> eliminando los términos que dependen del número de Reynolds.<br />
-$<span class="math notranslate nohighlight">\(
+<p>A continuación, podemos calcular el factor de fricción utilizando la ecuación de <em>Colebrook-White</em> eliminando los términos que dependen del número de Reynolds.</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{1}{\sqrt{f}} = -1.737\ln{\left(0.269\frac{\varepsilon}{D}\right)}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long sci_not
@@ -524,10 +529,11 @@ f &amp;= \left( \frac{ 1 }{ \left( - 1.737 \right) \cdot \ln \left( 0.269 \cdot 
 \end{split}\]</div>
 </div>
 </div>
-<p>Finalmente, calculamos el largo máximo permitido.<br />
-$<span class="math notranslate nohighlight">\(
+<p>Finalmente, calculamos el largo máximo permitido.</p>
+<div class="math notranslate nohighlight">
+\[
 L = \frac{D}{4f}\left(\frac{1-Ma^2}{Ma^2}+\frac{\gamma+1}{2\gamma}\ln{\left(\frac{\left(\gamma+1\right)Ma^2}{2+\left(\gamma-1\right)Ma^2}\right)}\right)
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
@@ -548,10 +554,11 @@ L &amp;= \frac{ D }{ 4 \cdot f } \cdot \left( \frac{ 1 - \left( \mathrm{Ma}_{1} 
 </section>
 <section id="inciso-2">
 <h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
-<p>Sabemos que la razón de compresión para dos etapas:
-$<span class="math notranslate nohighlight">\(
+<p>Sabemos que la razón de compresión para dos etapas:</p>
+<div class="math notranslate nohighlight">
+\[
 r_p = \frac{P_{i1}}{P_1} = \frac{P_2}{P_{i1}} = \left(\frac{P_2}{P_1}\right)^{\frac{1}{n}}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
@@ -601,19 +608,22 @@ v_{i1} &amp;= v_{2} \cdot \left( r_{p} \right) ^{ \left( \frac{ 1 }{ \gamma } \r
 </section>
 <section id="inciso-3">
 <h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
-<p>Sabemos que el trabajo total por ciclo si se considera holgura será.<br />
-$<span class="math notranslate nohighlight">\(
+<p>Sabemos que el trabajo total por ciclo si se considera holgura será.</p>
+<div class="math notranslate nohighlight">
+\[
 -W = \frac{\gamma}{\gamma-1}P_1V_s\left(\left(\frac{P_2}{P_1}\right)^{\frac{\gamma-1}{\gamma}}-1\right)\left(1+c\left(1-\left(\frac{P_2}{P_1}\right)^{\frac{1}{\gamma}}\right)\right)
-\)</span>$</p>
+\]</div>
 <p>Para esto necesitamo el volumen de barrido, el cual podemos obtener mediante el siguiente razonamiento. El volumen de barrido nos dice qué parte del volumen total del cilindro (véase, cuando el cilindro no se encuentra contraido) sale efectivamente de la etapa. Se desea cumplir con los <span class="math notranslate nohighlight">\(3~\text{kg/s}\)</span> de flujo másico, para esto, contamos con un volumen másico inicial en el segundo ciclo (obtenido en el inciso anterior) de <span class="math notranslate nohighlight">\(v_{i1}=0.1234~\text{m}^3\text{/kg}\)</span>.<br />
-Para cumplir con los requerimientos, necesito entonces<br />
-$<span class="math notranslate nohighlight">\(
+Para cumplir con los requerimientos, necesito entonces</p>
+<div class="math notranslate nohighlight">
+\[
 \dot{v} = v_{i1}\cdot G
-\)</span><span class="math notranslate nohighlight">\(\
-Considerando que el compresor realiza 500 ciclos de compresión por minuto (ya que opera a \)</span>500~\text{RPM}<span class="math notranslate nohighlight">\(). Podemos obtener el volumen de barrido utilizando:\
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Considerando que el compresor realiza 500 ciclos de compresión por minuto (ya que opera a <span class="math notranslate nohighlight">\(500~\text{RPM}\)</span>). Podemos obtener el volumen de barrido utilizando:</p>
+<div class="math notranslate nohighlight">
+\[
 V_s = \frac{\dot{v}}{\text{RPS}}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> sci_not long
