@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Ejercicio 2: Escalamiento de estanques agitados &#8212; Libro OOUU-1</title>
+    <title>Ejercicio 2: Flujo compresible y compresores &#8212; Libro OOUU-1</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c4/e1_4_2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c5/e1_5_2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fluidos compresibles y compresores" href="../c5/compresibles.html" />
-    <link rel="prev" title="Ejercicio 1: Estanques agitados" href="e1_4_1.html" />
+    <link rel="next" title="Ejercicios clases IIQ2013" href="../../ec/intro_ejclases.html" />
+    <link rel="prev" title="Ejercicio 1: Fluidos compresibles en tuberías" href="e1_5_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,14 +187,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="agitacion-y-mezclado.html">Agitación y mezclado</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 2: Escalamiento de estanques agitados</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c4/agitacion-y-mezclado.html">Agitación y mezclado</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e1_4_2.html">Ejercicio 2: Escalamiento de estanques agitados</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c5/compresibles.html">Fluidos compresibles y compresores</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c5/e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c5/e1_5_2.html">Ejercicio 2: Flujo compresible y compresores</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="compresibles.html">Fluidos compresibles y compresores</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 2: Flujo compresible y compresores</a></li>
 </ul>
 </li>
 </ul>
@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/p1/c4/e1_4_2.ipynb" target="_blank"
+      <li><a href="../../_sources/p1/c5/e1_5_2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -353,7 +353,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejercicio 2: Escalamiento de estanques agitados</h1>
+    <h1>Ejercicio 2: Flujo compresible y compresores</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,46 +381,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-2-escalamiento-de-estanques-agitados">
-<h1>Ejercicio 2: Escalamiento de estanques agitados<a class="headerlink" href="#ejercicio-2-escalamiento-de-estanques-agitados" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-2-flujo-compresible-y-compresores">
+<h1>Ejercicio 2: Flujo compresible y compresores<a class="headerlink" href="#ejercicio-2-flujo-compresible-y-compresores" title="Permalink to this heading">#</a></h1>
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Usted trabaja en un centro de investigación de aceites para uso industrial llamado Uncle Oil®. Recientemente, su jefe le ha pedido escalar su agitador piloto a uno industrial para masificar la producción de aceite de motor (ambos estanques cilíndricos). Considere que su agitador a escala piloto funciona a <span class="math notranslate nohighlight">\(400\hspace{1mm}RPM\)</span>, y que el motor con el que cuenta el centro de investigación para escala industrial alcanza los <span class="math notranslate nohighlight">\(230\hspace{1mm}RPM\)</span>. Usted sabe que el diámetro del agitador piloto es <span class="math notranslate nohighlight">\(D_{a,1}=15\hspace{1mm}(cm)\)</span>, y que las proporciones <span class="math notranslate nohighlight">\(S_i\)</span> se mantienen constantes e iguales a <span class="math notranslate nohighlight">\(S_1=1/3\)</span> y <span class="math notranslate nohighlight">\(S_6=3/2\)</span>. El equipo de investigación reológica, le hace entrega de la figura a continuación. Determine lo siguiente:</p>
+<p>Usted cuenta con un compresor reciprocante de 2 etapas que opera a  <span class="math notranslate nohighlight">\(500~\text{RPM}\)</span>. En dicho compresor, se encuentra argón (<span class="math notranslate nohighlight">\(\text{PM}_{\text{Ar}}=39.948~\text{g/mol}\)</span> y con coeficiente adiabático <span class="math notranslate nohighlight">\(\gamma=1.2\)</span>). A la salida del compresor se encuentra una tubería conectada por la cual se trasportará el argón a otro punto. Esta tubería es de acero comercial (<span class="math notranslate nohighlight">\(\varepsilon=0.046\text{mm}\)</span>), y tiene un largo <span class="math notranslate nohighlight">\(L=5~\text{km}\)</span> con diámetro interno <span class="math notranslate nohighlight">\(D = 3~\text{in}\)</span>. Usted sabe que a la entrada de la tubería, el gas tiene una presión y temperatura de <span class="math notranslate nohighlight">\(10~\text{MPa}\)</span> y <span class="math notranslate nohighlight">\(750~\text{K}\)</span> respectivamente. Además, el flujo másico a lo largo de la tubería debe ser de <span class="math notranslate nohighlight">\(G=3~\text{kg/s}\)</span>.</p>
 <ol class="arabic simple">
-<li><p>Encuentre la temperatura a la cual deberá operar el estanque industrial para que este funcione a su máxima capacidad de revoluciones. Considerando que el estanque piloto se encontraba a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span>. Asuma que se encuentra en régimen laminar.</p></li>
-<li><p>Calcule el volumen del estanque industrial. Considere que el escalamiento es de velocidad de punta constante.</p></li>
-<li><p>Calcule la potencia que utilizará este estanque si a escala industrial se utilizaban <span class="math notranslate nohighlight">\(3kW\)</span>. <em>Hint: el número de potencia se mantendrá constante.</em></p></li>
+<li><p>Encuentre el largo máximo de la tubería para que el argón o alcance la condición de ahogamiento. ¿Es el largo de la tubería indicado para operar en las condiciones descritas? <em>Hint: recuerde que puede asumir que <span class="math notranslate nohighlight">\(Re\rightarrow\infty\)</span>.</em></p></li>
+<li><p>Si en la primera etapa el compresor se encuentra a <span class="math notranslate nohighlight">\(70~\text{kPa}\)</span>, y el compresor opera de manera isoentrópica con razón de presiones constante. Encuentre el volumen específico del argón a la entrada de la segunda etapa <span class="math notranslate nohighlight">\(v_{i1}\)</span>.</p></li>
+<li><p>Considerando una holgura en la segunda etapa de <span class="math notranslate nohighlight">\(c_2 = 0.2\)</span>, calcule el trabajo total del segundo ciclo.</p></li>
 </ol>
-<table class="table table-center">
-<colgroup>
-<col style="width: 2%" />
-<col style="width: 49%" />
-<col style="width: 49%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td></td>
-<td><figure class="align-default" id="figura-1-4-2">
-<a class="reference internal image-reference" href="../../_images/img1_4_2.png"><img alt="../../_images/img1_4_2.png" src="../../_images/img1_4_2.png" style="width: 337.8px; height: 300.8px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Viscosidad vs temperatura para aceite de motor.</span><a class="headerlink" href="#figura-1-4-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</td>
-<td><figure class="align-default" id="figura-1-4-2-2">
-<a class="reference internal image-reference" href="../../_images/img1_4_2-2.png"><img alt="../../_images/img1_4_2-2.png" src="../../_images/img1_4_2-2.png" style="width: 336.40000000000003px; height: 294.40000000000003px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Densidad vs temperatura para aceite de motor.</span><a class="headerlink" href="#figura-1-4-2-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="attention admonition">
-<p class="admonition-title">Información sobre la figura</p>
-<p>Puede hacer click en las imágenes para verlas de cerca y hacer zoom.</p>
-</div>
-<p><a class="reference internal" href="#part1-cap4-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><a class="reference internal" href="#part1-cap5-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
 <p><br/><br/>
 <br/><br/>
 <br/><br/>
@@ -431,32 +402,43 @@ document.write(`
 <br/><br/></p>
 </section>
 <section id="solucion">
-<span id="part1-cap4-ex2-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part1-cap5-ex2-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paquetes utilizados</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cargamos los paquetes que vamos a utilizar.</span>
 <span class="kn">import</span> <span class="nn">handcalcs.render</span>
 <span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">log</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="inciso-1">
 <h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<p>Del gráfico obtenemos que a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span> la viscosidad es <span class="math notranslate nohighlight">\(\mu\approx 280\hspace{1mm}(cP)\)</span>. Ya que nos encontramos en regimen laminar, tenemos que:</p>
-<div class="math notranslate nohighlight">
-\[
-\mu_1N_1^2 = \mu_2N_2^2
-\]</div>
-<p>Entonces despejando para <span class="math notranslate nohighlight">\(\mu_2\)</span>.</p>
+<p>En primer lugar, se calcula el número de Mach a la entrada de la tubería (<span class="math notranslate nohighlight">\(Ma_1\)</span>).<br />
+$<span class="math notranslate nohighlight">\(
+\frac{G}{A} = Ma_1\frac{c}{v} = Ma_1 c\rho
+\)</span>$</p>
+<p>Se puede asumir que el argón es un gas ideal, luego su densidad será obtenida mediante la ecuación de gases ideales.<br />
+$<span class="math notranslate nohighlight">\(
+pv = \frac{RT}{\text{PM}_\text{Ar}} \Rightarrow \rho = \frac{p\text{PM}_\text{Ar}}{RT}
+\)</span>$</p>
+<p>Cuya velocidad del sonido será:<br />
+$<span class="math notranslate nohighlight">\(
+c = \sqrt{\frac{\gamma RT}{\text{PM}_\text{Ar}}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-mu_1 = 280 #cP
-N_1 = 400 #RPM
-N_2 = 230 #RPM
-mu_2 = mu_1*(N_1/N_2)**2 #cP
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> sci_not params 3
+PM_Ar = 39.948e-3 #kg/mol
+P_1 = 10e6 #Pa
+T_1 = 750 #K
+gamma = 1.2
+R = 8.314 #g/mol$\cdot$K
+G = 3 #kg/s
+D = 3/39.37 #m
+L = 5e3 #m
+epsilon = 0.046/1000 #m
 </pre></div>
 </div>
 </div>
@@ -464,35 +446,119 @@ mu_2 = mu_1*(N_1/N_2)**2 #cP
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\mu_{1} &amp;= 280 \; \;\textrm{(cP)}
+\mathrm{PM}_{Ar} &amp;= 3.995 \times 10 ^ {-2} \; \;\textrm{(kg/mol)}
+ &amp;P_{1} &amp;= 1.000 \times 10 ^ {7} \; \;\textrm{(Pa)}
+ &amp;T_{1} &amp;= 750 \; \;\textrm{(K)}
 \\[10pt]
-N_{1} &amp;= 400 \; \;\textrm{(RPM)}
+ \gamma &amp;= 1.200 \times 10 ^ {0} \; 
+ &amp;R &amp;= 8.314 \times 10 ^ {0} \; \;\textrm{(g/mol$\cdot$K)}
+ &amp;G &amp;= 3 \; \;\textrm{(kg/s)}
 \\[10pt]
-N_{2} &amp;= 230 \; \;\textrm{(RPM)}
+ D &amp;= 7.620 \times 10 ^ {-2} \; \;\textrm{(m)}
+ &amp;L &amp;= 5.000 \times 10 ^ {3} \; \;\textrm{(m)}
+ &amp;\epsilon &amp;= 4.600 \times 10 ^ {-5} \; \;\textrm{(m)}
 \\[10pt]
-\mu_{2} &amp;= \mu_{1} \cdot \left( \frac{ N_{1} }{ N_{2} } \right) ^{ 2 } \\&amp;= 280 \cdot \left( \frac{ 400 }{ 230 } \right) ^{ 2 } \\&amp;= 846.881 \; \;\textrm{(cP)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
-<p>Del gráfico de viscosidades, notamos que para <span class="math notranslate nohighlight">\(\mu=846.9\hspace{1mm}(cP)\)</span> la temperatura debe ser <span class="math notranslate nohighlight">\(T\approx 6\hspace{1mm}°C\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+rho = (P_1*PM_Ar)/(R*T_1) #kg/m$^3$
+c = sqrt((gamma*R*T_1)/(PM_Ar)) #m/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= \frac{ P_{1} \cdot \mathrm{PM}_{Ar} }{ R \cdot T_{1} } \\&amp;= \frac{ 10000000.000 \cdot 0.040 }{ 8.314 \cdot 750 } \\&amp;= 64.065 \; \;\textrm{(kg/m$^3$)}\\[10pt]
+\\[10pt]
+c &amp;= \sqrt { \frac{ \gamma \cdot R \cdot T_{1} }{ \mathrm{PM}_{Ar} } } \\&amp;= \sqrt { \frac{ 1.200 \cdot 8.314 \cdot 750 }{ 0.040 } } \\&amp;= 432.792 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Con los resultados obtenidos, se puede despejar el número de Mach a la entrada de la tubería.<br />
+$<span class="math notranslate nohighlight">\(
+Ma_1 = \frac{G}{A}\frac{1}{c\rho}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+A = pi * (D/2)**2 #m$^2$
+Ma_1 = G/A * 1/(c*rho)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= \pi \cdot \left( \frac{ D }{ 2 } \right) ^{ 2 } \\&amp;= 3.142 \cdot \left( \frac{ 0.076 }{ 2 } \right) ^{ 2 } \\&amp;= 0.005 \; \;\textrm{(m$^2$)}\\[10pt]
+\\[10pt]
+\mathrm{Ma}_{1} &amp;= \frac{ G }{ A } \cdot \frac{ 1 }{ c \cdot \rho } \\&amp;= \frac{ 3 }{ 0.005 } \cdot \frac{ 1 }{ 432.792 \cdot 64.065 } \\&amp;= 0.024  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>A continuación, podemos calcular el factor de fricción utilizando la ecuación de <em>Colebrook-White</em> eliminando los términos que dependen del número de Reynolds.<br />
+$<span class="math notranslate nohighlight">\(
+\frac{1}{\sqrt{f}} = -1.737\ln{\left(0.269\frac{\varepsilon}{D}\right)}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long sci_not
+f = (1/(-1.737*log(0.269*(epsilon/D))))**2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f &amp;= \left( \frac{ 1 }{ \left( - 1.737 \right) \cdot \ln \left( 0.269 \cdot \left( \frac{ \epsilon }{ D } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 1.737 \right) \cdot \ln \left( 0.269 \cdot \left( \frac{ 4.600 \times 10 ^ {-5} }{ 7.620 \times 10 ^ {-2} } \right) \right) } \right) ^{ 2 } \\&amp;= 4.353 \times 10 ^ {-3}  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Finalmente, calculamos el largo máximo permitido.<br />
+$<span class="math notranslate nohighlight">\(
+L = \frac{D}{4f}\left(\frac{1-Ma^2}{Ma^2}+\frac{\gamma+1}{2\gamma}\ln{\left(\frac{\left(\gamma+1\right)Ma^2}{2+\left(\gamma-1\right)Ma^2}\right)}\right)
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+L = D/(4*f)*((1-Ma_1**2)/(Ma_1**2) + (gamma+1)/(2*gamma)*log(((gamma+1)*Ma_1**2)/(2+(gamma-1)*Ma_1**2))) #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+L &amp;= \frac{ D }{ 4 \cdot f } \cdot \left( \frac{ 1 - \left( \mathrm{Ma}_{1} \right) ^{ 2 } }{ \left( \mathrm{Ma}_{1} \right) ^{ 2 } } + \frac{ \gamma + 1 }{ 2 \cdot \gamma } \cdot \ln \left( \frac{ \left( \gamma + 1 \right) \cdot \left( \mathrm{Ma}_{1} \right) ^{ 2 } }{ 2 + \left( \gamma - 1 \right) \cdot \left( \mathrm{Ma}_{1} \right) ^{ 2 } } \right) \right) \\&amp;= \frac{ 0.076 }{ 4 \cdot 0.004 } \cdot \left( \frac{ 1 - \left( 0.024 \right) ^{ 2 } }{ \left( 0.024 \right) ^{ 2 } } + \frac{ 1.200 + 1 }{ 2 \cdot 1.200 } \cdot \ln \left( \frac{ \left( 1.200 + 1 \right) \cdot \left( 0.024 \right) ^{ 2 } }{ 2 + \left( 1.200 - 1 \right) \cdot \left( 0.024 \right) ^{ 2 } } \right) \right) \\&amp;= 7739.980 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Ya que el largo máximo permitido es mayor al largo de la tubería (<span class="math notranslate nohighlight">\(5~\text{km}\)</span>), entonces sí podemos operar en este sistema.</p>
 </section>
 <section id="inciso-2">
 <h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
-<p>Si el escalamiento se basa en una velocidad de punta constante:</p>
-<div class="math notranslate nohighlight">
-\[
-D_{a,1}N_1=D_{a,2}N_2
-\]</div>
-<p>Entonces,</p>
+<p>Sabemos que la razón de compresión para dos etapas:
+$<span class="math notranslate nohighlight">\(
+r_p = \frac{P_{i1}}{P_1} = \frac{P_2}{P_{i1}} = \left(\frac{P_2}{P_1}\right)^{\frac{1}{n}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-D_a1 = 0.15 # m
-D_a2 = D_a1*N_1/N_2 #m
-D_t2 = 3*D_a2 #m
-H_2 = 3/2*D_t2 #m
-V_2 = pi*(D_t2/2)**2*H_2 #m$^3$
+P_2 = 10e6 #Pa
+P_1 = 70e3 #Pa
+n = 2
+r_p = (P_2/P_1)**(1/n)
 </pre></div>
 </div>
 </div>
@@ -500,35 +566,59 @@ V_2 = pi*(D_t2/2)**2*H_2 #m$^3$
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D_{a1} &amp;= 0.150 \; \;\textrm{(m)}
+P_{2} &amp;= 10000000.000 \; \;\textrm{(Pa)}
 \\[10pt]
-D_{a2} &amp;= D_{a1} \cdot \frac{ N_{1} }{ N_{2} } \\&amp;= 0.150 \cdot \frac{ 400 }{ 230 } \\&amp;= 0.261 \; \;\textrm{(m)}\\[10pt]
+P_{1} &amp;= 70000.000 \; \;\textrm{(Pa)}
 \\[10pt]
-D_{t2} &amp;= 3 \cdot D_{a2} \\&amp;= 3 \cdot 0.261 \\&amp;= 0.783 \; \;\textrm{(m)}\\[10pt]
+n &amp;= 2 \; 
 \\[10pt]
-H_{2} &amp;= \frac{ 3 }{ 2 } \cdot D_{t2} \\&amp;= \frac{ 3 }{ 2 } \cdot 0.783 \\&amp;= 1.174 \; \;\textrm{(m)}\\[10pt]
-\\[10pt]
-V_{2} &amp;= \pi \cdot \left( \frac{ D_{t2} }{ 2 } \right) ^{ 2 } \cdot H_{2} \\&amp;= 3.142 \cdot \left( \frac{ 0.783 }{ 2 } \right) ^{ 2 } \cdot 1.174 \\&amp;= 0.565 \; \;\textrm{(m$^3$)}\\[10pt]
+r_{p} &amp;= \left( \frac{ P_{2} }{ P_{1} } \right) ^{ \left( \frac{ 1 }{ n } \right) } \\&amp;= \left( \frac{ 10000000.000 }{ 70000.000 } \right) ^{ \left( \frac{ 1 }{ 2 } \right) } \\&amp;= 11.952  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
+<p>Ya que tenemos una compresión isoentrópica, <span class="math notranslate nohighlight">\(pv^\gamma\)</span> es consante. Antes de continuar, recordemos que en nuestro compresor tenemos en la primera etapa <span class="math notranslate nohighlight">\(v_{1}\rightarrow v_{i1}\)</span> y luego la segunda etapa <span class="math notranslate nohighlight">\(v_{i1}\rightarrow v_{2}\)</span>. En donde la relación de compresión isoentrópica se cumple para el cambio <span class="math notranslate nohighlight">\(v_{inicial}\rightarrow v_{final}\)</span>. Ya que no contamos con <span class="math notranslate nohighlight">\(P_{i1}\)</span> utilizamos la razón de compresión.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long sci_not
+v_2 = 1/rho #m$^3$/kg
+v_i1 = v_2*r_p**(1/gamma) #m$^3$/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v_{2} &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 6.407 \times 10 ^ {1} } \\&amp;= 1.561 \times 10 ^ {-2} \; \;\textrm{(m$^3$/kg)}\\[10pt]
+\\[10pt]
+v_{i1} &amp;= v_{2} \cdot \left( r_{p} \right) ^{ \left( \frac{ 1 }{ \gamma } \right) } \\&amp;= 1.561 \times 10 ^ {-2} \cdot \left( 1.195 \times 10 ^ {1} \right) ^{ \left( \frac{ 1 }{ 1.200 \times 10 ^ {0} } \right) } \\&amp;= 1.234 \times 10 ^ {-1} \; \;\textrm{(m$^3$/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>El volumen a la entrada del segundo ciclo será <span class="math notranslate nohighlight">\(v_{i1}=0.1234~\text{m}^3\text{/kg}\)</span>. Notamos que en el segundo ciclo, el compresor reduce el volumen del gas aproximadamente 10 veces su tamaño original.</p>
 </section>
 <section id="inciso-3">
 <h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
-<p>Se debe cumplir que el número de potencia es equivalente.</p>
-<div class="math notranslate nohighlight">
-\[
-N_{p,1} = N_{p,2} \Rightarrow \frac{P_1}{\rho_1N_1^3D_{a,1}^5} = \frac{P_2}{\rho_2N_2^3D_{a,2}^5}
-\]</div>
-<p>Recordar que la temperatura del agitador industrial se encuentra aproximadamente a <span class="math notranslate nohighlight">\(6\hspace{1mm}°C\)</span>, a esa temperatura la densidad del aceite será <span class="math notranslate nohighlight">\(\rho_2\approx 887.5\hspace{1mm}(kg/m^3)\)</span>. Y en las condiciones iniciales a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span> la densidad <span class="math notranslate nohighlight">\(\rho_1\approx 878\hspace{1mm}(kg/m^3)\)</span>.</p>
+<p>Sabemos que el trabajo total por ciclo si se considera holgura será.<br />
+$<span class="math notranslate nohighlight">\(
+-W = \frac{\gamma}{\gamma-1}P_1V_s\left(\left(\frac{P_2}{P_1}\right)^{\frac{\gamma-1}{\gamma}}-1\right)\left(1+c\left(1-\left(\frac{P_2}{P_1}\right)^{\frac{1}{\gamma}}\right)\right)
+\)</span>$</p>
+<p>Para esto necesitamo el volumen de barrido, el cual podemos obtener mediante el siguiente razonamiento. El volumen de barrido nos dice qué parte del volumen total del cilindro (véase, cuando el cilindro no se encuentra contraido) sale efectivamente de la etapa. Se desea cumplir con los <span class="math notranslate nohighlight">\(3~\text{kg/s}\)</span> de flujo másico, para esto, contamos con un volumen másico inicial en el segundo ciclo (obtenido en el inciso anterior) de <span class="math notranslate nohighlight">\(v_{i1}=0.1234~\text{m}^3\text{/kg}\)</span>.<br />
+Para cumplir con los requerimientos, necesito entonces<br />
+$<span class="math notranslate nohighlight">\(
+\dot{v} = v_{i1}\cdot G
+\)</span><span class="math notranslate nohighlight">\(\
+Considerando que el compresor realiza 500 ciclos de compresión por minuto (ya que opera a \)</span>500~\text{RPM}<span class="math notranslate nohighlight">\(). Podemos obtener el volumen de barrido utilizando:\
+\)</span><span class="math notranslate nohighlight">\(
+V_s = \frac{\dot{v}}{\text{RPS}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-P_1 = 3 #kW
-rho_1 = 878 #kg/m$^3$
-rho_2 = 887.5 #kg/m$^3$
-P_2 = P_1*(rho_2*(N_2/60)**3*D_a2**5)/(rho_1*(N_1/60)**3*D_a1**5) #kW
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> sci_not long
+RPS = 500/60 #1/s
+V_s = (v_i1*G)/RPS #m$^3$
 </pre></div>
 </div>
 </div>
@@ -536,17 +626,34 @@ P_2 = P_1*(rho_2*(N_2/60)**3*D_a2**5)/(rho_1*(N_1/60)**3*D_a1**5) #kW
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-P_{1} &amp;= 3 \; \;\textrm{(kW)}
+\mathrm{RPS} &amp;= \frac{ 500 }{ 60 } &amp;= 8.333 \times 10 ^ {0} \; \;\textrm{(1/s)}
 \\[10pt]
-\rho_{1} &amp;= 878 \; \;\textrm{(kg/m$^3$)}
-\\[10pt]
-\rho_{2} &amp;= 887.500 \; \;\textrm{(kg/m$^3$)}
-\\[10pt]
-P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a2} \right) ^{ 5 } }{ \rho_{1} \cdot \left( \frac{ N_{1} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a1} \right) ^{ 5 } } \\&amp;= 3 \cdot \frac{ 887.500 \cdot \left( \frac{ 230 }{ 60 } \right) ^{ 3 } \cdot \left( 0.261 \right) ^{ 5 } }{ 878 \cdot \left( \frac{ 400 }{ 60 } \right) ^{ 3 } \cdot \left( 0.150 \right) ^{ 5 } } \\&amp;= 9.172 \; \;\textrm{(kW)}\\[10pt]
+V_{s} &amp;= \frac{ v_{i1} \cdot G }{ \mathrm{RPS} } \\&amp;= \frac{ 1.234 \times 10 ^ {-1} \cdot 3 }{ 8.333 \times 10 ^ {0} } \\&amp;= 4.442 \times 10 ^ {-2} \; \;\textrm{(m$^3$)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
+<p>Luego reemplazamos en la ecuación para obtener el trabajo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+c = 0.2
+W = -gamma/(gamma-1)*P_1*V_s*((P_2/P_1)**((gamma-1)/gamma)-1)*(1+c*(1-(P_2/P_1)**(1/gamma))) #J
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+c &amp;= 0.200 \; 
+\\[10pt]
+W &amp;= \frac{ \left( - \gamma \right) }{ \gamma - 1 } \cdot P_{1} \cdot V_{s} \cdot \left( \left( \frac{ P_{2} }{ P_{1} } \right) ^{ \left( \frac{ \gamma - 1 }{ \gamma } \right) } - 1 \right) \cdot \left( 1 + c \cdot \left( 1 - \left( \frac{ P_{2} }{ P_{1} } \right) ^{ \left( \frac{ 1 }{ \gamma } \right) } \right) \right) \\&amp;= \frac{ \left( - 1.200 \right) }{ 1.200 - 1 } \cdot 70000.000 \cdot 0.044 \cdot \left( \left( \frac{ 10000000.000 }{ 70000.000 } \right) ^{ \left( \frac{ 1.200 - 1 }{ 1.200 } \right) } - 1 \right) \cdot \left( 1 + 0.200 \cdot \left( 1 - \left( \frac{ 10000000.000 }{ 70000.000 } \right) ^{ \left( \frac{ 1 }{ 1.200 } \right) } \right) \right) \\&amp;= 271089.661 \; \;\textrm{(J)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>El trabajo requerido en la segunda etapa es de <span class="math notranslate nohighlight">\(271.09~\text{kJ}\)</span>.</p>
 </section>
 </section>
 </section>
@@ -564,7 +671,7 @@ P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \righ
         },
         kernelOptions: {
             name: "python3",
-            path: "./p1\c4"
+            path: "./p1\c5"
         },
         predefinedOutput: true
     }
@@ -582,20 +689,20 @@ P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \righ
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="e1_4_1.html"
+       href="e1_5_1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Ejercicio 1: Estanques agitados</p>
+        <p class="prev-next-title">Ejercicio 1: Fluidos compresibles en tuberías</p>
       </div>
     </a>
     <a class="right-next"
-       href="../c5/compresibles.html"
+       href="../../ec/intro_ejclases.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fluidos compresibles y compresores</p>
+        <p class="prev-next-title">Ejercicios clases IIQ2013</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
