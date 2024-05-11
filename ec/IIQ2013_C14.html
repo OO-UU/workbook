@@ -389,14 +389,14 @@ document.write(`
 <h1>IIQ2013 - Clase 14<a class="headerlink" href="#iiq2013-clase-14" title="Permalink to this heading">#</a></h1>
 <p>Se usa un intercambiador de calor de doble tubo (<strong>ICDT</strong>) para enfriar el aceite lubricante del motor de una turbina de gas industrial grande de <span class="math notranslate nohighlight">\(T_{a,e} = 100~\text{°C}\)</span> a <span class="math notranslate nohighlight">\(T_{a,s} = 60~\text{°C}\)</span>. El agua de enfriamiento (<span class="math notranslate nohighlight">\(F_{ag} = 0.2~\text{kg/s}\)</span>; <span class="math notranslate nohighlight">\(T_{ag,e} = 30~\text{°C}\)</span>) fluye a contracorrientes a través del tubo interno (<span class="math notranslate nohighlight">\(D_i = 25~\text{mm}\)</span>), mientras que el aceite (<span class="math notranslate nohighlight">\(0.1~\text{kg/s}\)</span>) fluye por la zona anular (<span class="math notranslate nohighlight">\(D_{i,e} = 45~\text{mm}\)</span>). La tabla adjunta presenta las propiedades termofísicas del aceite y el agua a sus correspondientes temperaturas promedio.</p>
 <table class="table table-center" id="tabla-ec14">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Propiedades termofísicas del aceite</span><a class="headerlink" href="#tabla-ec14" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Propiedades termofísicas del aceite y el agua.</span><a class="headerlink" href="#tabla-ec14" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Fluido</p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(T~\text{(K)}\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(c_P~\text{(J/kg}\cdot\text{K)}\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(\mu~\text{(Pa}\cdot\text{s)}\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(Pr\)</span></p></th>
-<th class="head"><p>$k~\text{(W/m}\cdot\text{K)}</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k~\text{(W/m}\cdot\text{K)}\)</span></p></th>
 </tr>
 </thead>
 <tbody>
@@ -500,7 +500,7 @@ T_{cs} &amp;= \frac{ q }{ m_{c} \cdot c_{Pc} } + T_{ce} \\&amp;= \frac{ 8524.000
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-DT_ml = ((T_he-T_cs)-(T_hs-T_ce))/(log((T_he-T_cs)/(T_hs-T_ce))) #C~o~K
+DT_ml = ((T_he-T_cs)-(T_hs-T_ce))/(log((T_he-T_cs)/(T_hs-T_ce))) #C o K
 </pre></div>
 </div>
 </div>
@@ -508,7 +508,7 @@ DT_ml = ((T_he-T_cs)-(T_hs-T_ce))/(log((T_he-T_cs)/(T_hs-T_ce))) #C~o~K
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\mathrm{DT}_{ml} &amp;= \frac{ \left( T_{he} - T_{cs} \right) - \left( T_{hs} - T_{ce} \right) }{ \ln \left( \frac{ T_{he} - T_{cs} }{ T_{hs} - T_{ce} } \right) } \\&amp;= \frac{ \left( 373.150 - 313.351 \right) - \left( 333.150 - 303.150 \right) }{ \ln \left( \frac{ 373.150 - 313.351 }{ 333.150 - 303.150 } \right) } \\&amp;= 43.200 \; \;\textrm{(C~o~K)}\\[10pt]
+\mathrm{DT}_{ml} &amp;= \frac{ \left( T_{he} - T_{cs} \right) - \left( T_{hs} - T_{ce} \right) }{ \ln \left( \frac{ T_{he} - T_{cs} }{ T_{hs} - T_{ce} } \right) } \\&amp;= \frac{ \left( 373.150 - 313.351 \right) - \left( 333.150 - 303.150 \right) }{ \ln \left( \frac{ 373.150 - 313.351 }{ 333.150 - 303.150 } \right) } \\&amp;= 43.200 \; \;\textrm{(C o K)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -607,7 +607,7 @@ n &amp;= 0.400 \; \;\textrm{(El agua se está calentando)}
 \end{split}\]</div>
 </div>
 </div>
-<p>Podemos despejar eñ coeficiente de trasnferencia de calor desde la definición del número de Nusselt</p>
+<p>Podemos despejar el coeficiente de trasnferencia de calor desde la definición del número de Nusselt</p>
 <div class="math notranslate nohighlight">
 \[
 Nu_D = \frac{hD}{k}
