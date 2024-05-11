@@ -43,5 +43,6 @@ parts:
       - file: ec/IIQ2013_C10
       - file: ec/IIQ2013_C11
       - file: ec/IIQ2013_C12
+      - file: ec/IIQ2013_C13
       - file: ec/IIQ2013_C14
     - file: doc/documentacion
