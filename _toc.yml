@@ -28,6 +28,11 @@ parts:
       sections:
       - file: p1/c5/e1_5_1
       - file: p1/c5/e1_5_2
+  - caption: Transferencia de Calor
+    chapters:
+    - file: p2/c1/ICDT
+      sections:
+      - file: p2/c1/e2_1_1
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases
