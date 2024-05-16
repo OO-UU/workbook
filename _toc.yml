@@ -50,4 +50,6 @@ parts:
       - file: ec/IIQ2013_C12
       - file: ec/IIQ2013_C13
       - file: ec/IIQ2013_C14
+      - file: ec/IIQ2013_C15
+      - file: ec/IIQ2013_C16
     - file: doc/documentacion

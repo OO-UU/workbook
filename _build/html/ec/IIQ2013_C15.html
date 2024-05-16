@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>IIQ2013 - Clase 3 &#8212; Libro OOUU-1</title>
+    <title>IIQ2013 - Clase 15 &#8212; Libro OOUU-1</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ec/IIQ2013_C3';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ec/IIQ2013_C15';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="IIQ2013 - Clase 4" href="IIQ2013_C4.html" />
-    <link rel="prev" title="IIQ2013 - Clase 2" href="IIQ2013_C2.html" />
+    <link rel="next" title="IIQ2013 - Clase 16" href="IIQ2013_C16.html" />
+    <link rel="prev" title="IIQ2013 - Clase 14" href="IIQ2013_C14.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">IIQ2013 - Clase 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C4.html">IIQ2013 - Clase 4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C5.html">IIQ2013 - Clase 5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C7.html">IIQ2013 - Clase 7</a></li>
@@ -221,7 +221,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C12.html">IIQ2013 - Clase 12</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C13.html">IIQ2013 - Clase 13</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C14.html">IIQ2013 - Clase 14</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IIQ2013_C15.html">IIQ2013 - Clase 15</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">IIQ2013 - Clase 15</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C16.html">IIQ2013 - Clase 16</a></li>
 </ul>
 </li>
@@ -280,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ec/IIQ2013_C3.ipynb" target="_blank"
+      <li><a href="../_sources/ec/IIQ2013_C15.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>IIQ2013 - Clase 3</h1>
+    <h1>IIQ2013 - Clase 15</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -391,127 +391,178 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="iiq2013-clase-3">
-<h1>IIQ2013 - Clase 3<a class="headerlink" href="#iiq2013-clase-3" title="Permalink to this heading">#</a></h1>
-<p>En primer lugar se deben cargar las librerias que vamos a utilizar</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="iiq2013-clase-15">
+<h1>IIQ2013 - Clase 15<a class="headerlink" href="#iiq2013-clase-15" title="Permalink to this heading">#</a></h1>
+<p>Se utilizaron los siguientes paquetes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">sqrt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="pregunta-1">
 <h2>Pregunta 1<a class="headerlink" href="#pregunta-1" title="Permalink to this heading">#</a></h2>
-<p>La pérdida de carga (<span class="math notranslate nohighlight">\(\Delta p/L\)</span>) al transportar <span class="math notranslate nohighlight">\(Q\)</span> = 100 L/s de agua por una tubería horizontal de acero comercial de 10 in de diámetro nominal (D= 254,5 mm) es la siguiente:</p>
-<p>(a) <span class="math notranslate nohighlight">\(\Delta p/L &gt;\)</span> 0.13 atm/100 m</p>
-<p>(b) 0.12 <span class="math notranslate nohighlight">\(&lt; \Delta p/L \leq\)</span> 0.13 atm/100 m</p>
-<p>(c) 0.11 <span class="math notranslate nohighlight">\(&lt; \Delta p/L \leq\)</span> 0.12 atm/100 m</p>
-<p>(d) <span class="math notranslate nohighlight">\(\Delta p/L \leq\)</span> 0.11 atm/100 m</p>
-<p>Considere las propiedades físicas del agua a 20 °C [<span class="math notranslate nohighlight">\(\rho\)</span>= 1000 kg/m<span class="math notranslate nohighlight">\(^3\)</span>, <span class="math notranslate nohighlight">\(\mu\)</span>= 0.001 Pa s].</p>
+<p>Determine el factor de corrección <span class="math notranslate nohighlight">\(F_T\)</span> para el caso de un intercambiador de calor de tubos y carcasa (<strong>ICTC</strong>) tipo 1-2n en el que se enfrían <span class="math notranslate nohighlight">\(1500~\text{kg/h}\)</span> de agua a <span class="math notranslate nohighlight">\(80~\text{°C}\)</span> usando <span class="math notranslate nohighlight">\(2200~\text{kg/h}\)</span> de agua a <span class="math notranslate nohighlight">\(18~\text{°C}\)</span> como líquido refrigerante, el cual se puede calentar hasta <span class="math notranslate nohighlight">\(42~\text{°C}\)</span>:</p>
+<p>a) <span class="math notranslate nohighlight">\(F_T \leq 0.80\)</span> <br />
+b) <span class="math notranslate nohighlight">\(0.80 &lt; F_T \leq 0.82\)</span> <br />
+c) <span class="math notranslate nohighlight">\(0.82 &lt; F_T \leq 0.85\)</span> <br />
+d) <span class="math notranslate nohighlight">\(FT &gt; 0.85\)</span></p>
 </section>
 <section id="solucion">
 <h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
-<p>Comenzamos recordando el ejercicio de la clase anterior …</p>
+<p>A partir de la razón de temperaturas, tenemos que en este caso en particular.</p>
+<div class="math notranslate nohighlight">
+\[
+Z = \frac{T_{h,e}-T_{h,s}}{T_{c,s}-T_{c,e}} = \frac{\dot{m}_c}{\dot{m}_h}
+\]</div>
+<p>Luego la temperatura de salida será:</p>
+<div class="math notranslate nohighlight">
+\[
+T_{h,s} = T_{h,e} - Z(T_{c,s}-T_{c,e})
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
-<span class="n">d</span> <span class="o">=</span> <span class="mf">254.5e-3</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1"># m^3/s</span>
-<span class="n">V</span> <span class="o">=</span> <span class="n">Q</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">d</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Calculamos la velocidad </span>
-<span class="n">rho</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.001</span>
-<span class="n">Re</span> <span class="o">=</span> <span class="n">rho</span><span class="o">*</span><span class="n">V</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="n">mu</span>
-<span class="n">eps</span> <span class="o">=</span> <span class="mf">0.046</span><span class="o">*</span><span class="mf">1e-3</span>
-<span class="k">def</span> <span class="nf">f_Nevers</span><span class="p">(</span><span class="n">eps</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">Re</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mf">0.001375</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">2e4</span> <span class="o">*</span> <span class="n">eps</span><span class="o">/</span><span class="n">D</span> <span class="o">+</span> <span class="mf">1e6</span><span class="o">/</span><span class="n">Re</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="n">f</span> <span class="o">=</span> <span class="n">f_Nevers</span><span class="p">(</span><span class="n">eps</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">Re</span><span class="p">)</span>
-
-<span class="n">L</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># m</span>
-<span class="n">phi</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La perdida de carga por unidad de largo es </span><span class="si">{</span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phi</span><span class="o">/</span><span class="n">L</span><span class="si">}</span><span class="s2"> Pa/m&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+m_c = 2200 #kg/h
+T_ce = 18+273.15 #K
+T_cs = 42+273.15 #K
+m_h = 1500 #kg/h
+T_he = 80+273.15 #K
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La perdida de carga por unidad de largo es 115.96605830597088 Pa/m
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+m_{c} &amp;= 2200 \; \;\textrm{(kg/h)}
+ &amp;T_{ce} &amp;= 291.150 \; \;\textrm{(K)}
+ &amp;T_{cs} &amp;= 315.150 \; \;\textrm{(K)}
+\\[10pt]
+ m_{h} &amp;= 1500 \; \;\textrm{(kg/h)}
+ &amp;T_{he} &amp;= 353.150 \; \;\textrm{(K)}
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
-</div>
-<p>Realizando el cambio de unidades</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La perdida de carga por unidad de largo es </span><span class="si">{</span><span class="mi">100000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phi</span><span class="o">/</span><span class="n">L</span><span class="o">*</span><span class="mf">9.86923e-6</span><span class="si">}</span><span class="s2"> atm/100 m&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Z = m_c/m_h
+T_hs = T_he - Z*(T_cs-T_ce)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La perdida de carga por unidad de largo es 0.11444957016150369 atm/100 m
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Z &amp;= \frac{ m_{c} }{ m_{h} } \\&amp;= \frac{ 2200 }{ 1500 } \\&amp;= 1.467  \\[10pt]
+\\[10pt]
+T_{hs} &amp;= T_{he} - Z \cdot \left( T_{cs} - T_{ce} \right) \\&amp;= 353.150 - 1.467 \cdot \left( 315.150 - 291.150 \right) \\&amp;= 317.950  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego la eficiencia de temperatura.</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_H = \frac{T_{c,s}-T_{c,e}}{T_{h,e}-T_{c,e}}
+\]</div>
+<p>En donde el factor de corrección es:</p>
+<div class="math notranslate nohighlight">
+\[
+F_T = \frac{\sqrt{Z^2+1}\ln\left(\frac{1-\eta_H}{1-\eta_HZ}\right)}{(Z-1)\ln\left(\frac{2-\eta_H\left(Z+1-\sqrt{Z^2+1}\right)}{2-\eta_H\left(Z+1+\sqrt{Z^2+1}\right)}\right)}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+eta_H = (T_cs-T_ce)/(T_he-T_ce)
+F_T = (sqrt(Z**2+1)*log((1-eta_H)/(1-eta_H*Z)))/((Z-1)*log((2-eta_H*(Z+1-sqrt(Z**2+1)))/(2-eta_H*(Z+1+sqrt(Z**2+1)))))
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\eta_{H} &amp;= \frac{ T_{cs} - T_{ce} }{ T_{he} - T_{ce} } \\&amp;= \frac{ 315.150 - 291.150 }{ 353.150 - 291.150 } \\&amp;= 0.387  \\[10pt]
+\\[10pt]
+F_{T} &amp;= \frac{ \sqrt { \left( Z \right) ^{ 2 } + 1 } \cdot \ln \left( \frac{ 1 - \eta_{H} }{ 1 - \eta_{H} \cdot Z } \right) }{ \left( Z - 1 \right) \cdot \ln \left( \frac{ 2 - \eta_{H} \cdot \left( Z + 1 - \sqrt { \left( Z \right) ^{ 2 } + 1 } \right) }{ 2 - \eta_{H} \cdot \left( Z + 1 + \sqrt { \left( Z \right) ^{ 2 } + 1 } \right) } \right) } \\&amp;= \frac{ \sqrt { \left( 1.467 \right) ^{ 2 } + 1 } \cdot \ln \left( \frac{ 1 - 0.387 }{ 1 - 0.387 \cdot 1.467 } \right) }{ \left( 1.467 - 1 \right) \cdot \ln \left( \frac{ 2 - 0.387 \cdot \left( 1.467 + 1 - \sqrt { \left( 1.467 \right) ^{ 2 } + 1 } \right) }{ 2 - 0.387 \cdot \left( 1.467 + 1 + \sqrt { \left( 1.467 \right) ^{ 2 } + 1 } \right) } \right) } \\&amp;= 0.842  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
-<p>Por lo tanto la alternativa correcta es la <strong>c</strong>.</p>
+</div>
+<p>Por lo tanto, la alternativa correcta es la <strong>c</strong>.</p>
 </section>
 <section id="pregunta-2">
 <h2>Pregunta 2<a class="headerlink" href="#pregunta-2" title="Permalink to this heading">#</a></h2>
-<p>La pérdida de carga en un tramo de 100 metros de la tubería de (1) que inclute una válvula de compuerta abierta en un 75%, estimada usando el valor tabulado de coeficiente de pérdida de energía para la válvula, es la siguiente:</p>
-<p>(a) <span class="math notranslate nohighlight">\(\Delta p &gt;\)</span> 0.13 atm</p>
-<p>(b) 0.12 <span class="math notranslate nohighlight">\(&lt; \Delta p \leq\)</span> 0.13 atm</p>
-<p>(c) 0.11 <span class="math notranslate nohighlight">\(&lt; \Delta p \leq\)</span> 0.12 atm</p>
-<p>(d)  <span class="math notranslate nohighlight">\(\Delta p \leq\)</span> 0.11 atm</p>
+<p>Se pretende enfriar <span class="math notranslate nohighlight">\(1500~\text{kg/h}\)</span> de agua a <span class="math notranslate nohighlight">\(80~\text{°C}\)</span> usando <span class="math notranslate nohighlight">\(2200~\text{kg/h}\)</span> de agua a <span class="math notranslate nohighlight">\(18~\text{°C}\)</span> como líquido refrigerante. Discuta con su compañero por qué no es posible hacer esto en un ICTC tipo 1-2n cuando el agua de enfriamiento se calienta a <span class="math notranslate nohighlight">\(50~\text{°C}\)</span>.</p>
+<p><br><br/>
+<br><br/>
+<br><br/>
+<br><br/></p>
 </section>
 <section id="id1">
 <h2>Solución<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>Necesitamos sumar el coeficiente de fricción con el coeficiente de fricción por singularidad. Para una válvula de compuerta abierta en un 75% utilizamos un valor de K = 1</p>
+<p>Los flujos se mantienen constantes, por lo tanto, nuestra razón de temperaturas es constante también. Podemos entonces calcular el nuevo <span class="math notranslate nohighlight">\(\eta_H\)</span> y buscar el factor de corrección.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">f_Nevers</span><span class="p">(</span><span class="n">eps</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">Re</span><span class="p">)</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># m</span>
-<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">d</span><span class="p">)</span> <span class="o">+</span> <span class="n">K</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La perdida de carga </span><span class="si">{</span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phi</span><span class="o">*</span><span class="mf">9.86923e-6</span><span class="si">}</span><span class="s2"> atm&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+T_cs = 50+273.15 #K
+T_hs = T_he - Z*(T_cs-T_ce)
+eta_H = (T_cs-T_ce)/(T_he-T_ce)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La perdida de carga 0.1335183263148772 atm
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{cs} &amp;= 50 + 273.15 &amp;= 323.150 \; \;\textrm{(K)}
+\\[10pt]
+T_{hs} &amp;= T_{he} - Z \cdot \left( T_{cs} - T_{ce} \right) \\&amp;= 353.150 - 1.467 \cdot \left( 323.150 - 291.150 \right) \\&amp;= 306.217  \\[10pt]
+\\[10pt]
+\eta_{H} &amp;= \frac{ T_{cs} - T_{ce} }{ T_{he} - T_{ce} } \\&amp;= \frac{ 323.150 - 291.150 }{ 353.150 - 291.150 } \\&amp;= 0.516  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
-</div>
-<p>Por lo tanto la alternativa correcta es la <strong>a</strong>.</p>
+<p>Notamos que en la gráfica, el <span class="math notranslate nohighlight">\(0.5\)</span> se encuentra después de la curva donde <span class="math notranslate nohighlight">\(Z\approx1.4\)</span> por lo tanto, el valor del factor de corrección no existe y el diseño de este intercambiador es imposible.</p>
 </section>
 <section id="pregunta-3">
 <h2>Pregunta 3<a class="headerlink" href="#pregunta-3" title="Permalink to this heading">#</a></h2>
-<p>El valor de la pérdida de carga (2), pero evaluado considerando que el largo equivalente (<span class="math notranslate nohighlight">\(L_e\)</span>/D) de una válvula de compuerta abierta en un 75% es 40, es el siguiente:</p>
-<p>(a) <span class="math notranslate nohighlight">\(\Delta p &gt;\)</span> 0.13 atm</p>
-<p>(b) 0.12 <span class="math notranslate nohighlight">\(&lt; \Delta p \leq\)</span> 0.13 atm</p>
-<p>(c) 0.11 <span class="math notranslate nohighlight">\(&lt; \Delta p \leq\)</span> 0.12 atm</p>
-<p>(d)  <span class="math notranslate nohighlight">\(\Delta p \leq\)</span> 0.11 atm</p>
+<p>Determine la máxima temperatura a la cual se puede calentar el agua de enfriamiento, y para la cual dicho intercambiador de calor opera marginalmente. ¿Qué valor de <span class="math notranslate nohighlight">\(F_T\)</span> se debe asumir en estos casos? Utilice las curvas para el factor de corrección, <span class="math notranslate nohighlight">\(F_T\)</span> de la temperatura media logarítmica para contacto a contracorrientes, <span class="math notranslate nohighlight">\((\Delta T_{ml})_{CC}\)</span> , para un ICTC tipo 1-2n.</p>
+<p>a) <span class="math notranslate nohighlight">\(T_{cs} \approx 36~\text{°C}\)</span><br />
+b) <span class="math notranslate nohighlight">\(T_{cs} \approx 40~\text{°C}\)</span><br />
+c) <span class="math notranslate nohighlight">\(T_{cs} \approx 44~\text{°C}\)</span><br />
+d) <span class="math notranslate nohighlight">\(T_{cs} \approx 48~\text{°C}\)</span></p>
 </section>
 <section id="id2">
 <h2>Solución<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>Ocupando la aproximación del largo equivalente</p>
+<p>Aproximando <span class="math notranslate nohighlight">\(Z\approx 1.4\)</span> utilizamos el gráfico, notamos que el valor máximo que puede tomar la eficiencia de temperaturas es de <span class="math notranslate nohighlight">\(\eta_H\approx0.475\)</span> Cuando <span class="math notranslate nohighlight">\(Z_T\)</span> toma su mínimo valor de 0.5. Bajo estos supuestos podemos obtener <span class="math notranslate nohighlight">\(T_{c,s}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">f_Nevers</span><span class="p">(</span><span class="n">eps</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">Re</span><span class="p">)</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># m</span>
-<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">d</span> <span class="o">+</span> <span class="mi">40</span><span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La perdida de carga </span><span class="si">{</span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phi</span><span class="o">*</span><span class="mf">9.86923e-6</span><span class="si">}</span><span class="s2"> atm&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+eta_H = 0.475
+T_cs = T_ce + eta_H*(T_he-T_ce) - 273.15 #$^\circ$C
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La perdida de carga 0.12610053640394478 atm
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\eta_{H} &amp;= 0.475 \; 
+\\[10pt]
+T_{cs} &amp;= T_{ce} + \eta_{H} \cdot \left( T_{he} - T_{ce} \right) - 273.15 \\&amp;= 291.150 + 0.475 \cdot \left( 353.150 - 291.150 \right) - 273.15 \\&amp;= 47.450 \; \;\textrm{($^\circ$C)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
-</div>
-<p>Por lo tanto la alternativa correcta es la <strong>b</strong>.</p>
+<p>Por lo tanto, la alternativa correcta es la <strong>d</strong>.</p>
 </section>
 </section>
 
@@ -546,20 +597,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="IIQ2013_C2.html"
+       href="IIQ2013_C14.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">IIQ2013 - Clase 2</p>
+        <p class="prev-next-title">IIQ2013 - Clase 14</p>
       </div>
     </a>
     <a class="right-next"
-       href="IIQ2013_C4.html"
+       href="IIQ2013_C16.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">IIQ2013 - Clase 4</p>
+        <p class="prev-next-title">IIQ2013 - Clase 16</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
