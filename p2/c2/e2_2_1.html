@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c2/e2_2_1';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ejercicios clases IIQ2013" href="../../ec/intro_ejclases.html" />
+    <link rel="next" title="ICTC" href="../c3/ICTC.html" />
     <link rel="prev" title="Transferencia de calor en estanques agitados" href="agitadores.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -208,10 +208,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1: Agitador con serpentín</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/ICTC.html">ICTC</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3/e2_3_1.html">Ejercicio 1: ICTC y haces de tubos</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
@@ -378,11 +382,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
 </ul>
 </li>
@@ -399,6 +402,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-agitador-con-serpentin">
 <h1>Ejercicio 1: Agitador con serpentín<a class="headerlink" href="#ejercicio-1-agitador-con-serpentin" title="Permalink to this heading">#</a></h1>
+<section id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
 <p>Usted desea enfriar <span class="math notranslate nohighlight">\(500~\text{L}\)</span> de Etilbenceno mediante un estanque agitado con un serpentín. Para esto utiliza como flujo refrigerante agua (<span class="math notranslate nohighlight">\(40~\text{L/h}\)</span>) que entra a <span class="math notranslate nohighlight">\(25~\text{°C}\)</span> al serpentín y sale a <span class="math notranslate nohighlight">\(40~\text{°C}\)</span>. El diámetro del serpentín es <span class="math notranslate nohighlight">\(D_s = 64~\text{cm}\)</span> y la altura del serpentín <span class="math notranslate nohighlight">\(H_s = 80~\text{cm}\)</span> con un número de espiras igual a <span class="math notranslate nohighlight">\(4\)</span> como indica la figura. El diámetro interno del tubo del serpentín es de <span class="math notranslate nohighlight">\(1~\text{cm}\)</span>. En cuanto a las características del estanque, este se encuentra lleno completamento por el fluido, y tiene una altura de <span class="math notranslate nohighlight">\(1~\text{m}\)</span> con un agitador que opera a <span class="math notranslate nohighlight">\(15~\text{RPM}\)</span>. Su configuración es <span class="math notranslate nohighlight">\(S_1 = 0.65\)</span>. El objetivo de esta operación es enfriar Etilbenceno desde los <span class="math notranslate nohighlight">\(120~\text{°C}\)</span> hasta los <span class="math notranslate nohighlight">\(105~\text{°C}\)</span>.</p>
 <figure class="align-center" id="figura2-2-1">
 <img alt="../../_images/img2_2_1.png" src="../../_images/img2_2_1.png" />
@@ -447,6 +452,7 @@ document.write(`
 <br/><br/>
 <br/><br/>
 <br/><br/></p>
+</section>
 <section id="solucion">
 <span id="part2-cap2-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -596,9 +602,8 @@ h_{o} &amp;= \frac{ \mathrm{Nusselt}_{D} \cdot k_{h} }{ d } \\&amp;= \frac{ 111.
 </div>
 </div>
 </section>
-</section>
 <section id="inciso-2">
-<h2>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h2>
+<h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
 <p>Para el serpentín, las correlaciones para obtener los números adimensionales son los mismos que para flujos en tuberías. Siempre y cuando, este flujo sea turbulento.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -656,6 +661,7 @@ h_{s} &amp;= \frac{ \mathrm{Nusselt}_{D} \cdot k_{c} }{ d } \\&amp;= \frac{ 149.
 \end{split}\]</div>
 </div>
 </div>
+</section>
 <section id="inciso-3">
 <h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
 <p>Ya que el grosor del tubo del serpentín es despreciable, tampoco presenta resistencia a la transferencia de calor.</p>
@@ -816,11 +822,11 @@ t &amp;= \frac{ M \cdot \frac{ c_{Ph} }{ c_{Pc} } }{ m_{c} \cdot \left( 1 - K_{M
       </div>
     </a>
     <a class="right-next"
-       href="../../ec/intro_ejclases.html"
+       href="../c3/ICTC.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ejercicios clases IIQ2013</p>
+        <p class="prev-next-title">ICTC</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -839,11 +845,10 @@ t &amp;= \frac{ M \cdot \frac{ c_{Ph} }{ c_{Pc} } }{ m_{c} \cdot \left( 1 - K_{M
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
 </ul>
 </li>
