@@ -36,6 +36,9 @@ parts:
     - file: p2/c2/agitadores
       sections:
       - file: p2/c2/e2_2_1
+    - file: p2/c3/ICTC
+      sections:
+      - file: p2/c3/e2_3_1
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases
