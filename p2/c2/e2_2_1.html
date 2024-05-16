@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Ejercicio 1: ICDT &#8212; Libro OOUU-1</title>
+    <title>Ejercicio 1: Agitador con serpentín &#8212; Libro OOUU-1</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c1/e2_1_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c2/e2_2_1';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Transferencia de calor en estanques agitados" href="../c2/agitadores.html" />
-    <link rel="prev" title="ICDT" href="ICDT.html" />
+    <link rel="next" title="Ejercicios clases IIQ2013" href="../../ec/intro_ejclases.html" />
+    <link rel="prev" title="Transferencia de calor en estanques agitados" href="agitadores.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -200,12 +200,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transferencia de Calor</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="ICDT.html">ICDT</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1: ICDT</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/ICDT.html">ICDT</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e2_1_1.html">Ejercicio 1: ICDT</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/agitadores.html">Transferencia de calor en estanques agitados</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c2/e2_2_1.html">Ejercicio 1: Agitador con serpentín</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="agitadores.html">Transferencia de calor en estanques agitados</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 1: Agitador con serpentín</a></li>
 </ul>
 </li>
 </ul>
@@ -284,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/p2/c1/e2_1_1.ipynb" target="_blank"
+      <li><a href="../../_sources/p2/c2/e2_2_1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -368,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejercicio 1: ICDT</h1>
+    <h1>Ejercicio 1: Agitador con serpentín</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,10 +378,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
 </ul>
 </li>
@@ -396,14 +397,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-icdt">
-<h1>Ejercicio 1: ICDT<a class="headerlink" href="#ejercicio-1-icdt" title="Permalink to this heading">#</a></h1>
-<section id="enunciado">
-<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Se desea enfriar un flujo de tolueno (<span class="math notranslate nohighlight">\(0.48~\text{kg/s}\)</span>) hasta alcanzar los <span class="math notranslate nohighlight">\(75~\text{°C}\)</span>. Para esto, se utiliza un flujo de agua (<span class="math notranslate nohighlight">\(0.55~\text{kg/s}\)</span>) a contracorrientes que pasa por el ánulo de un intercambiador de doble tubo. Al inicio de la operación, el agua se encuentra a <span class="math notranslate nohighlight">\(10~\text{°C}\)</span> y termina saliendo del proceso a <span class="math notranslate nohighlight">\(20~\text{°C}\)</span>. El tubo es de acero (<span class="math notranslate nohighlight">\(k_p = 50.2~\text{W/m}\cdot\text{K}\)</span>) y considere que su diámetro interno del tubo es <span class="math notranslate nohighlight">\(D_i=15~\text{cm}\)</span>, que el diámetro externo del tubo es <span class="math notranslate nohighlight">\(D_{i,e}=15.5~\text{cm}\)</span> y que el díametro interno del ánulo es <span class="math notranslate nohighlight">\(D_a= 25~\text{cm}\)</span>.</p>
-<p>Para las condiciones descritas en el enunciado, las propiedades termofísicas del tolueno y el agua son las siguientes:</p>
-<table class="table table-center" id="tabla-e2-1-1">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Propiedades termofísicas del tolueno y el agua en función de su temperatura promedio.</span><a class="headerlink" href="#tabla-e2-1-1" title="Permalink to this table">#</a></caption>
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-1-agitador-con-serpentin">
+<h1>Ejercicio 1: Agitador con serpentín<a class="headerlink" href="#ejercicio-1-agitador-con-serpentin" title="Permalink to this heading">#</a></h1>
+<p>Usted desea enfriar <span class="math notranslate nohighlight">\(500~\text{L}\)</span> de Etilbenceno mediante un estanque agitado con un serpentín. Para esto utiliza como flujo refrigerante agua (<span class="math notranslate nohighlight">\(40~\text{L/h}\)</span>) que entra a <span class="math notranslate nohighlight">\(25~\text{°C}\)</span> al serpentín y sale a <span class="math notranslate nohighlight">\(40~\text{°C}\)</span>. El diámetro del serpentín es <span class="math notranslate nohighlight">\(D_s = 64~\text{cm}\)</span> y la altura del serpentín <span class="math notranslate nohighlight">\(H_s = 80~\text{cm}\)</span> con un número de espiras igual a <span class="math notranslate nohighlight">\(4\)</span> como indica la figura. El diámetro interno del tubo del serpentín es de <span class="math notranslate nohighlight">\(1~\text{cm}\)</span>. En cuanto a las características del estanque, este se encuentra lleno completamento por el fluido, y tiene una altura de <span class="math notranslate nohighlight">\(1~\text{m}\)</span> con un agitador que opera a <span class="math notranslate nohighlight">\(15~\text{RPM}\)</span>. Su configuración es <span class="math notranslate nohighlight">\(S_1 = 0.65\)</span>. El objetivo de esta operación es enfriar Etilbenceno desde los <span class="math notranslate nohighlight">\(120~\text{°C}\)</span> hasta los <span class="math notranslate nohighlight">\(105~\text{°C}\)</span>.</p>
+<figure class="align-center" id="figura2-2-1">
+<img alt="../../_images/img2_2_1.png" src="../../_images/img2_2_1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Estanque con serpentín</span><a class="headerlink" href="#figura2-2-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Usted cuenta con la tabla de las propiedades termofísicas de ambos fluidos a la temperatura promedio de entrada y salida.</p>
+<table class="table table-center" id="tabla-e2-2-1">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Propiedades termofísicas del Etilbenceno y el agua en función de su temperatura promedio.</span><a class="headerlink" href="#tabla-e2-2-1" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Fluido</p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(c_P~\text{(J/kg}\cdot\text{K)}\)</span></p></th>
@@ -413,27 +418,27 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Tolueno</p></td>
-<td><p>1917.25</p></td>
-<td><p>802.355</p></td>
-<td><p>3.003<span class="math notranslate nohighlight">\(\times\)</span>10<span class="math notranslate nohighlight">\(^{-4}\)</span></p></td>
-<td><p>0.11329</p></td>
+<tr class="row-even"><td><p>Etilbenceno</p></td>
+<td><p>2052.21</p></td>
+<td><p>730.884</p></td>
+<td><p>2.764<span class="math notranslate nohighlight">\(\times\)</span>10<span class="math notranslate nohighlight">\(^{-4}\)</span></p></td>
+<td><p>0.1069</p></td>
 </tr>
 <tr class="row-odd"><td><p>Agua</p></td>
-<td><p>4181.95</p></td>
-<td><p>996.93</p></td>
-<td><p>8.994<span class="math notranslate nohighlight">\(\times\)</span>10<span class="math notranslate nohighlight">\(^{-4}\)</span></p></td>
-<td><p>0.6062</p></td>
+<td><p>4180.35</p></td>
+<td><p>994.635</p></td>
+<td><p>7.714<span class="math notranslate nohighlight">\(\times\)</span>10<span class="math notranslate nohighlight">\(^{-4}\)</span></p></td>
+<td><p>0.6175</p></td>
 </tr>
 </tbody>
 </table>
-<p>Encuentre lo siguiente:</p>
+<p>Responda lo siguiente:</p>
 <ol class="arabic simple">
-<li><p>La temperatura de entrada del tolueno.</p></li>
-<li><p>Los coeficientes de transferencia de calor para fluido que circula por el tubo y por el ánulo.</p></li>
-<li><p>Si el coeficiente de transferencia global total (<span class="math notranslate nohighlight">\(U_T\)</span>) es <span class="math notranslate nohighlight">\(28.43~\text{W/m}^2\cdot\text{K}\)</span>, encuentre el factor de ensuciamiento.</p></li>
+<li><p>Encuentre el coeficiente de transferencia de calor para el fluido en el estanque <span class="math notranslate nohighlight">\(h_o\)</span>. <em>Hint: Asuma que el grosor de la tubería del serpentín es despreciable.</em></p></li>
+<li><p>Encuentre el coeficiente de transferencia de calor para el fluido en el serpentín <span class="math notranslate nohighlight">\(h_s\)</span>.</p></li>
+<li><p>¿Cuántos días se demorará un lote en enfriar el Etilbenceno?</p></li>
 </ol>
-<p><a class="reference internal" href="#part2-cap1-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><a class="reference internal" href="#part2-cap2-ex1-sol"><span class="std std-ref">Ver solución</span></a></p>
 <p><br/><br/>
 <br/><br/>
 <br/><br/>
@@ -442,40 +447,31 @@ document.write(`
 <br/><br/>
 <br/><br/>
 <br/><br/></p>
-</section>
 <section id="solucion">
-<span id="part2-cap1-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part2-cap2-ex1-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
 <span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">exp</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="inciso-1">
 <h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<p>Para encontrar la temperatura de entrada del tolueno, podemos igualar los valores de <span class="math notranslate nohighlight">\(q\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-q = \dot{m}_hc_{P,h}(T_{h,e}-T_{h,s}) = \dot{m}_cc_{P,c}(T_{c,s}-T_{c,e})
-\]</div>
-<p>Para este ejercicio, el fluido caliente (tolueno) con subíndice <span class="math notranslate nohighlight">\(h\)</span> pasa por el tubo, mientras que el fluido de enfriamiento (agua) con subíndice <span class="math notranslate nohighlight">\(c\)</span> pasa por el ánulo. Del enunciado recuperamos todas las variables relevantes.</p>
+<p>Escribimos todas las propiedades termofísicas del enunciado.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params sci_not
-m_c = 0.55 #kg/s
-T_ce = 10+273.15 #K
-T_cs = 20+273.15 #K
-mu_c = 8.994e-4 #Pa$\cdot$s
-c_Pc = 4181.95 #J/kg$\cdot$K
-k_c = 0.6062 #W/m$\cdot$K
-m_h = 0.48 #kg/s
-T_hs = 75+273.15 #K
-mu_h = 3.003e-4 #Pa$\cdot$s
-c_Ph = 1917.25 #J/kg$\cdot$K
-k_h = 0.11329 #W/m$\cdot$K
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+rho_c = 994.635 #kg/m$^3$
+mu_c = 7.714e-4 #Pa$\cdot$s
+c_Pc = 4180.35 #J/kg$\cdot$K
+k_c = 0.6175 #W/m$\cdot$K
+rho_h = 730.884 #kg/m$^3$
+mu_h = 2.764e-4 #Pa$\cdot$s
+c_Ph = 2052.21 #J/kg$\cdot$K
+k_h = 0.1069 #W/m$\cdot$K
 </pre></div>
 </div>
 </div>
@@ -483,29 +479,32 @@ k_h = 0.11329 #W/m$\cdot$K
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-m_{c} &amp;= 5.500 \times 10 ^ {-1} \; \;\textrm{(kg/s)}
- &amp;T_{ce} &amp;= 2.831 \times 10 ^ {2} \; \;\textrm{(K)}
- &amp;T_{cs} &amp;= 2.931 \times 10 ^ {2} \; \;\textrm{(K)}
+\rho_{c} &amp;= 994.635 \; \;\textrm{(kg/m$^3$)}
+ &amp;\mu_{c} &amp;= 0.001 \; \;\textrm{(Pa$\cdot$s)}
+ &amp;c_{Pc} &amp;= 4180.350 \; \;\textrm{(J/kg$\cdot$K)}
 \\[10pt]
- \mu_{c} &amp;= 8.994 \times 10 ^ {-4} \; \;\textrm{(Pa$\cdot$s)}
- &amp;c_{Pc} &amp;= 4.182 \times 10 ^ {3} \; \;\textrm{(J/kg$\cdot$K)}
- &amp;k_{c} &amp;= 6.062 \times 10 ^ {-1} \; \;\textrm{(W/m$\cdot$K)}
+ k_{c} &amp;= 0.618 \; \;\textrm{(W/m$\cdot$K)}
+ &amp;\rho_{h} &amp;= 730.884 \; \;\textrm{(kg/m$^3$)}
+ &amp;\mu_{h} &amp;= 0.000 \; \;\textrm{(Pa$\cdot$s)}
 \\[10pt]
- m_{h} &amp;= 4.800 \times 10 ^ {-1} \; \;\textrm{(kg/s)}
- &amp;T_{hs} &amp;= 3.481 \times 10 ^ {2} \; \;\textrm{(K)}
- &amp;\mu_{h} &amp;= 3.003 \times 10 ^ {-4} \; \;\textrm{(Pa$\cdot$s)}
-\\[10pt]
- c_{Ph} &amp;= 1.917 \times 10 ^ {3} \; \;\textrm{(J/kg$\cdot$K)}
- &amp;k_{h} &amp;= 1.133 \times 10 ^ {-1} \; \;\textrm{(W/m$\cdot$K)}
+ c_{Ph} &amp;= 2052.210 \; \;\textrm{(J/kg$\cdot$K)}
+ &amp;k_{h} &amp;= 0.107 \; \;\textrm{(W/m$\cdot$K)}
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
+<p>Luego obtenemos todos los parámetros de dimensionamiento que nos faltan del reactor.</p>
+<p>Ya que el estanque de encuentra lleno, sabemos su volumen. Asumiendo estanque cilíndrico:</p>
+<div class="math notranslate nohighlight">
+\[
+V = \pi\left(\frac{D_t}{2}\right)^2H
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-q = m_c*c_Pc*(T_cs-T_ce) #J/s
-T_he = q/(m_h*c_Ph)+T_hs #K
+V= 0.5 #m$^3$
+H= 1 #m
+D_t = 2*sqrt(V/(pi*H)) #m
 </pre></div>
 </div>
 </div>
@@ -513,40 +512,105 @@ T_he = q/(m_h*c_Ph)+T_hs #K
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-q &amp;= m_{c} \cdot c_{Pc} \cdot \left( T_{cs} - T_{ce} \right) \\&amp;= 0.550 \cdot 4181.950 \cdot \left( 293.150 - 283.150 \right) \\&amp;= 23000.725 \; \;\textrm{(J/s)}\\[10pt]
+V &amp;= 0.500 \; \;\textrm{(m$^3$)}
 \\[10pt]
-T_{he} &amp;= \frac{ q }{ m_{h} \cdot c_{Ph} } + T_{hs} \\&amp;= \frac{ 23000.725 }{ 0.480 \cdot 1917.250 } + 348.150 \\&amp;= 373.143 \; \;\textrm{(K)}\\[10pt]
+H &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+D_{t} &amp;= 2 \cdot \sqrt { \frac{ V }{ \pi \cdot H } } \\&amp;= 2 \cdot \sqrt { \frac{ 0.500 }{ 3.142 \cdot 1 } } \\&amp;= 0.798 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Con esta información, podemos también obtener el diámetro del estanque para luego obtener el número de Reynolds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+S_1 = 0.65
+D_a = S_1*D_t
+N = 15 #RPM
+Re_D = (rho_h*(N/60)*D_a**2)/mu_h
+Pr_h = (mu_h*c_Ph)/k_h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S_{1} &amp;= 0.650 \; 
+\\[10pt]
+D_{a} &amp;= S_{1} \cdot D_{t} \\&amp;= 0.650 \cdot 0.798 \\&amp;= 0.519  \\[10pt]
+\\[10pt]
+N &amp;= 15 \; \;\textrm{(RPM)}
+\\[10pt]
+\mathrm{Re}_{D} &amp;= \frac{ \rho_{h} \cdot \left( \frac{ N }{ 60 } \right) \cdot \left( D_{a} \right) ^{ 2 } }{ \mu_{h} } \\&amp;= \frac{ 730.884 \cdot \left( \frac{ 15 }{ 60 } \right) \cdot \left( 0.519 \right) ^{ 2 } }{ 0.000 } \\&amp;= 177810.442  \\[10pt]
+\\[10pt]
+\mathrm{Pr}_{h} &amp;= \frac{ \mu_{h} \cdot c_{Ph} }{ k_{h} } \\&amp;= \frac{ 0.000 \cdot 2052.210 }{ 0.107 } \\&amp;= 5.306  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego para estanques agitados con serpentín asumiendo <span class="math notranslate nohighlight">\(\mu \approx \mu_s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+Nu_D = 0.17\left(Re_D\right)^{0.67}Pr^{0.37}\left(\frac{D_a}{D_t}\right)^{0.1}\left(\frac{d}{D_t}\right)^{0.5}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+d = 1/100 #m
+Nusselt_D = 0.17*Re_D**0.67*Pr_h**0.37*(D_a/D_t)**0.1*(d/D_t)**0.5
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= \frac{ 1 }{ 100 } &amp;= 0.010 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Nusselt}_{D} &amp;= 0.17 \cdot \left( \mathrm{Re}_{D} \right) ^{ 0.67 } \cdot \left( \mathrm{Pr}_{h} \right) ^{ 0.37 } \cdot \left( \frac{ D_{a} }{ D_{t} } \right) ^{ 0.1 } \cdot \left( \frac{ d }{ D_{t} } \right) ^{ 0.5 } \\&amp;= 0.17 \cdot \left( 177810.442 \right) ^{ 0.67 } \cdot \left( 5.306 \right) ^{ 0.37 } \cdot \left( \frac{ 0.519 }{ 0.798 } \right) ^{ 0.1 } \cdot \left( \frac{ 0.010 }{ 0.798 } \right) ^{ 0.5 } \\&amp;= 111.278  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego el coeficiente de transferencia de calor para el estanque será:</p>
+<div class="math notranslate nohighlight">
+\[
+h_o = \frac{Nu_Dk_h}{d}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+h_o = (Nusselt_D*k_h)/d #W/m$^2\cdot$K
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{o} &amp;= \frac{ \mathrm{Nusselt}_{D} \cdot k_{h} }{ d } \\&amp;= \frac{ 111.278 \cdot 0.107 }{ 0.010 } \\&amp;= 1189.566 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
 </section>
+</section>
 <section id="inciso-2">
-<h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
-<p>Para calcular los coeficientes de transferencia de calor vienen dados por el número de Nusselt.</p>
+<h2>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h2>
+<p>Para el serpentín, las correlaciones para obtener los números adimensionales son los mismos que para flujos en tuberías. Siempre y cuando, este flujo sea turbulento.</p>
 <div class="math notranslate nohighlight">
 \[
-Nu_D = \frac{hD_{térmico}}{k}
+Re_D = \frac{d \dot{m}_c}{\mu A}
 \]</div>
-<p>El cual puede ser despejado de distintas correlaciones dependiendo del tipo de fluido. Por lo que es recomendable empezar calculando el número de Reynolds para discriminar el tipo de flujo.</p>
-<div class="math notranslate nohighlight">
-\[
-Re_D = \frac{D_{térmico}\cdot\dot{m}}{A_t\cdot\mu}
-\]</div>
-<p>Por un lado, el diámetro térmico equivalente para el flujo que pasa por el tubo será equivalente al diámetro interno de la tubería. Por otro lado, el diámetro térmico equivalente para el flujo que pasa por el ánulo, será el siguiente:</p>
-<div class="math notranslate nohighlight">
-\[
-D_{térmico} = \frac{D_{a}^2-D_{i,e}^2}{D_{i,e}}
-\]</div>
-<p>Luego, podemos calcular los números de Prandtl y de Reynolds para ambos flujos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
-D_i = 15/100 #m
-D_ie = 15.5/100 #m
-D_a = 25/100 #m
-k_p = 50.2 #W/m$\cdot$K
-Pr_h = (mu_h*c_Ph)/k_h
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 6
+F = 40 # L/h
+m_c =  F/rho_c/1000*3600 #kg/s
+A = pi*(d/2)**2 #m$^2$
+Re_D = (d*m_c)/(mu_c*A)
 Pr_c = (mu_c*c_Pc)/k_c
 </pre></div>
 </div>
@@ -555,110 +619,29 @@ Pr_c = (mu_c*c_Pc)/k_c
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D_{i} &amp;= 0.150 \; \;\textrm{(m)}
- &amp;D_{ie} &amp;= 0.155 \; \;\textrm{(m)}
- &amp;D_{a} &amp;= 0.250 \; \;\textrm{(m)}
+F &amp;= 40 \; \;\textrm{(L/h)}
 \\[10pt]
- k_{p} &amp;= 50.200 \; \;\textrm{(W/m$\cdot$K)}
- &amp;\mathrm{Pr}_{h} &amp;= 5.082 \; 
- &amp;\mathrm{Pr}_{c} &amp;= 6.205 \; 
+m_{c} &amp;= \frac{ F }{ \rho_{c} } \cdot \frac{1} { 1000 } \cdot 3600 \\&amp;= \frac{ 40 }{ 994.635000 } \cdot \frac{1} { 1000 } \cdot 3600 \\&amp;= 0.144777 \; \;\textrm{(kg/s)}\\[10pt]
 \\[10pt]
+A &amp;= \pi \cdot \left( \frac{ d }{ 2 } \right) ^{ 2 } \\&amp;= 3.141593 \cdot \left( \frac{ 0.010000 }{ 2 } \right) ^{ 2 } \\&amp;= 0.000079 \; \;\textrm{(m$^2$)}\\[10pt]
+\\[10pt]
+\mathrm{Re}_{D} &amp;= \frac{ d \cdot m_{c} }{ \mu_{c} \cdot A } \\&amp;= \frac{ 0.010000 \cdot 0.144777 }{ 0.000771 \cdot 0.000079 } \\&amp;= 23896.221695  \\[10pt]
+\\[10pt]
+\mathrm{Pr}_{c} &amp;= \frac{ \mu_{c} \cdot c_{Pc} }{ k_{c} } \\&amp;= \frac{ 0.000771 \cdot 4180.350000 }{ 0.617500 } \\&amp;= 5.222222  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-Re_Dh = (D_i*m_h)/(pi*(D_i/2)**2*mu_h)
-D_t = (D_a**2-D_ie**2)/D_ie**2 #m
-Re_Dc = (D_t*m_c)/(pi*((D_a-D_ie)/2)**2*mu_c)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{Re}_{Dh} &amp;= \frac{ D_{i} \cdot m_{h} }{ \pi \cdot \left( \frac{ D_{i} }{ 2 } \right) ^{ 2 } \cdot \mu_{h} } \\&amp;= \frac{ 0.150 \cdot 0.480 }{ 3.142 \cdot \left( \frac{ 0.150 }{ 2 } \right) ^{ 2 } \cdot 0.000 } \\&amp;= 13567.654  \\[10pt]
-\\[10pt]
-D_{t} &amp;= \frac{ \left( D_{a} \right) ^{ 2 } - \left( D_{ie} \right) ^{ 2 } }{ \left( D_{ie} \right) ^{ 2 } } \\&amp;= \frac{ \left( 0.250 \right) ^{ 2 } - \left( 0.155 \right) ^{ 2 } }{ \left( 0.155 \right) ^{ 2 } } \\&amp;= 1.601 \; \;\textrm{(m)}\\[10pt]
-\\[10pt]
-\mathrm{Re}_{Dc} &amp;= \frac{ D_{t} \cdot m_{c} }{ \pi \cdot \left( \frac{ D_{a} - D_{ie} }{ 2 } \right) ^{ 2 } \cdot \mu_{c} } \\&amp;= \frac{ 1.601 \cdot 0.550 }{ 3.142 \cdot \left( \frac{ 0.250 - 0.155 }{ 2 } \right) ^{ 2 } \cdot 0.001 } \\&amp;= 138161.788  \\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-<p>Notamos que ambos flujos son turbulentos, y por lo tanto, se cosidera que la mejor ecuación para encontrar el número de Nusselt será la relación de Dittus-Boelter.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-NuD_h = 0.023*Re_Dh**0.8*Pr_h**0.3
-NuD_c = 0.023*Re_Dc**0.8*Pr_c**0.4
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{NuD}_{h} &amp;= 0.023 \cdot \left( \mathrm{Re}_{Dh} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr}_{h} \right) ^{ 0.3 } \\&amp;= 0.023 \cdot \left( 13567.654 \right) ^{ 0.8 } \cdot \left( 5.082 \right) ^{ 0.3 } \\&amp;= 75.778  \\[10pt]
-\\[10pt]
-\mathrm{NuD}_{c} &amp;= 0.023 \cdot \left( \mathrm{Re}_{Dc} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr}_{c} \right) ^{ 0.4 } \\&amp;= 0.023 \cdot \left( 138161.788 \right) ^{ 0.8 } \cdot \left( 6.205 \right) ^{ 0.4 } \\&amp;= 618.194  \\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-<p>Con lo cual se puede despejar el coeficiente de transferencia de calor para ambos fluidos.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-h_h = (NuD_h*k_h)/(D_i) #W/m$^2\cdot$K
-h_c = (NuD_c*k_c)/(D_t) #W/m$^2\cdot$K
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-h_{h} &amp;= \frac{ \mathrm{NuD}_{h} \cdot k_{h} }{ D_{i} } \\&amp;= \frac{ 75.778 \cdot 0.113 }{ 0.150 } \\&amp;= 57.233 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
-\\[10pt]
-h_{c} &amp;= \frac{ \mathrm{NuD}_{c} \cdot k_{c} }{ D_{t} } \\&amp;= \frac{ 618.194 \cdot 0.606 }{ 1.601 } \\&amp;= 234.005 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-</section>
-<section id="inciso-3">
-<h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
-<p>Primero, calculamos el coeficiente global de transferencia de calor para un intercambiador de doble tubo sin ensuciamiento.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-U = (D_ie/(D_i*h_h) + D_ie/(2*k_p)*log(D_ie/D_i) + 1/h_c)**-1 #W/m$^2\cdot$K
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-U &amp;= \left( \frac{ D_{ie} }{ D_{i} \cdot h_{h} } + \frac{ D_{ie} }{ 2 \cdot k_{p} } \cdot \ln \left( \frac{ D_{ie} }{ D_{i} } \right) + \frac{ 1 }{ h_{c} } \right) ^{ -1 } \\&amp;= \left( \frac{ 0.155 }{ 0.150 \cdot 57.233 } + \frac{ 0.155 }{ 2 \cdot 50.200 } \cdot \ln \left( \frac{ 0.155 }{ 0.150 } \right) + \frac{ 1 }{ 234.005 } \right) ^{ -1 } \\&amp;= 44.685 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</div>
-<p>Luego podemos despejar el factor de ensuciamiento.</p>
+<p>Al ser turbulento, utilizamos Sieder-Tate asumiendo <span class="math notranslate nohighlight">\(\mu \approx \mu_s\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{U_T} = \frac{1}{U} + R_f
+Nu_D = 0.027Re_D^{0.8}Pr^{1/3}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-U_T = 28.43 #W/m$^2\cdot$K
-R_f = 1/U_T - 1/U #m$^2\cdot$K/W
+Nusselt_D = 0.027*Re_D**0.8*Pr_c**(1/3)
+h_s = (Nusselt_D*k_c)/d #W/m$^2\cdot$K
 </pre></div>
 </div>
 </div>
@@ -666,14 +649,129 @@ R_f = 1/U_T - 1/U #m$^2\cdot$K/W
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-U_{T} &amp;= 28.430 \; \;\textrm{(W/m$^2\cdot$K)}
+\mathrm{Nusselt}_{D} &amp;= 0.027 \cdot \left( \mathrm{Re}_{D} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr}_{c} \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \\&amp;= 0.027 \cdot \left( 23896.222 \right) ^{ 0.8 } \cdot \left( 5.222 \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \\&amp;= 149.043  \\[10pt]
 \\[10pt]
-R_{f} &amp;= \frac{ 1 }{ U_{T} } - \frac{ 1 }{ U } \\&amp;= \frac{ 1 }{ 28.430 } - \frac{ 1 }{ 44.685 } \\&amp;= 0.013 \; \;\textrm{(m$^2\cdot$K/W)}\\[10pt]
+h_{s} &amp;= \frac{ \mathrm{Nusselt}_{D} \cdot k_{c} }{ d } \\&amp;= \frac{ 149.043 \cdot 0.618 }{ 0.010 } \\&amp;= 9203.420 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
-<p>Finalmente, obtenemos que el factor de ensuciamiento es de <span class="math notranslate nohighlight">\(R_f = 0.013~\text{m}^2\cdot\text{K/W}\)</span>.</p>
+<section id="inciso-3">
+<h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
+<p>Ya que el grosor del tubo del serpentín es despreciable, tampoco presenta resistencia a la transferencia de calor.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{U} = \left(\frac{1}{h_o} + \frac{1}{h_s}\right)
+\]</div>
+<p>Por otro lado, el área de transferencia de calor para un serpentín será:</p>
+<div class="math notranslate nohighlight">
+\[
+A_t = \pi D_s\left(\sqrt{4\pi^2n^2r_s^2 + H_s^2}\right)
+\]</div>
+<p>Del enunciado recuperamos los parámetros de dimensionamiento del serpentín.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+D_s = 64/100 #m
+H_s = 80/100 #m
+r_s = D_s/2 #m
+n = 4
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{s} &amp;= 0.640 \; \;\textrm{(m)}
+ &amp;H_{s} &amp;= 0.800 \; \;\textrm{(m)}
+ &amp;r_{s} &amp;= 0.320 \; \;\textrm{(m)}
+\\[10pt]
+ n &amp;= 4 \;
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+U = (1/h_o + 1/h_s)**(-1) #W/m$^2\cdot$K
+A_t = pi*D_s*sqrt(2*pi**2*n**2*r_s**2 + H_s**2) #m$^2$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+U &amp;= \left( \frac{ 1 }{ h_{o} } + \frac{ 1 }{ h_{s} } \right) ^{ \left( - 1 \right) } \\&amp;= \left( \frac{ 1 }{ 1189.566 } + \frac{ 1 }{ 9203.420 } \right) ^{ \left( - 1 \right) } \\&amp;= 1053.410 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+\\[10pt]
+A_{t} &amp;= \pi \cdot D_{s} \cdot \sqrt { 2 \cdot \left( \pi \right) ^{ 2 } \cdot \left( n \right) ^{ 2 } \cdot \left( r_{s} \right) ^{ 2 } + \left( H_{s} \right) ^{ 2 } } \\&amp;= 3.142 \cdot 0.640 \cdot \sqrt { 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot \left( 4 \right) ^{ 2 } \cdot \left( 0.320 \right) ^{ 2 } + \left( 0.800 \right) ^{ 2 } } \\&amp;= 11.547 \; \;\textrm{(m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Ya que estamos en un proceso de enfriamiento el tiempo del proceso tenemos las siguientes ecuaciones para representar el tiempo de enfriamiento. En donde, se enfría un líquido desde <span class="math notranslate nohighlight">\(T_0\)</span> hasta <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta T_{ml} = \frac{T_{cs}-T_{ce}}{\ln\left(\frac{T-T_{ce}}{T-T_{cs}}\right)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+K_{ME} = exp\left(-\frac{UA}{\dot{m}_cc_{P,c}}\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+t = \frac{Mc_{P,h}/c_{P,c}}{\dot{m}_c\left(1-K_{ME}\right)}\ln\left(\frac{T_0-T_{ce}}{T-T_{ce}}\right)
+\]</div>
+<p>Procedemos a calcular lo pedido.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+T_0 = 120+273.15 #K
+T = 105+273.15 #K
+T_ce = 25+273.15 #K
+T_cs = 40+273.15 #K
+M = 0.5*rho_h #kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{0} &amp;= 393.150 \; \;\textrm{(K)}
+ &amp;T &amp;= 378.150 \; \;\textrm{(K)}
+ &amp;T_{ce} &amp;= 298.150 \; \;\textrm{(K)}
+\\[10pt]
+ T_{cs} &amp;= 313.150 \; \;\textrm{(K)}
+ &amp;M &amp;= 365.442 \; \;\textrm{(kg)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 5
+dT_ml = (T_cs-T_ce)/(log((T-T_ce)/(T-T_cs)))
+K_ME = exp(-(U*A)/(m_c*c_Pc))
+t = (M*c_Ph/c_Pc)/(m_c*(1-K_ME)) * log((T_0-T_ce)/(T-T_ce))* 1/(3600*24) #días
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{dT}_{ml} &amp;= \frac{ T_{cs} - T_{ce} }{ \ln \left( \frac{ T - T_{ce} }{ T - T_{cs} } \right) } \\&amp;= \frac{ 313.15000 - 298.15000 }{ \ln \left( \frac{ 378.15000 - 298.15000 }{ 378.15000 - 313.15000 } \right) } \\&amp;= 72.24064  \\[10pt]
+\\[10pt]
+K_{ME} &amp;= \exp \left( \frac{ \left( - \left( U \cdot A \right) \right) }{ m_{c} \cdot c_{Pc} } \right) \\&amp;= \exp \left( \frac{ \left( - \left( 1053.41031 \cdot 0.00008 \right) \right) }{ 0.14478 \cdot 4180.35000 } \right) \\&amp;= 0.99986  \\[10pt]
+\\[10pt]
+t &amp;= \frac{ M \cdot \frac{ c_{Ph} }{ c_{Pc} } }{ m_{c} \cdot \left( 1 - K_{ME} \right) } \cdot \ln \left( \frac{ T_{0} - T_{ce} }{ T - T_{ce} } \right) \cdot \frac{ 1 }{ 3600 \cdot 24 } \\&amp;= \frac{ 365.44200 \cdot \frac{ 2052.21000 }{ 4180.35000 } }{ 0.14478 \cdot \left( 1 - 0.99986 \right) } \cdot \ln \left( \frac{ 393.15000 - 298.15000 }{ 378.15000 - 298.15000 } \right) \cdot \frac{ 1 }{ 3600 \cdot 24 } \\&amp;= 18.03096 \; \;\textrm{(días)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -691,7 +789,7 @@ R_{f} &amp;= \frac{ 1 }{ U_{T} } - \frac{ 1 }{ U } \\&amp;= \frac{ 1 }{ 28.430 }
         },
         kernelOptions: {
             name: "python3",
-            path: "./p2\c1"
+            path: "./p2\c2"
         },
         predefinedOutput: true
     }
@@ -709,20 +807,20 @@ R_{f} &amp;= \frac{ 1 }{ U_{T} } - \frac{ 1 }{ U } \\&amp;= \frac{ 1 }{ 28.430 }
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ICDT.html"
+       href="agitadores.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ICDT</p>
+        <p class="prev-next-title">Transferencia de calor en estanques agitados</p>
       </div>
     </a>
     <a class="right-next"
-       href="../c2/agitadores.html"
+       href="../../ec/intro_ejclases.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Transferencia de calor en estanques agitados</p>
+        <p class="prev-next-title">Ejercicios clases IIQ2013</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -741,10 +839,11 @@ R_{f} &amp;= \frac{ 1 }{ U_{T} } - \frac{ 1 }{ U } \\&amp;= \frac{ 1 }{ 28.430 }
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
 </ul>
 </li>
