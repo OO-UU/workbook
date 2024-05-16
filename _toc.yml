@@ -33,6 +33,9 @@ parts:
     - file: p2/c1/ICDT
       sections:
       - file: p2/c1/e2_1_1
+    - file: p2/c2/agitadores
+      sections:
+      - file: p2/c2/e2_2_1
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases
