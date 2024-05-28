@@ -59,4 +59,5 @@ parts:
       - file: ec/IIQ2013_C15
       - file: ec/IIQ2013_C16
       - file: ec/IIQ2013_C17
+      - file: ec/IIQ2013_C18
     - file: doc/documentacion
