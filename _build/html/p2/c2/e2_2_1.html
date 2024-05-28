@@ -589,19 +589,17 @@ h_o = \frac{Nu_Dk_h}{d}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-h_o = FC*(Nusselt_D*k_h)/d #W/m$^2\cdot$K
+h_o = (Nusselt_D*k_h)/d #W/m$^2\cdot$K
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">h_o</span> <span class="o">=</span> <span class="n">FC</span><span class="o">*</span><span class="p">(</span><span class="n">Nusselt_D</span><span class="o">*</span><span class="n">k_h</span><span class="p">)</span><span class="o">/</span><span class="n">d</span> <span class="c1">#W/m$^2\cdot$K</span>
-
-<span class="ne">NameError</span>: name &#39;FC&#39; is not defined
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{o} &amp;= \frac{ \mathrm{Nusselt}_{D} \cdot k_{h} }{ d } \\&amp;= \frac{ 111.278 \cdot 0.107 }{ 0.010 } \\&amp;= 1189.566 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
 </section>
@@ -724,15 +722,14 @@ A_t = pi*d*sqrt(2*pi**2*n**2*r_s**2 + H_s**2) #m$^2$
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">U</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">h_o</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">h_s</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#W/m$^2\cdot$K</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">A_t</span> <span class="o">=</span> <span class="n">pi</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">r_s</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">H_s</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m$^2$</span>
-
-<span class="ne">NameError</span>: name &#39;h_o&#39; is not defined
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+U &amp;= \left( \frac{ 1 }{ h_{o} } + \frac{ 1 }{ h_{s} } \right) ^{ \left( - 1 \right) } \\&amp;= \left( \frac{ 1 }{ 1189.566 } + \frac{ 1 }{ 9706.732 } \right) ^{ \left( - 1 \right) } \\&amp;= 1059.700 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+\\[10pt]
+A_{t} &amp;= \pi \cdot d \cdot \sqrt { 2 \cdot \left( \pi \right) ^{ 2 } \cdot \left( n \right) ^{ 2 } \cdot \left( r_{s} \right) ^{ 2 } + \left( H_{s} \right) ^{ 2 } } \\&amp;= 3.142 \cdot 0.010 \cdot \sqrt { 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot \left( 4 \right) ^{ 2 } \cdot \left( 0.320 \right) ^{ 2 } + \left( 0.800 \right) ^{ 2 } } \\&amp;= 0.180 \; \;\textrm{(m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
 <p>Ya que estamos en un proceso de enfriamiento el tiempo del proceso tenemos las siguientes ecuaciones para representar el tiempo de enfriamiento. En donde, se enfría un líquido desde <span class="math notranslate nohighlight">\(T_0\)</span> hasta <span class="math notranslate nohighlight">\(T\)</span>.</p>
@@ -784,16 +781,16 @@ t = (M*c_Ph/c_Pc)/(m_c*(1-K_ME)) * log((T_0-T_ce)/(T-T_ce))* 1/(3600*24) #días
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">dT_ml</span> <span class="o">=</span> <span class="p">(</span><span class="n">T_cs</span><span class="o">-</span><span class="n">T_ce</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">log</span><span class="p">((</span><span class="n">T</span><span class="o">-</span><span class="n">T_ce</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">T</span><span class="o">-</span><span class="n">T_cs</span><span class="p">)))</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">K_ME</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">U</span><span class="o">*</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">m_c</span><span class="o">*</span><span class="n">c_Pc</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="n">M</span><span class="o">*</span><span class="n">c_Ph</span><span class="o">/</span><span class="n">c_Pc</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">m_c</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">K_ME</span><span class="p">))</span> <span class="o">*</span> <span class="n">log</span><span class="p">((</span><span class="n">T_0</span><span class="o">-</span><span class="n">T_ce</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">T</span><span class="o">-</span><span class="n">T_ce</span><span class="p">))</span><span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">3600</span><span class="o">*</span><span class="mi">24</span><span class="p">)</span> <span class="c1">#días</span>
-
-<span class="ne">NameError</span>: name &#39;U&#39; is not defined
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{dT}_{ml} &amp;= \frac{ T_{cs} - T_{ce} }{ \ln \left( \frac{ T - T_{ce} }{ T - T_{cs} } \right) } \\&amp;= \frac{ 313.15000 - 298.15000 }{ \ln \left( \frac{ 378.15000 - 298.15000 }{ 378.15000 - 313.15000 } \right) } \\&amp;= 72.24064  \\[10pt]
+\\[10pt]
+K_{ME} &amp;= \exp \left( \frac{ \left( - \left( U \cdot A \right) \right) }{ m_{c} \cdot c_{Pc} } \right) \\&amp;= \exp \left( \frac{ \left( - \left( 1059.69951 \cdot 0.00008 \right) \right) }{ 0.14478 \cdot 4180.35000 } \right) \\&amp;= 0.99986  \\[10pt]
+\\[10pt]
+t &amp;= \frac{ M \cdot \frac{ c_{Ph} }{ c_{Pc} } }{ m_{c} \cdot \left( 1 - K_{ME} \right) } \cdot \ln \left( \frac{ T_{0} - T_{ce} }{ T - T_{ce} } \right) \cdot \frac{ 1 }{ 3600 \cdot 24 } \\&amp;= \frac{ 365.44200 \cdot \frac{ 2052.21000 }{ 4180.35000 } }{ 0.14478 \cdot \left( 1 - 0.99986 \right) } \cdot \ln \left( \frac{ 393.15000 - 298.15000 }{ 378.15000 - 298.15000 } \right) \cdot \frac{ 1 }{ 3600 \cdot 24 } \\&amp;= 17.92396 \; \;\textrm{(días)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </div>
 </section>
