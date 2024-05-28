@@ -577,7 +577,7 @@ D_{i} &amp;= 0.150 \; \;\textrm{(m)}
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
 Re_Dh = (D_i*m_h)/(pi*(D_i/2)**2*mu_h)
-D_t = (D_a**2-D_ie**2)/D_ie**2 #m
+D_t = (D_a**2-D_ie**2)/D_ie #m
 Re_Dc = (D_t*m_c)/(pi*((D_a-D_ie)/2)**2*mu_c)
 </pre></div>
 </div>
@@ -588,9 +588,9 @@ Re_Dc = (D_t*m_c)/(pi*((D_a-D_ie)/2)**2*mu_c)
 \begin{aligned}
 \mathrm{Re}_{Dh} &amp;= \frac{ D_{i} \cdot m_{h} }{ \pi \cdot \left( \frac{ D_{i} }{ 2 } \right) ^{ 2 } \cdot \mu_{h} } \\&amp;= \frac{ 0.150 \cdot 0.480 }{ 3.142 \cdot \left( \frac{ 0.150 }{ 2 } \right) ^{ 2 } \cdot 0.000 } \\&amp;= 13567.654  \\[10pt]
 \\[10pt]
-D_{t} &amp;= \frac{ \left( D_{a} \right) ^{ 2 } - \left( D_{ie} \right) ^{ 2 } }{ \left( D_{ie} \right) ^{ 2 } } \\&amp;= \frac{ \left( 0.250 \right) ^{ 2 } - \left( 0.155 \right) ^{ 2 } }{ \left( 0.155 \right) ^{ 2 } } \\&amp;= 1.601 \; \;\textrm{(m)}\\[10pt]
+D_{t} &amp;= \frac{ \left( D_{a} \right) ^{ 2 } - \left( D_{ie} \right) ^{ 2 } }{ D_{ie} } \\&amp;= \frac{ \left( 0.250 \right) ^{ 2 } - \left( 0.155 \right) ^{ 2 } }{ 0.155 } \\&amp;= 0.248 \; \;\textrm{(m)}\\[10pt]
 \\[10pt]
-\mathrm{Re}_{Dc} &amp;= \frac{ D_{t} \cdot m_{c} }{ \pi \cdot \left( \frac{ D_{a} - D_{ie} }{ 2 } \right) ^{ 2 } \cdot \mu_{c} } \\&amp;= \frac{ 1.601 \cdot 0.550 }{ 3.142 \cdot \left( \frac{ 0.250 - 0.155 }{ 2 } \right) ^{ 2 } \cdot 0.001 } \\&amp;= 138161.788  \\[10pt]
+\mathrm{Re}_{Dc} &amp;= \frac{ D_{t} \cdot m_{c} }{ \pi \cdot \left( \frac{ D_{a} - D_{ie} }{ 2 } \right) ^{ 2 } \cdot \mu_{c} } \\&amp;= \frac{ 0.248 \cdot 0.550 }{ 3.142 \cdot \left( \frac{ 0.250 - 0.155 }{ 2 } \right) ^{ 2 } \cdot 0.001 } \\&amp;= 21415.077  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -610,7 +610,7 @@ NuD_c = 0.023*Re_Dc**0.8*Pr_c**0.4
 \begin{aligned}
 \mathrm{NuD}_{h} &amp;= 0.023 \cdot \left( \mathrm{Re}_{Dh} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr}_{h} \right) ^{ 0.3 } \\&amp;= 0.023 \cdot \left( 13567.654 \right) ^{ 0.8 } \cdot \left( 5.082 \right) ^{ 0.3 } \\&amp;= 75.778  \\[10pt]
 \\[10pt]
-\mathrm{NuD}_{c} &amp;= 0.023 \cdot \left( \mathrm{Re}_{Dc} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr}_{c} \right) ^{ 0.4 } \\&amp;= 0.023 \cdot \left( 138161.788 \right) ^{ 0.8 } \cdot \left( 6.205 \right) ^{ 0.4 } \\&amp;= 618.194  \\[10pt]
+\mathrm{NuD}_{c} &amp;= 0.023 \cdot \left( \mathrm{Re}_{Dc} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr}_{c} \right) ^{ 0.4 } \\&amp;= 0.023 \cdot \left( 21415.077 \right) ^{ 0.8 } \cdot \left( 6.205 \right) ^{ 0.4 } \\&amp;= 139.120  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -630,7 +630,7 @@ h_c = (NuD_c*k_c)/(D_t) #W/m$^2\cdot$K
 \begin{aligned}
 h_{h} &amp;= \frac{ \mathrm{NuD}_{h} \cdot k_{h} }{ D_{i} } \\&amp;= \frac{ 75.778 \cdot 0.113 }{ 0.150 } \\&amp;= 57.233 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
 \\[10pt]
-h_{c} &amp;= \frac{ \mathrm{NuD}_{c} \cdot k_{c} }{ D_{t} } \\&amp;= \frac{ 618.194 \cdot 0.606 }{ 1.601 } \\&amp;= 234.005 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+h_{c} &amp;= \frac{ \mathrm{NuD}_{c} \cdot k_{c} }{ D_{t} } \\&amp;= \frac{ 139.120 \cdot 0.606 }{ 0.248 } \\&amp;= 339.750 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -650,7 +650,7 @@ U = (D_ie/(D_i*h_h) + D_ie/(2*k_p)*log(D_ie/D_i) + 1/h_c)**-1 #W/m$^2\cdot$K
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-U &amp;= \left( \frac{ D_{ie} }{ D_{i} \cdot h_{h} } + \frac{ D_{ie} }{ 2 \cdot k_{p} } \cdot \ln \left( \frac{ D_{ie} }{ D_{i} } \right) + \frac{ 1 }{ h_{c} } \right) ^{ -1 } \\&amp;= \left( \frac{ 0.155 }{ 0.150 \cdot 57.233 } + \frac{ 0.155 }{ 2 \cdot 50.200 } \cdot \ln \left( \frac{ 0.155 }{ 0.150 } \right) + \frac{ 1 }{ 234.005 } \right) ^{ -1 } \\&amp;= 44.685 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+U &amp;= \left( \frac{ D_{ie} }{ D_{i} \cdot h_{h} } + \frac{ D_{ie} }{ 2 \cdot k_{p} } \cdot \ln \left( \frac{ D_{ie} }{ D_{i} } \right) + \frac{ 1 }{ h_{c} } \right) ^{ -1 } \\&amp;= \left( \frac{ 0.155 }{ 0.150 \cdot 57.233 } + \frac{ 0.155 }{ 2 \cdot 50.200 } \cdot \ln \left( \frac{ 0.155 }{ 0.150 } \right) + \frac{ 1 }{ 339.750 } \right) ^{ -1 } \\&amp;= 47.508 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -674,12 +674,12 @@ R_f = 1/U_T - 1/U #m$^2\cdot$K/W
 \begin{aligned}
 U_{T} &amp;= 28.430 \; \;\textrm{(W/m$^2\cdot$K)}
 \\[10pt]
-R_{f} &amp;= \frac{ 1 }{ U_{T} } - \frac{ 1 }{ U } \\&amp;= \frac{ 1 }{ 28.430 } - \frac{ 1 }{ 44.685 } \\&amp;= 0.013 \; \;\textrm{(m$^2\cdot$K/W)}\\[10pt]
+R_{f} &amp;= \frac{ 1 }{ U_{T} } - \frac{ 1 }{ U } \\&amp;= \frac{ 1 }{ 28.430 } - \frac{ 1 }{ 47.508 } \\&amp;= 0.014 \; \;\textrm{(m$^2\cdot$K/W)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
-<p>Finalmente, obtenemos que el factor de ensuciamiento es de <span class="math notranslate nohighlight">\(R_f = 0.013~\text{m}^2\cdot\text{K/W}\)</span>.</p>
+<p>Finalmente, obtenemos que el factor de ensuciamiento es de <span class="math notranslate nohighlight">\(R_f = 0.014~\text{m}^2\cdot\text{K/W}\)</span>.</p>
 </section>
 </section>
 </section>
