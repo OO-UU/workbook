@@ -39,6 +39,12 @@ parts:
     - file: p2/c3/ICTC
       sections:
       - file: p2/c3/e2_3_1
+      - file: p2/c3/e2_3_2
+    - file: p2/c4/superficies-extendidas
+      sections:
+      - file: p2/c4/e2_4_1
+      - file: p2/c4/e2_4_2
+      - file: p2/c4/e2_4_3
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases

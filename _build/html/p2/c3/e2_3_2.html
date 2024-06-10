@@ -1,0 +1,1042 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ejercicio 2: Método NTU - ICTC &#8212; Libro OOUU-1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c3/e2_3_2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Superficies extendidas" href="../c4/superficies-extendidas.html" />
+    <link rel="prev" title="Ejercicio 1: ICTC y haces de tubos" href="e2_3_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Libro OOUU-1 - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Libro OOUU-1 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducción al libro de ejercicios
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c4/agitacion-y-mezclado.html">Agitación y mezclado</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c4/e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c4/e1_4_2.html">Ejercicio 2: Escalamiento de estanques agitados</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c5/compresibles.html">Fluidos compresibles y compresores</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c5/e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c5/e1_5_2.html">Ejercicio 2: Flujo compresible y compresores</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transferencia de Calor</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/ICDT.html">ICDT</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e2_1_1.html">Ejercicio 1: ICDT</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/agitadores.html">Transferencia de calor en estanques agitados</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e2_2_1.html">Ejercicio 1: Agitador con serpentín</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ICTC.html">ICTC</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="e2_3_1.html">Ejercicio 1: ICTC y haces de tubos</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 2: Método NTU - ICTC</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c4/superficies-extendidas.html">Superficies extendidas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_1.html">Pregunta 1: Aletas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_2.html">Ejercicio 2: Aletas cuadradas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C4.html">IIQ2013 - Clase 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C5.html">IIQ2013 - Clase 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C7.html">IIQ2013 - Clase 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C8.html">IIQ2013 - Clase 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C9.html">IIQ2013 - Clase 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C10.html">IIQ2013 - Clase 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C11.html">IIQ2013 - Clase 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C12.html">IIQ2013 - Clase 12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C13.html">IIQ2013 - Clase 13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C14.html">IIQ2013 - Clase 14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C15.html">IIQ2013 - Clase 15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C16.html">IIQ2013 - Clase 16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C17.html">IIQ2013 - Clase 17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C18.html">IIQ2013 - Clase 18</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/p2/c3/e2_3_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ejercicio 2: Método NTU - ICTC</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1-y-2">Inciso 1 y 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-2-metodo-ntu-ictc">
+<h1>Ejercicio 2: Método NTU - ICTC<a class="headerlink" href="#ejercicio-2-metodo-ntu-ictc" title="Permalink to this heading">#</a></h1>
+<section id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
+<p>Usted es el encargado de diseño de la planta de energía más importante de Chile. Para la producción de energía se utiliza vapor sobrecalentado a <span class="math notranslate nohighlight">\(130~\text{°C}\)</span>, el cual se desea enfriar y consendar tal que salga del intercambiador como líquido saturado. Suponga que su condensador actua como un intercambiador de tubo y carcasa tipo 1-2n a contra-corriente con <span class="math notranslate nohighlight">\(27000~\text{tubos}\)</span>. Los tubos son de acero (<span class="math notranslate nohighlight">\(k = 53~\text{W/m}\cdot\text{K}\)</span> , <span class="math notranslate nohighlight">\(\varepsilon = 0.046\)</span>) con <span class="math notranslate nohighlight">\(d_e=30~\text{mm}\)</span> y <span class="math notranslate nohighlight">\(d_i=26~\text{mm}\)</span> de diámetro externo e interno respectivamente. El vapor pasa por la carcasa y se condensa con un coeficiente de convección asociado de <span class="math notranslate nohighlight">\(h_o=11000~\text{W/m}^2\cdot\text{K}\)</span>. Se utiliza agua a <span class="math notranslate nohighlight">\(20~\text{°C}\)</span> como refrigerante. El flujo de refrigerante por cada tubo individual es de <span class="math notranslate nohighlight">\(1~\text{kg/s}\)</span>, con el cual se consigue una tasa de transferencia de calor de <span class="math notranslate nohighlight">\(q=2\times10^{9}~\text{W}\)</span>.</p>
+<p>Por un lado, las propiedades del vapor, sabe que el calor latente será <span class="math notranslate nohighlight">\(h_{fg}=2183~\text{kJ/kg}\)</span> (considerando <span class="math notranslate nohighlight">\(T^{sat}=100~\text{°C}\)</span>) y el calor específico de gas será <span class="math notranslate nohighlight">\(c_{p,g}=2158~\text{J/kg}\cdot\text{K}\)</span>.</p>
+<p>Por otro lado, las propiedades termofísicas del agua refrigerante, utilice la siguiente tabla.</p>
+<table class="table table-center" id="tabla-e2-3-2">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Propiedades termofísicas del agua en función de su temperatura promedio.</span><a class="headerlink" href="#tabla-e2-3-2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fluido</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_P~\text{(J/kg}\cdot\text{K)}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\rho~\text{(kg/m}^3\text{)}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mu~\text{(N}\cdot\text{s/m}^2\text{)}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k~\text{(W/m}\cdot\text{K)}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Pr\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Agua</p></td>
+<td><p>4179</p></td>
+<td><p>997</p></td>
+<td><p>855<span class="math notranslate nohighlight">\(\times\)</span>10<span class="math notranslate nohighlight">\(^{-6}\)</span></p></td>
+<td><p>0.613</p></td>
+<td><p>5.83</p></td>
+</tr>
+</tbody>
+</table>
+<p>Responda lo siguiente:</p>
+<ol class="arabic simple">
+<li><p>Encuentre el flujo másico de vapor.</p></li>
+<li><p>Encuentre la temperatura de salida del flujo refrigerante</p></li>
+<li><p>Utilice método NTU para encontrar el largo de los tubos necesario para este sistema. Considere que se conocen los coeficientes de transferencia de calor para la carcasa. Para la zona de enfriamiento <span class="math notranslate nohighlight">\(h_{c,A} = 14200~\text{W/m}^2\cdot\text{K}\)</span> y para la zona de condensación <span class="math notranslate nohighlight">\(h_{c,B} = 10800~\text{W/m}^2\cdot\text{K}\)</span>.</p></li>
+<li><p>Encuentre las péridas de carga asociada a los tubos (Considere solo péridas por fricción) y la energía necesaria para bombear el agua refrigerante por todos los tubos. Considere para sus cálculos:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+P = \frac{\Delta p\dot{m}}{\rho}
+\]</div>
+</section>
+<section id="solucion">
+<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paquetes utilizados</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">sqrt</span>
+<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="inciso-1-y-2">
+<h3>Inciso 1 y 2<a class="headerlink" href="#inciso-1-y-2" title="Permalink to this heading">#</a></h3>
+<p>Tanto el flujo de vapor como la temperatura de salida del flujo refrigerante los podemos encontrar mediante el balance general de calor.</p>
+<div class="math notranslate nohighlight">
+\[
+q = c_p\dot{m}\Delta T
+\]</div>
+<p>Para el flujo de vapor que circula por la carcasa se debe considerar el fenómeno de enfriamiento y de condensación.</p>
+<div class="math notranslate nohighlight">
+\[
+q = q_A + q_B = \dot{m}_h\left(c_{p,h}\left(T_{i,h}-T^{sat}\right)+h_{fg}\right)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+q = 2e9 #W
+c_ph = 2158 #J/kg$\cdot$K
+T_ih = 130 #$^\circ$C
+T_sat = 100 #$^\circ$C
+h_fg = 2183*1000 #J/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+q &amp;= 2000000000.000 \; \;\textrm{(W)}
+ &amp;c_{ph} &amp;= 2158 \; \;\textrm{(J/kg$\cdot$K)}
+ &amp;T_{ih} &amp;= 130 \; \;\textrm{($^\circ$C)}
+\\[10pt]
+ T_{sat} &amp;= 100 \; \;\textrm{($^\circ$C)}
+ &amp;h_{fg} &amp;= 2183000 \; \;\textrm{(J/kg)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+m_h = q/(c_ph*(T_ih-T_sat)+h_fg) #kg/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+m_{h} &amp;= \frac{ q }{ c_{ph} \cdot \left( T_{ih} - T_{sat} \right) + h_{fg} } \\&amp;= \frac{ 2000000000.000 }{ 2158 \cdot \left( 130 - 100 \right) + 2183000 } \\&amp;= 889.783 \; \;\textrm{(kg/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Mientras que para el flujo refrigerante debemos considerar que, el flujo total que pasará por todos los tubos, será:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{m}_c = \frac{N_t}{n}\times\dot{m}_{tubo}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+c_pc = 4179 #J/kg$\cdot$K
+N_t = 27000
+m_tubo = 1 #kg/s
+m_c = (N_t/2)*m_tubo #kg/s
+T_ic = 20 #$^\circ$C
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+c_{pc} &amp;= 4179 \; \;\textrm{(J/kg$\cdot$K)}
+ &amp;N_{t} &amp;= 27000 \; 
+ &amp;m_{tubo} &amp;= 1 \; \;\textrm{(kg/s)}
+\\[10pt]
+ m_{c} &amp;= 13500.000 \; \;\textrm{(kg/s)}
+ &amp;T_{ic} &amp;= 20 \; \;\textrm{($^\circ$C)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+T_oc = q/(m_c*c_pc) + T_ic #$^\circ$C
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{oc} &amp;= \frac{ q }{ m_{c} \cdot c_{pc} } + T_{ic} \\&amp;= \frac{ 2000000000.000 }{ 13500.000 \cdot 4179 } + 20 \\&amp;= 55.451 \; \;\textrm{($^\circ$C)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-3">
+<h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
+<p>Primero que nada, al existir condensación, debemos separar el intercambiador de calor en dos partes para un análisis NTU. La primera parte <span class="math notranslate nohighlight">\(A\)</span> considera el efecto de enfriamiento del vapor, mientras que la parte <span class="math notranslate nohighlight">\(B\)</span> el efecto de condensación. Siempre que dividamos nuestro intercambiador debemos encontrar las temperaturas de entrada y salida de nuestras secciones. Para el flujo condensante será:</p>
+<div class="math notranslate nohighlight">
+\[
+T_{i,h}^A = 130~\text{°C} \hspace{0.5cm} T_{o,h}^A = 100~\text{°C} \hspace{2cm} T_{i,h}^B = 100~\text{°C} = T_{o,h}^B
+\]</div>
+<p>Mientras que para el fluido refrigerante:</p>
+<div class="math notranslate nohighlight">
+\[
+T_{i,c}^B = 20~\text{°C} \hspace{2cm} T_{o,c}^B = T_{i,c}^A \hspace{2cm} T_{o,c}^A = 55.451~\text{°C}
+\]</div>
+<p>Podemos calcular la temperatura de salida de <span class="math notranslate nohighlight">\(A\)</span> con <span class="math notranslate nohighlight">\(q_A\)</span> o la temperatura de <span class="math notranslate nohighlight">\(B\)</span> con <span class="math notranslate nohighlight">\(q_B\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+## Usando B:
+T_icB = T_ic #$^\circ$C
+q_B = m_h*h_fg #W
+T_ocB = q_B/(m_c*c_pc) + T_icB #$^\circ$C
+## De igual forma, usando A:
+T_ocA = T_oc #$^\circ$C
+q_A = m_h*c_ph*(T_ih-T_sat) #W
+T_icA = T_ocA - q_A/(m_c*c_pc) #$^\circ$C
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \textrm{ Usando B:}\\[10pt]
+T_{icB} &amp;= 20 \; \;\textrm{($^\circ$C)}
+\\[10pt]
+q_{B} &amp;= m_{h} \cdot h_{fg} \\&amp;= 889.783 \cdot 2183000 \\&amp;= 1942395472.786 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+T_{ocB} &amp;= \frac{ q_{B} }{ m_{c} \cdot c_{pc} } + T_{icB} \\&amp;= \frac{ 1942395472.786 }{ 13500.000 \cdot 4179 } + 20 \\&amp;= 54.430 \; \;\textrm{($^\circ$C)}\\[10pt]
+\\[10pt]
+&amp; \textrm{ De igual forma, usando A:}\\[10pt]
+T_{ocA} &amp;= 55.451 \; \;\textrm{($^\circ$C)}
+\\[10pt]
+q_{A} &amp;= m_{h} \cdot c_{ph} \cdot \left( T_{ih} - T_{sat} \right) \\&amp;= 889.783 \cdot 2158 \cdot \left( 130 - 100 \right) \\&amp;= 57604527.214 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+T_{icA} &amp;= T_{ocA} - \frac{ q_{A} }{ m_{c} \cdot c_{pc} } \\&amp;= 55.451 - \frac{ 57604527.214 }{ 13500.000 \cdot 4179 } \\&amp;= 54.430 \; \;\textrm{($^\circ$C)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><strong>Análisis de <em>A</em></strong></p>
+<p>Para la primera etapa:</p>
+<div class="math notranslate nohighlight">
+\[
+C_h = \dot{m}_h\cdot c_{p,h} \hspace{2cm} C_c = \dot{m}_c\cdot c_{p,c}
+\]</div>
+<p>Tal que,</p>
+<div class="math notranslate nohighlight">
+\[
+C_{r,A} = \frac{C_{min,A}}{C_{max,A}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+C_h = m_h*c_ph #W/K
+C_c = m_c*c_pc #W/K
+C_rA = C_h/C_c
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+C_{h} &amp;= m_{h} \cdot c_{ph} \\&amp;= 889.783 \cdot 2158 \\&amp;= 1920150.907 \; \;\textrm{(W/K)}\\[10pt]
+\\[10pt]
+C_{c} &amp;= m_{c} \cdot c_{pc} \\&amp;= 13500.000 \cdot 4179 \\&amp;= 56416500.000 \; \;\textrm{(W/K)}\\[10pt]
+\\[10pt]
+C_{rA} &amp;= \frac{ C_{h} }{ C_{c} } \\&amp;= \frac{ 1920150.907 }{ 56416500.000 } \\&amp;= 0.034  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego, podemos obtener <span class="math notranslate nohighlight">\(\varepsilon_A\)</span> y <span class="math notranslate nohighlight">\(NTU_A\)</span> para flujos contra-corriente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+epsilon_A = q_A/(C_h*(T_ih-T_icA))
+E_A = (2-epsilon_A*(1+C_rA))/(epsilon_A*sqrt(1+C_rA**2))
+NTU_A = 1/sqrt(1+C_rA**2)*log((E_A+1)/(E_A-1))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\epsilon_{A} &amp;= \frac{ q_{A} }{ C_{h} \cdot \left( T_{ih} - T_{icA} \right) } \\&amp;= \frac{ 57604527.214 }{ 1920150.907 \cdot \left( 130 - 54.430 \right) } \\&amp;= 0.397  \\[10pt]
+\\[10pt]
+E_{A} &amp;= \frac{ 2 - \epsilon_{A} \cdot \left( 1 + C_{rA} \right) }{ \epsilon_{A} \cdot \sqrt { 1 + \left( C_{rA} \right) ^{ 2 } } } \\&amp;= \frac{ 2 - 0.397 \cdot \left( 1 + 0.034 \right) }{ 0.397 \cdot \sqrt { 1 + \left( 0.034 \right) ^{ 2 } } } \\&amp;= 4.002  \\[10pt]
+\\[10pt]
+\mathrm{NTU}_{A} &amp;= \frac{ 1 }{ \sqrt { 1 + \left( C_{rA} \right) ^{ 2 } } } \cdot \ln \left( \frac{ E_{A} + 1 }{ E_{A} - 1 } \right) \\&amp;= \frac{ 1 }{ \sqrt { 1 + \left( 0.034 \right) ^{ 2 } } } \cdot \ln \left( \frac{ 4.002 + 1 }{ 4.002 - 1 } \right) \\&amp;= 0.510  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Entonces el área requerida para la transferencia de calor:</p>
+<div class="math notranslate nohighlight">
+\[
+A_A = \frac{NTU_AC_{min,A}}{U_A}
+\]</div>
+<p>Para encontrar el coeficiente global de transferencia de masa en la zona de enfriamiento, debemos obtener el coeficiente local de transferencia de masa por el lado de los tubos.</p>
+<div class="math notranslate nohighlight">
+\[
+U_A = \left(\frac{d_i}{d_eh_{i,A}}+ \frac{d_i}{2 k_p}\ln\left(\frac{d_i}{d_e}\right) +\frac{1}{h_{c,A}}\right)^{-1}
+\]</div>
+<p>Se obtiene el coeficiente local de transferencia de calor de la misma forma que se haría para tubos.</p>
+<div class="math notranslate nohighlight">
+\[
+Re_D = \frac{G_td_i}{\mu}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+G_t = \frac{\dot{m}}{a_t} = \frac{\frac{N_t}{n}\dot{m}_{tubo}}{\frac{N_t}{n}\left(\frac{\pi d_i^2}{4}\right)} = \frac{4\dot{m}_{tubo}}{\pi d_i^2} 
+\]</div>
+<p>Luego el número de Reynolds será:</p>
+<div class="math notranslate nohighlight">
+\[
+Re_D = \frac{4\dot{m}_{tubo}}{\pi d_i\mu}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+mu = 855e-6 #N$\cdot$s/m$^2$
+d_i = 0.026 #m
+Re_D = (4*m_tubo)/(pi*d_i*mu)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mu &amp;= 0.001 \; \;\textrm{(N$\cdot$s/m$^2$)}
+\\[10pt]
+d_{i} &amp;= 0.026 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re}_{D} &amp;= \frac{ 4 \cdot m_{tubo} }{ \pi \cdot d_{i} \cdot \mu } \\&amp;= \frac{ 4 \cdot 1 }{ 3.142 \cdot 0.026 \cdot 0.001 } \\&amp;= 57275.733  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Para flujos turbulentos, tenemos que el número de Nusselt utilizamos la ecuación de Sieder-Tate bajo el supuesto <span class="math notranslate nohighlight">\(\mu\approx\mu_s\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Pr = 5.83
+Nusselt_D = 0.027*Re_D**0.8*Pr**(1/3)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Pr} &amp;= 5.830 \; 
+\\[10pt]
+\mathrm{Nusselt}_{D} &amp;= 0.027 \cdot \left( \mathrm{Re}_{D} \right) ^{ 0.8 } \cdot \left( \mathrm{Pr} \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \\&amp;= 0.027 \cdot \left( 57275.733 \right) ^{ 0.8 } \cdot \left( 5.830 \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \\&amp;= 311.145  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+k = 0.613 #W/m$\cdot$K
+h_i = Nusselt_D*(k/d_i) #W/m$^2\cdot$K
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+k &amp;= 0.613 \; \;\textrm{(W/m$\cdot$K)}
+\\[10pt]
+h_{i} &amp;= \mathrm{Nusselt}_{D} \cdot \left( \frac{ k }{ d_{i} } \right) \\&amp;= 311.145 \cdot \left( \frac{ 0.613 }{ 0.026 } \right) \\&amp;= 7335.847 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Por último calculamos <span class="math notranslate nohighlight">\(U_A\)</span> a partir de los coeficientes locales y luego despejamos el área de transferencia <span class="math notranslate nohighlight">\(A_A\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+h_cA = 14200 #W/m$^2\cdot$K
+k_p = 53 #W/m$\cdot$K
+d_e = 0.03 #m
+U_A = (d_i/(d_e*h_i) + d_i/(2*k_p)*log(d_i/d_e) + 1/h_cA)**-1 #W/m$^2\cdot$K
+A_A = (NTU_A*C_h)/U_A #m$^2$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{cA} &amp;= 14200 \; \;\textrm{(W/m$^2\cdot$K)}
+\\[10pt]
+k_{p} &amp;= 53 \; \;\textrm{(W/m$\cdot$K)}
+\\[10pt]
+d_{e} &amp;= 0.030 \; \;\textrm{(m)}
+\\[10pt]
+U_{A} &amp;= \left( \frac{ d_{i} }{ d_{e} \cdot h_{i} } + \frac{ d_{i} }{ 2 \cdot k_{p} } \cdot \ln \left( \frac{ d_{i} }{ d_{e} } \right) + \frac{ 1 }{ h_{cA} } \right) ^{ -1 } \\&amp;= \left( \frac{ 0.026 }{ 0.030 \cdot 7335.847 } + \frac{ 0.026 }{ 2 \cdot 53 } \cdot \ln \left( \frac{ 0.026 }{ 0.030 } \right) + \frac{ 1 }{ 14200 } \right) ^{ -1 } \\&amp;= 6516.201 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+\\[10pt]
+A_{A} &amp;= \frac{ \mathrm{NTU}_{A} \cdot C_{h} }{ U_{A} } \\&amp;= \frac{ 0.510 \cdot 1920150.907 }{ 6516.201 } \\&amp;= 150.374 \; \;\textrm{(m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><strong>Análisis de <em>B</em></strong></p>
+<p>Para <span class="math notranslate nohighlight">\(B\)</span> consideramos que el proceso de condensación libera tanta energía tal que <span class="math notranslate nohighlight">\(C_h=\infty\)</span>. Luego, <span class="math notranslate nohighlight">\(C_{r,B} = 0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+C_rB = 0
+epsilon_B = q_B/(C_c*(T_sat-T_icB))
+E_B = (2-epsilon_B)/epsilon_B
+NTU_B = log((E_B+1)/(E_B-1))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+C_{rB} &amp;= 0 \; 
+\\[10pt]
+\epsilon_{B} &amp;= \frac{ q_{B} }{ C_{c} \cdot \left( T_{sat} - T_{icB} \right) } \\&amp;= \frac{ 1942395472.786 }{ 56416500.000 \cdot \left( 100 - 20 \right) } \\&amp;= 0.430  \\[10pt]
+\\[10pt]
+E_{B} &amp;= \frac{ 2 - \epsilon_{B} }{ \epsilon_{B} } \\&amp;= \frac{ 2 - 0.430 }{ 0.430 } \\&amp;= 3.647  \\[10pt]
+\\[10pt]
+\mathrm{NTU}_{B} &amp;= \ln \left( \frac{ E_{B} + 1 }{ E_{B} - 1 } \right) \\&amp;= \ln \left( \frac{ 3.647 + 1 }{ 3.647 - 1 } \right) \\&amp;= 0.563  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Luego para <span class="math notranslate nohighlight">\(U_B\)</span>, <span class="math notranslate nohighlight">\(h_o\)</span> será el mismo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+h_cB = 10800 #W/m$^2\cdot$K
+U_B = (d_i/(d_e*h_i) + d_i/(2*k_p)*log(d_i/d_e) + 1/h_cB)**-1 #W/m$^2\cdot$K
+A_B = (NTU_B*C_c)/U_B #m$^2$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{cB} &amp;= 10800 \; \;\textrm{(W/m$^2\cdot$K)}
+\\[10pt]
+U_{B} &amp;= \left( \frac{ d_{i} }{ d_{e} \cdot h_{i} } + \frac{ d_{i} }{ 2 \cdot k_{p} } \cdot \ln \left( \frac{ d_{i} }{ d_{e} } \right) + \frac{ 1 }{ h_{cB} } \right) ^{ -1 } \\&amp;= \left( \frac{ 0.026 }{ 0.030 \cdot 7335.847 } + \frac{ 0.026 }{ 2 \cdot 53 } \cdot \ln \left( \frac{ 0.026 }{ 0.030 } \right) + \frac{ 1 }{ 10800 } \right) ^{ -1 } \\&amp;= 5693.668 \; \;\textrm{(W/m$^2\cdot$K)}\\[10pt]
+\\[10pt]
+A_{B} &amp;= \frac{ \mathrm{NTU}_{B} \cdot C_{c} }{ U_{B} } \\&amp;= \frac{ 0.563 \cdot 56416500.000 }{ 5693.668 } \\&amp;= 5576.260 \; \;\textrm{(m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Por último, sumamos las áreas y despejamos el largo de los tubos.</p>
+<div class="math notranslate nohighlight">
+\[
+A = \frac{N_t}{n}\times 2\pi d_iL
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+A = A_A + A_B #m$^2$
+L = A/(N_t/2*pi*d_i) #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= A_{A} + A_{B} \\&amp;= 150.374 + 5576.260 \\&amp;= 5726.633 \; \;\textrm{(m$^2$)}\\[10pt]
+\\[10pt]
+L &amp;= \frac{ A }{ \frac{ N_{t} }{ 2 } \cdot \pi \cdot d_{i} } \\&amp;= \frac{ 5726.633 }{ \frac{ 27000 }{ 2 } \cdot 3.142 \cdot 0.026 } \\&amp;= 5.193 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-4">
+<h3>Inciso 4<a class="headerlink" href="#inciso-4" title="Permalink to this heading">#</a></h3>
+<p>Para las pérdidas de fricción en un tubo, podemos calcular el factor de fricción mediante la ecuación de Nevers. La caida de presión asociada será:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta p}{\rho} = 4f\left(\frac{Lu_t}{2D}\right)
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(u_t\)</span> es la velocidad promedio en los tubos.</p>
+<div class="math notranslate nohighlight">
+\[
+u_t = \frac{4\dot{m}_{tubo}}{\rho\pi d_i^2}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+epsilon = 0.046
+rho = 997 #kg/m$^3$
+f = 0.001375*(1+(2*10**4*(epsilon/d_i)+(10**6/Re_D))**(1/3))
+u_t = (4*m_tubo)/(rho*pi*d_i**2) #m/s
+Delta_P = 4*f*((L*u_t*rho)/(2*d_i)) #N/m$^2$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\epsilon &amp;= 0.046 \; 
+\\[10pt]
+\rho &amp;= 997 \; \;\textrm{(kg/m$^3$)}
+\\[10pt]
+f &amp;= 0.001375 \cdot \left( 1 + \left( 2 \cdot \left( 10 \right) ^{ 4 } \cdot \left( \frac{ \epsilon }{ d_{i} } \right) + \left( \frac{ \left( 10 \right) ^{ 6 } }{ \mathrm{Re}_{D} } \right) \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \right) \\&amp;= 0.001375 \cdot \left( 1 + \left( 2 \cdot \left( 10 \right) ^{ 4 } \cdot \left( \frac{ 0.046 }{ 0.026 } \right) + \left( \frac{ \left( 10 \right) ^{ 6 } }{ 57275.733 } \right) \right) ^{ \left( \frac{ 1 }{ 3 } \right) } \right) \\&amp;= 0.047  \\[10pt]
+\\[10pt]
+u_{t} &amp;= \frac{ 4 \cdot m_{tubo} }{ \rho \cdot \pi \cdot \left( d_{i} \right) ^{ 2 } } \\&amp;= \frac{ 4 \cdot 1 }{ 997 \cdot 3.142 \cdot \left( 0.026 \right) ^{ 2 } } \\&amp;= 1.889 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+\Delta_{P} &amp;= 4 \cdot f \cdot \left( \frac{ L \cdot u_{t} \cdot \rho }{ 2 \cdot d_{i} } \right) \\&amp;= 4 \cdot 0.047 \cdot \left( \frac{ 5.193 \cdot 1.889 \cdot 997 }{ 2 \cdot 0.026 } \right) \\&amp;= 35005.562 \; \;\textrm{(N/m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Para la potencia de la bomba, se utiliza la ecuación proporcionada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+P = (Delta_P*m_c)/rho #W
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P &amp;= \frac{ \Delta_{P} \cdot m_{c} }{ \rho } \\&amp;= \frac{ 35005.562 \cdot 13500.000 }{ 997 } \\&amp;= 473997.072 \; \;\textrm{(W)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>La potencia total requerida para mover todo el líquido por los tubos en el intercambiador será <span class="math notranslate nohighlight">\(474.0~\text{kW}\)</span>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./p2\c3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="e2_3_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ejercicio 1: ICTC y haces de tubos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../c4/superficies-extendidas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Superficies extendidas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1-y-2">Inciso 1 y 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Equipo Docente, Operaciones Unitarias
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
