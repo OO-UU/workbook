@@ -66,4 +66,6 @@ parts:
       - file: ec/IIQ2013_C16
       - file: ec/IIQ2013_C17
       - file: ec/IIQ2013_C18
+      - file: ec/IIQ2013_C19
+      - file: ec/IIQ2013_C20
     - file: doc/documentacion
