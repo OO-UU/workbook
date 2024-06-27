@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Ejercicio 2: Escalamiento de estanques agitados &#8212; Libro OOUU-1</title>
+    <title>Ejercicio 2: Evaporador considerando entalpía de dilución &#8212; Libro OOUU-1</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c4/e1_4_2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c5/e2_5_2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fluidos compresibles y compresores" href="../c5/compresibles.html" />
-    <link rel="prev" title="Ejercicio 1: Estanques agitados" href="e1_4_1.html" />
+    <link rel="next" title="Ejercicio 3: Evaporador de 2 efectos backward" href="e2_5_3.html" />
+    <link rel="prev" title="Ejercicio 1: Evaporador de 1 efecto simple" href="e2_5_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,59 +171,59 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="agitacion-y-mezclado.html">Agitación y mezclado</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 2: Escalamiento de estanques agitados</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c4/agitacion-y-mezclado.html">Agitación y mezclado</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c4/e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c4/e1_4_2.html">Ejercicio 2: Escalamiento de estanques agitados</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c5/compresibles.html">Fluidos compresibles y compresores</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c5/e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c5/e1_5_2.html">Ejercicio 2: Flujo compresible y compresores</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c5/compresibles.html">Fluidos compresibles y compresores</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c5/e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c5/e1_5_2.html">Ejercicio 2: Flujo compresible y compresores</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transferencia de Calor</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c1/ICDT.html">ICDT</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c1/e2_1_1.html">Ejercicio 1: ICDT</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/ICDT.html">ICDT</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e2_1_1.html">Ejercicio 1: ICDT</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c2/agitadores.html">Transferencia de calor en estanques agitados</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c2/e2_2_1.html">Ejercicio 1: Agitador con serpentín</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/agitadores.html">Transferencia de calor en estanques agitados</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e2_2_1.html">Ejercicio 1: Agitador con serpentín</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c3/ICTC.html">ICTC</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c3/e2_3_1.html">Ejercicio 1: ICTC y haces de tubos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c3/e2_3_2.html">Ejercicio 2: Método NTU - ICTC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/ICTC.html">ICTC</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3/e2_3_1.html">Ejercicio 1: ICTC y haces de tubos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3/e2_3_2.html">Ejercicio 2: Método NTU - ICTC</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c4/superficies-extendidas.html">Superficies extendidas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c4/e2_4_1.html">Ejercicio 1: Aletas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c4/e2_4_2.html">Ejercicio 2: Aletas cuadradas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c4/superficies-extendidas.html">Superficies extendidas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_1.html">Ejercicio 1: Aletas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_2.html">Ejercicio 2: Aletas cuadradas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../p2/c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="evaporadores.html">Evaporadores</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
 </ul>
 </li>
 </ul>
@@ -308,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/p1/c4/e1_4_2.ipynb" target="_blank"
+      <li><a href="../../_sources/p2/c5/e2_5_2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejercicio 2: Escalamiento de estanques agitados</h1>
+    <h1>Ejercicio 2: Evaporador considerando entalpía de dilución</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,6 +407,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
 </ul>
 </li>
 </ul>
@@ -420,46 +421,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-2-escalamiento-de-estanques-agitados">
-<h1>Ejercicio 2: Escalamiento de estanques agitados<a class="headerlink" href="#ejercicio-2-escalamiento-de-estanques-agitados" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-2-evaporador-considerando-entalpia-de-dilucion">
+<h1>Ejercicio 2: Evaporador considerando entalpía de dilución<a class="headerlink" href="#ejercicio-2-evaporador-considerando-entalpia-de-dilucion" title="Permalink to this heading">#</a></h1>
 <section id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
-<p>Usted trabaja en un centro de investigación de aceites para uso industrial llamado Uncle Oil®. Recientemente, su jefe le ha pedido escalar su agitador piloto a uno industrial para masificar la producción de aceite de motor (ambos estanques cilíndricos). Considere que su agitador a escala piloto funciona a <span class="math notranslate nohighlight">\(400\hspace{1mm}RPM\)</span>, y que el motor con el que cuenta el centro de investigación para escala industrial alcanza los <span class="math notranslate nohighlight">\(230\hspace{1mm}RPM\)</span>. Usted sabe que el diámetro del agitador piloto es <span class="math notranslate nohighlight">\(D_{a,1}=15\hspace{1mm}(cm)\)</span>, y que las proporciones <span class="math notranslate nohighlight">\(S_i\)</span> se mantienen constantes e iguales a <span class="math notranslate nohighlight">\(S_1=1/3\)</span> y <span class="math notranslate nohighlight">\(S_6=3/2\)</span>. El equipo de investigación reológica, le hace entrega de la figura a continuación. Determine lo siguiente:</p>
+<p>Un evaporador de un efecto es utilizado para concentrar <span class="math notranslate nohighlight">\(9070~\text{kg/h}\)</span> de una solución al <span class="math notranslate nohighlight">\(20~\%\)</span> de hidróxido de sodio hasta alcanzar un <span class="math notranslate nohighlight">\(50~\%\)</span> de concentración másica. La presión de manométrica del vapor saturado que entra al evaporador (<span class="math notranslate nohighlight">\(\text{S}\)</span>) es de <span class="math notranslate nohighlight">\(1.37~\text{atm}\)</span>; la presión en el evaporador es <span class="math notranslate nohighlight">\(100~\text{mmHg}\)</span>. Asuma que el coeficiente global de transferencia de masa es de <span class="math notranslate nohighlight">\(1400~\text{W/m}^2\cdot\text{°C}\)</span>, y que la temperatura del flujo de alimentación es de <span class="math notranslate nohighlight">\(37.8~\text{°C}\)</span>.</p>
+<p>Encuentre lo siguiente:</p>
 <ol class="arabic simple">
-<li><p>Encuentre la temperatura a la cual deberá operar el estanque industrial para que este funcione a su máxima capacidad de revoluciones. Considerando que el estanque piloto se encontraba a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span>. Asuma que se encuentra en régimen laminar.</p></li>
-<li><p>Calcule el volumen del estanque industrial. Considere que el escalamiento es de velocidad de punta constante.</p></li>
-<li><p>Calcule la potencia que utilizará este estanque si a escala industrial se utilizaban <span class="math notranslate nohighlight">\(3kW\)</span>. <em>Hint: el número de potencia se mantendrá constante.</em></p></li>
+<li><p>El flujo másico de vapor saturado que sale del evaporador en la corriente <span class="math notranslate nohighlight">\(\text{V}\)</span>.</p></li>
+<li><p>El flujo másico de vapor saturado necesario en la corriente <span class="math notranslate nohighlight">\(\text{S}\)</span>.</p></li>
+<li><p>La economía del evaporador.</p></li>
+<li><p>El área de evaporador requerido si la temperatura de condensación del vapor a <span class="math notranslate nohighlight">\(1.37~\text{atm}\)</span> es <span class="math notranslate nohighlight">\(126.1~\text{°C}\)</span>.</p></li>
 </ol>
-<table class="table table-center">
-<colgroup>
-<col style="width: 2%" />
-<col style="width: 49%" />
-<col style="width: 49%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td></td>
-<td><figure class="align-default" id="figura-1-4-2">
-<a class="reference internal image-reference" href="../../_images/img1_4_2.png"><img alt="../../_images/img1_4_2.png" src="../../_images/img1_4_2.png" style="width: 337.8px; height: 300.8px;" /></a>
+<figure class="align-center" id="fig252">
+<a class="reference internal image-reference" href="../../_images/img2_5_2.png"><img alt="../../_images/img2_5_2.png" src="../../_images/img2_5_2.png" style="width: 180.6px; height: 232.2px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Viscosidad vs temperatura para aceite de motor.</span><a class="headerlink" href="#figura-1-4-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Diagrama de evaporador de 1 efecto.</span><a class="headerlink" href="#fig252" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</td>
-<td><figure class="align-default" id="figura-1-4-2-2">
-<a class="reference internal image-reference" href="../../_images/img1_4_2-2.png"><img alt="../../_images/img1_4_2-2.png" src="../../_images/img1_4_2-2.png" style="width: 336.40000000000003px; height: 294.40000000000003px;" /></a>
+<p>Para sus cálculos utilice la siguiente información:<br />
+Temperatura de ebullición del agua a <span class="math notranslate nohighlight">\(100~\text{mmHg}\)</span>: <span class="math notranslate nohighlight">\(51.11~\text{°C}\)</span><br />
+Punto de ebullición de la solución a una concentración del <span class="math notranslate nohighlight">\(20~\%\)</span> de NaOH: <span class="math notranslate nohighlight">\(91.67~\text{°C}\)</span><br />
+El calor latente de vapor saturado a <span class="math notranslate nohighlight">\(1.37~\text{atm}\)</span> es: <span class="math notranslate nohighlight">\(18466.11~\text{kJ/kg}\)</span><br />
+La entalpía de agua sobrecalentada a <span class="math notranslate nohighlight">\(91.67~\text{°C}\)</span> puede ser calculada como:</p>
+<div class="math notranslate nohighlight">
+\[
+H_v \text{(Btu/lb)} = 1116+0.45\cdot\Delta\text{EPE}\text{(°F)}
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(\Delta\text{EPE}\)</span> es la elevación del punto de ebullición.<br />
+Ya que tenemos una solución salina, debemos considerar la entalpía de dilución. Para esto, utilice el siguiente gráfico.</p>
+<figure class="align-center" id="fig2522">
+<a class="reference internal image-reference" href="../../_images/img2_5_22.png"><img alt="../../_images/img2_5_22.png" src="../../_images/img2_5_22.png" style="width: 778.1999999999999px; height: 541.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Densidad vs temperatura para aceite de motor.</span><a class="headerlink" href="#figura-1-4-2-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Diagrama concentración másica vs entalpía.</span><a class="headerlink" href="#fig2522" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="attention admonition">
-<p class="admonition-title">Información sobre la figura</p>
-<p>Puede hacer click en las imágenes para verlas de cerca y hacer zoom.</p>
-</div>
-<p><a class="reference internal" href="#part1-cap4-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><a class="reference internal" href="#part2-cap5-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
 <p><br/><br/>
 <br/><br/>
 <br/><br/>
@@ -470,32 +467,28 @@ document.write(`
 <br/><br/></p>
 </section>
 <section id="solucion">
-<span id="part1-cap4-ex2-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part2-cap5-ex2-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<section id="inciso-1">
+<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paquetes utilizados</span>
-<span class="kn">import</span> <span class="nn">handcalcs.render</span>
-<span class="kn">from</span> <span class="nn">handcalcs</span> <span class="kn">import</span> <span class="n">handcalc</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="n">handcalcs</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;custom_symbols&quot;</span><span class="p">,{</span><span class="s2">&quot;dEPE&quot;</span><span class="p">:</span> <span class="s2">&quot;\Delta EPE&quot;</span><span class="p">,</span> <span class="s2">&quot;dotm&quot;</span><span class="p">:</span> <span class="s2">&quot;\dot m&quot;</span><span class="p">,</span> <span class="s2">&quot;lambda&quot;</span><span class="p">:</span> <span class="s2">&quot;\lambda&quot;</span><span class="p">,</span> <span class="s2">&quot;Tebs&quot;</span><span class="p">:</span> <span class="s2">&quot;T^eb&quot;</span><span class="p">,</span> <span class="s2">&quot;dT&quot;</span><span class="p">:</span> <span class="s2">&quot;\Delta T&quot;</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="inciso-1">
-<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
-<p>Del gráfico obtenemos que a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span> la viscosidad es <span class="math notranslate nohighlight">\(\mu\approx 280\hspace{1mm}(cP)\)</span>. Ya que nos encontramos en regimen laminar, tenemos que:</p>
+<p>Se debe cumplir la conservación de masa, tal que</p>
 <div class="math notranslate nohighlight">
 \[
-\mu_1N_1^2 = \mu_2N_2^2
+w_F\cdot F = w_L\cdot L
 \]</div>
-<p>Entonces despejando para <span class="math notranslate nohighlight">\(\mu_2\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-mu_1 = 280 #cP
-N_1 = 400 #RPM
-N_2 = 230 #RPM
-mu_2 = mu_1*(N_1/N_2)**2 #cP
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+dotm_F = 9070 #kg/h
+w_F = 0.2 
+w_L = 0.5
 </pre></div>
 </div>
 </div>
@@ -503,35 +496,61 @@ mu_2 = mu_1*(N_1/N_2)**2 #cP
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\mu_{1} &amp;= 280 \; \;\textrm{(cP)}
+\dot m_{F} &amp;= 9070 \; \;\textrm{(kg/h)}
+ &amp;w_{F} &amp;= 0.200 \; 
+ &amp;w_{L} &amp;= 0.500 \; 
 \\[10pt]
-N_{1} &amp;= 400 \; \;\textrm{(RPM)}
-\\[10pt]
-N_{2} &amp;= 230 \; \;\textrm{(RPM)}
-\\[10pt]
-\mu_{2} &amp;= \mu_{1} \cdot \left( \frac{ N_{1} }{ N_{2} } \right) ^{ 2 } \\&amp;= 280 \cdot \left( \frac{ 400 }{ 230 } \right) ^{ 2 } \\&amp;= 846.881 \; \;\textrm{(cP)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
 </div>
-<p>Del gráfico de viscosidades, notamos que para <span class="math notranslate nohighlight">\(\mu=846.9\hspace{1mm}(cP)\)</span> la temperatura debe ser <span class="math notranslate nohighlight">\(T\approx 6\hspace{1mm}°C\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short
+dotm_L = dotm_F*(w_F/w_L) #kg/h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\dot m_{L} &amp;= \dot m_{F} \cdot \left( \frac{ w_{F} }{ w_{L} } \right)  = 9070 \cdot \left( \frac{ 0.200 }{ 0.500 } \right) &amp;= 3628.000 \; \;\textrm{(kg/h)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>Por balance de masa se despeja <span class="math notranslate nohighlight">\(\dot{m}_V\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short 0
+dotm_V = dotm_F-dotm_L #kg/h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\dot m_{V} &amp;= \dot m_{F} - \dot m_{L}  = 9070 - 3628 &amp;= 5442 \; \;\textrm{(kg/h)}
+\end{aligned}
+\]</div>
+</div>
+</div>
 </section>
 <section id="inciso-2">
 <h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
-<p>Si el escalamiento se basa en una velocidad de punta constante:</p>
+<p>Se debe despejar <span class="math notranslate nohighlight">\(\dot{m}_s\)</span> a partir del balance de energía.</p>
 <div class="math notranslate nohighlight">
 \[
-D_{a,1}N_1=D_{a,2}N_2
+\dot{m}_s\cdot\lambda_s = \dot{m}_v\cdot H_v + \dot{m}_L\cdot H_L - \dot{m}_F\cdot H_F
 \]</div>
-<p>Entonces,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-D_a1 = 0.15 # m
-D_a2 = D_a1*N_1/N_2 #m
-D_t2 = 3*D_a2 #m
-H_2 = 3/2*D_t2 #m
-V_2 = pi*(D_t2/2)**2*H_2 #m$^3$
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+Tebs_sol = 91.67 #$^\circ$C
+Tebs_w = 51.11 #$^\circ$C
+lambda_s = 2184.11 #kJ/kg
 </pre></div>
 </div>
 </div>
@@ -539,15 +558,80 @@ V_2 = pi*(D_t2/2)**2*H_2 #m$^3$
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D_{a1} &amp;= 0.150 \; \;\textrm{(m)}
+\mathrm{T^eb}_{sol} &amp;= 91.670 \; \;\textrm{($^\circ$C)}
+ &amp;\mathrm{T^eb}_{w} &amp;= 51.110 \; \;\textrm{($^\circ$C)}
+ &amp;\lambda_{s} &amp;= 2184.110 \; \;\textrm{(kJ/kg)}
 \\[10pt]
-D_{a2} &amp;= D_{a1} \cdot \frac{ N_{1} }{ N_{2} } \\&amp;= 0.150 \cdot \frac{ 400 }{ 230 } \\&amp;= 0.261 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Por definición, el <span class="math notranslate nohighlight">\(\Delta\text{EPE}\)</span> es la diferencia entre las temperaturas de ebullición de la solución y el agua pura. Ya que la fórmula para <span class="math notranslate nohighlight">\(H_v\)</span> se encuentra en función de la temperatura en Farenheit, hacemos el cambio de unidades.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short 0
+Tebs_solF = Tebs_sol*9/5 +32 #$^\circ$F
+Tebs_wF = Tebs_w*9/5 +32 #$^\circ$F
+dEPE = Tebs_solF-Tebs_wF #$^\circ$F
+H_V = 1116+0.45*dEPE #Btu/lb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{T^eb}_{solF} &amp;= \mathrm{T^eb}_{sol} \cdot \frac{ 9 }{ 5 } + 32  = 92 \cdot \frac{ 9 }{ 5 } + 32 &amp;= 197 \; \;\textrm{($^\circ$F)}
 \\[10pt]
-D_{t2} &amp;= 3 \cdot D_{a2} \\&amp;= 3 \cdot 0.261 \\&amp;= 0.783 \; \;\textrm{(m)}\\[10pt]
+\mathrm{T^eb}_{wF} &amp;= \mathrm{T^eb}_{w} \cdot \frac{ 9 }{ 5 } + 32  = 51 \cdot \frac{ 9 }{ 5 } + 32 &amp;= 124 \; \;\textrm{($^\circ$F)}
 \\[10pt]
-H_{2} &amp;= \frac{ 3 }{ 2 } \cdot D_{t2} \\&amp;= \frac{ 3 }{ 2 } \cdot 0.783 \\&amp;= 1.174 \; \;\textrm{(m)}\\[10pt]
+\Delta EPE &amp;= \mathrm{T^eb}_{solF} - \mathrm{T^eb}_{wF}  = 197 - 124 &amp;= 73 \; \;\textrm{($^\circ$F)}
 \\[10pt]
-V_{2} &amp;= \pi \cdot \left( \frac{ D_{t2} }{ 2 } \right) ^{ 2 } \cdot H_{2} \\&amp;= 3.142 \cdot \left( \frac{ 0.783 }{ 2 } \right) ^{ 2 } \cdot 1.174 \\&amp;= 0.565 \; \;\textrm{(m$^3$)}\\[10pt]
+H_{V} &amp;= 1116 + 0.45 \cdot \Delta EPE  = 1116 + 0.45 \cdot 73 &amp;= 1149 \; \;\textrm{(Btu/lb)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Las otras entalpías las encontramos de forma gráfica:<br />
+<span class="math notranslate nohighlight">\(H_F:~20~\%~\text{sólidos a}~100~\text{°F}\)</span> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <span class="math notranslate nohighlight">\(55~\text{Btu/lb}\)</span> <br />
+<span class="math notranslate nohighlight">\(H_L:~50~\%~\text{sólidos a}~197~\text{°F}\)</span> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <span class="math notranslate nohighlight">\(221~\text{Btu/lb}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short
+H_V = 1149*2.326 # kJ/kg
+H_F = 55*2.326 # kJ/kg
+H_L = 221*2.326 # kJ/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+H_{V} &amp;= 1149 \cdot 2.326 &amp;= 2672.574 \; \;\textrm{(kJ/kg)}
+\\[10pt]
+H_{F} &amp;= 55 \cdot 2.326 &amp;= 127.930 \; \;\textrm{(kJ/kg)}
+\\[10pt]
+H_{L} &amp;= 221 \cdot 2.326 &amp;= 514.046 \; \;\textrm{(kJ/kg)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+q = dotm_V*H_V + dotm_L*H_L - dotm_F*H_F # kJ/h
+dotm_s = q/lambda_s #kg/h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+q &amp;= \dot m_{V} \cdot H_{V} + \dot m_{L} \cdot H_{L} - \dot m_{F} \cdot H_{F} \\&amp;= 5442.000 \cdot 2672.574 + 3628.000 \cdot 514.046 - 9070 \cdot 127.930 \\&amp;= 15248781.496 \; \;\textrm{(kJ/h)}\\[10pt]
+\\[10pt]
+\dot m_{s} &amp;= \frac{ q }{ \lambda_{s} } \\&amp;= \frac{ 15248781.496 }{ 2184.110 } \\&amp;= 6981.691 \; \;\textrm{(kg/h)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -555,19 +639,38 @@ V_{2} &amp;= \pi \cdot \left( \frac{ D_{t2} }{ 2 } \right) ^{ 2 } \cdot H_{2} \\
 </section>
 <section id="inciso-3">
 <h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
-<p>Se debe cumplir que el número de potencia es equivalente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 2
+E = dotm_V/dotm_s #kg/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+E &amp;= \frac{ \dot m_{V} }{ \dot m_{s} }  = \frac{ 5442.00 }{ 6981.69 } &amp;= 0.78 \; \;\textrm{(kg/kg)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-4">
+<h3>Inciso 4<a class="headerlink" href="#inciso-4" title="Permalink to this heading">#</a></h3>
+<p>La ecuación de diseño de un evaporador será:</p>
 <div class="math notranslate nohighlight">
 \[
-N_{p,1} = N_{p,2} \Rightarrow \frac{P_1}{\rho_1N_1^3D_{a,1}^5} = \frac{P_2}{\rho_2N_2^3D_{a,2}^5}
+q = U\cdot A\cdot\Delta T
 \]</div>
-<p>Recordar que la temperatura del agitador industrial se encuentra aproximadamente a <span class="math notranslate nohighlight">\(6\hspace{1mm}°C\)</span>, a esa temperatura la densidad del aceite será <span class="math notranslate nohighlight">\(\rho_2\approx 887.5\hspace{1mm}(kg/m^3)\)</span>. Y en las condiciones iniciales a <span class="math notranslate nohighlight">\(20\hspace{1mm}°C\)</span> la densidad <span class="math notranslate nohighlight">\(\rho_1\approx 878\hspace{1mm}(kg/m^3)\)</span>.</p>
+<p>Donde la diferencia de temperaturas <span class="math notranslate nohighlight">\(\Delta T\)</span> será la temperatura en el flujo de vapor <span class="math notranslate nohighlight">\(\text{S}\)</span> y la temperatura de ebullición de la solución en el evaporador.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
-P_1 = 3 #kW
-rho_1 = 878 #kg/m$^3$
-rho_2 = 887.5 #kg/m$^3$
-P_2 = P_1*(rho_2*(N_2/60)**3*D_a2**5)/(rho_1*(N_1/60)**3*D_a1**5) #kW
+U = 1400 #W/m$^2\cdot^\circ$C
+q = q*(1000/3600) #W
+dT = 126.1-91.67
+A = q/(U*dT) #m$^2$
 </pre></div>
 </div>
 </div>
@@ -575,13 +678,13 @@ P_2 = P_1*(rho_2*(N_2/60)**3*D_a2**5)/(rho_1*(N_1/60)**3*D_a1**5) #kW
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-P_{1} &amp;= 3 \; \;\textrm{(kW)}
+U &amp;= 1400 \; \;\textrm{(W/m$^2\cdot^\circ$C)}
 \\[10pt]
-\rho_{1} &amp;= 878 \; \;\textrm{(kg/m$^3$)}
+q &amp;= q \cdot \left( \frac{ 1000 }{ 3600 } \right) \\&amp;= 4235772.638 \cdot \left( \frac{ 1000 }{ 3600 } \right) \\&amp;= 4235772.638 \; \;\textrm{(W)}\\[10pt]
 \\[10pt]
-\rho_{2} &amp;= 887.500 \; \;\textrm{(kg/m$^3$)}
+\Delta T &amp;= 126.1 - 91.67 &amp;= 34.430  
 \\[10pt]
-P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a2} \right) ^{ 5 } }{ \rho_{1} \cdot \left( \frac{ N_{1} }{ 60 } \right) ^{ 3 } \cdot \left( D_{a1} \right) ^{ 5 } } \\&amp;= 3 \cdot \frac{ 887.500 \cdot \left( \frac{ 230 }{ 60 } \right) ^{ 3 } \cdot \left( 0.261 \right) ^{ 5 } }{ 878 \cdot \left( \frac{ 400 }{ 60 } \right) ^{ 3 } \cdot \left( 0.150 \right) ^{ 5 } } \\&amp;= 9.172 \; \;\textrm{(kW)}\\[10pt]
+A &amp;= \frac{ q }{ U \cdot \Delta T } \\&amp;= \frac{ 4235772.638 }{ 1400 \cdot 34.430 } \\&amp;= 87.875 \; \;\textrm{(m$^2$)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -603,7 +706,7 @@ P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \righ
         },
         kernelOptions: {
             name: "python3",
-            path: "./p1\c4"
+            path: "./p2\c5"
         },
         predefinedOutput: true
     }
@@ -621,20 +724,20 @@ P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \righ
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="e1_4_1.html"
+       href="e2_5_1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Ejercicio 1: Estanques agitados</p>
+        <p class="prev-next-title">Ejercicio 1: Evaporador de 1 efecto simple</p>
       </div>
     </a>
     <a class="right-next"
-       href="../c5/compresibles.html"
+       href="e2_5_3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fluidos compresibles y compresores</p>
+        <p class="prev-next-title">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -658,6 +761,7 @@ P_{2} &amp;= P_{1} \cdot \frac{ \rho_{2} \cdot \left( \frac{ N_{2} }{ 60 } \righ
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
 </ul>
 </li>
 </ul>

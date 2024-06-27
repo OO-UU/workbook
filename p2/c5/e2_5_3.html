@@ -1,0 +1,1121 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ejercicio 3: Evaporador de 2 efectos backward &#8212; Libro OOUU-1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c5/e2_5_3';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Ejercicios clases IIQ2013" href="../../ec/intro_ejclases.html" />
+    <link rel="prev" title="Ejercicio 2: Evaporador considerando entalpía de dilución" href="e2_5_2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Libro OOUU-1 - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Libro OOUU-1 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducción al libro de ejercicios
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c4/agitacion-y-mezclado.html">Agitación y mezclado</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c4/e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c4/e1_4_2.html">Ejercicio 2: Escalamiento de estanques agitados</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c5/compresibles.html">Fluidos compresibles y compresores</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c5/e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c5/e1_5_2.html">Ejercicio 2: Flujo compresible y compresores</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transferencia de Calor</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/ICDT.html">ICDT</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e2_1_1.html">Ejercicio 1: ICDT</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c2/agitadores.html">Transferencia de calor en estanques agitados</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c2/e2_2_1.html">Ejercicio 1: Agitador con serpentín</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/ICTC.html">ICTC</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3/e2_3_1.html">Ejercicio 1: ICTC y haces de tubos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3/e2_3_2.html">Ejercicio 2: Método NTU - ICTC</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c4/superficies-extendidas.html">Superficies extendidas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_1.html">Ejercicio 1: Aletas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_2.html">Ejercicio 2: Aletas cuadradas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="evaporadores.html">Evaporadores</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C4.html">IIQ2013 - Clase 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C5.html">IIQ2013 - Clase 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C7.html">IIQ2013 - Clase 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C8.html">IIQ2013 - Clase 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C9.html">IIQ2013 - Clase 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C10.html">IIQ2013 - Clase 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C11.html">IIQ2013 - Clase 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C12.html">IIQ2013 - Clase 12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C13.html">IIQ2013 - Clase 13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C14.html">IIQ2013 - Clase 14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C15.html">IIQ2013 - Clase 15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C16.html">IIQ2013 - Clase 16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C17.html">IIQ2013 - Clase 17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C18.html">IIQ2013 - Clase 18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C19.html">IIQ2013 - Clase 19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C20.html">IIQ2013 - Clase 20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C21.html">IIQ2013 - Clase 21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C22.html">IIQ2013 - Clase 22</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/p2/c5/e2_5_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ejercicio 3: Evaporador de 2 efectos backward</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2-y-3">Inciso 2 y 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-5">Inciso 5</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-3-evaporador-de-2-efectos-backward">
+<h1>Ejercicio 3: Evaporador de 2 efectos <em>backward</em><a class="headerlink" href="#ejercicio-3-evaporador-de-2-efectos-backward" title="Permalink to this heading">#</a></h1>
+<section id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
+<p>Un evaporador de dos efectos verticales es utilizado para concentrar un flujo de una solución de sólidos disueltos al <span class="math notranslate nohighlight">\(19~\%\)</span>. El flujo entra al sistema a <span class="math notranslate nohighlight">\(80000~\text{L/h}\)</span> con una temperatura de <span class="math notranslate nohighlight">\(25~\text{°C}\)</span>. Se quiere alcanzar una concentración de sólidos del <span class="math notranslate nohighlight">\(40~\%\)</span>. Al entrar, el flujo pasa por dos intercambiadores de tubo y carcasa a contra-corrientes <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> que actuan como calentadores. Luego, pasa a través del segundo y primer efecto como muestra la figura. El vapor que se utiliza en el calentador <span class="math notranslate nohighlight">\(a\)</span> proviene de la linea de vapor entre el segundo efecto y el condensador <span class="math notranslate nohighlight">\(C\)</span>. Mientras que para el calentador <span class="math notranslate nohighlight">\(b\)</span> se utiliza el vapor proveniente de la linea de vapor entre el primer y segundo efecto. La diferencia de temperaturas <span class="math notranslate nohighlight">\(\Delta T_h\)</span> para ambos calentadores es de <span class="math notranslate nohighlight">\(10~\text{°C}\)</span>. Por último, la temperatura de entrada del vapor saturado de la corriente <span class="math notranslate nohighlight">\(\text{S}\)</span> es de <span class="math notranslate nohighlight">\(110~\text{°C}\)</span>.</p>
+<figure class="align-center" id="fig253">
+<a class="reference internal image-reference" href="../../_images/img2_5_3.png"><img alt="../../_images/img2_5_3.png" src="../../_images/img2_5_3.png" style="width: 906.6px; height: 713.4px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Diagrama de evaporador de 2 efectos backward.</span><a class="headerlink" href="#fig253" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Además, su mejor amigo le asegura que las diferencias de temperatura para cada intercambiador son <span class="math notranslate nohighlight">\(\Delta T_1 = 22~\text{°C}\)</span> y<span class="math notranslate nohighlight">\(\Delta T_2 = 15~\text{°C}\)</span>. Para corroborar, le entrega la siguiente información.</p>
+<ul class="simple">
+<li><p>La gravedad específica para sólidos disueltos al <span class="math notranslate nohighlight">\(19\%\)</span> es <span class="math notranslate nohighlight">\(1.0632\)</span> y la densidad del agua es <span class="math notranslate nohighlight">\(0.995~\text{kg/L}\)</span>.</p></li>
+<li><p>Las elevaciones del punto de ebullición (EPE) son <span class="math notranslate nohighlight">\(7~\text{°C}\)</span> y <span class="math notranslate nohighlight">\(4~\text{°C}\)</span> para el primer y segundo efecto respectivamente.</p></li>
+<li><p>Los coeficientes de transferencia global de calor corregidos son <span class="math notranslate nohighlight">\(25555.12~\text{W/m}^2\cdot\text{K}\)</span> para <span class="math notranslate nohighlight">\(\text{E}1\)</span> y <span class="math notranslate nohighlight">\(39974.8~\text{W/m}^2\cdot\text{K}\)</span> para <span class="math notranslate nohighlight">\(\text{E}2\)</span>.</p></li>
+<li><p>Considere que el calor latente del vapor será <span class="math notranslate nohighlight">\(\lambda_{s}=2183~\text{kJ/kg}\)</span>, <span class="math notranslate nohighlight">\(\lambda_{1}=2341~\text{kJ/kg}\)</span> y <span class="math notranslate nohighlight">\(\lambda_{2}=2678~\text{kJ/kg}\)</span>.</p></li>
+<li><p>La ecuación para el calor específico a presión constante en función de la temperatura (en °C) es:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[c_p (\text{J/kg}\cdot\text{°C}) = 6.5684 T + 3499\]</div>
+<p>Encuentre:</p>
+<ol class="arabic simple">
+<li><p>La fracción másica de sólidos disueltos luego del segundo efecto.</p></li>
+<li><p>El flujo másico de vapor requerido en la corriente <span class="math notranslate nohighlight">\(\text{S}\)</span> en <span class="math notranslate nohighlight">\(\text{kg/h}\)</span>.</p></li>
+<li><p>El área de transferecia de calor para cada efecto en <span class="math notranslate nohighlight">\(\text{m}^2\)</span>.</p></li>
+<li><p>La economía del intercambiador.</p></li>
+<li><p>El calor a ser removido del condensdor en <span class="math notranslate nohighlight">\(\text{MW}\)</span>.</p></li>
+</ol>
+<p><a class="reference internal" href="#part2-cap5-ex3-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
+</section>
+<section id="solucion">
+<span id="part2-cap5-ex3-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs</span>
+<span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="n">handcalcs</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;custom_symbols&quot;</span><span class="p">,{</span><span class="s2">&quot;dT&quot;</span><span class="p">:</span> <span class="s2">&quot;\Delta T&quot;</span><span class="p">,</span> <span class="s2">&quot;dEPE&quot;</span><span class="p">:</span> <span class="s2">&quot;\Delta EPE&quot;</span><span class="p">,</span> <span class="s2">&quot;dotm&quot;</span><span class="p">:</span> <span class="s2">&quot;\dot{m&quot;</span><span class="p">,</span> <span class="s2">&quot;lambda&quot;</span><span class="p">:</span> <span class="s2">&quot;\lambda&quot;</span><span class="p">})</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sympy.solvers.solveset</span> <span class="kn">import</span> <span class="n">linsolve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="inciso-1">
+<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+w_f = 0.19
+w_p = 0.4
+rho_w = 0.995 #kg/L
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+w_{f} &amp;= 0.190 \; 
+ &amp;w_{p} &amp;= 0.400 \; 
+ &amp;\rho_{w} &amp;= 0.995 \; \;\textrm{(kg/L)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Asumiendo <span class="math notranslate nohighlight">\(1~\text{hora}\)</span> de opración.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short 2
+F = 80000*1.0632*rho_w #kg
+P = F*(w_f/w_p) #kg
+V = F-P #kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+F &amp;= 80000 \cdot 1.0632 \cdot \rho_{w}  = 80000 \cdot 1.0632 \cdot 0.99 &amp;= 84630.72 \; \;\textrm{(kg)}
+\\[10pt]
+P &amp;= F \cdot \left( \frac{ w_{f} }{ w_{p} } \right)  = 84630.72 \cdot \left( \frac{ 0.19 }{ 0.40 } \right) &amp;= 40199.59 \; \;\textrm{(kg)}
+\\[10pt]
+V &amp;= F - P  = 84630.72 - 40199.59 &amp;= 44431.13 \; \;\textrm{(kg)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Podemos asumir que la evaporación es equitativa en ambos efectos, luego para el segundo efecto:</p>
+<div class="math notranslate nohighlight">
+\[
+w_f\cdot F = w_{E2}\cdot L =  w_{E2}\cdot (F-V_{E2})
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short
+V_E2 = V/2 #kg
+w_E2 = (w_f*F)/(F-V_E2)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V_{E2} &amp;= \frac{ V }{ 2 }  = \frac{ 44431.128 }{ 2 } &amp;= 22215.564 \; \;\textrm{(kg)}
+\\[10pt]
+w_{E2} &amp;= \frac{ w_{f} \cdot F }{ F - V_{E2} }  = \frac{ 0.190 \cdot 84630.720 }{ 84630.720 - 22215.564 } &amp;= 0.258  
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-2-y-3">
+<h3>Inciso 2 y 3<a class="headerlink" href="#inciso-2-y-3" title="Permalink to this heading">#</a></h3>
+<p>Del enunciado sabemos lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+dT_1 = 22
+dEPE_1 = 7
+dT_2 = 15
+dEPE_2 = 4
+dT_h = 10
+lambda_s = 2183e3 #J/kg
+lambda_1 = 2341e3 #J/kg
+lambda_2 = 2678e3 #J/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta T_{1} &amp;= 22 \; 
+ &amp;\Delta EPE_{1} &amp;= 7 \; 
+ &amp;\Delta T_{2} &amp;= 15 \; 
+\\[10pt]
+ \Delta EPE_{2} &amp;= 4 \; 
+ &amp;\Delta T_{h} &amp;= 10 \; 
+ &amp;\lambda_{s} &amp;= 2183000.000 \; \;\textrm{(J/kg)}
+\\[10pt]
+ \lambda_{1} &amp;= 2341000.000 \; \;\textrm{(J/kg)}
+ &amp;\lambda_{2} &amp;= 2678000.000 \; \;\textrm{(J/kg)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Además definiremos una función que calcule el calor específico promedio entre dos temperaturas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">c_p</span><span class="p">(</span><span class="n">T_1</span><span class="p">,</span><span class="n">T_2</span><span class="p">):</span>
+    <span class="n">c_p1</span> <span class="o">=</span> <span class="mf">6.5684</span><span class="o">*</span><span class="n">T_1</span><span class="o">+</span><span class="mi">3499</span>
+    <span class="n">c_p2</span> <span class="o">=</span> <span class="mf">6.5684</span><span class="o">*</span><span class="n">T_2</span><span class="o">+</span><span class="mi">3499</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">c_p1</span><span class="o">+</span><span class="n">c_p2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A partir del enunciado podemos despejar las tempraturas de los flujos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short
+## Temperaturas en $^\circ$C
+T_s = 110 #Vapor que entra a E1
+T_1 = T_s-dT_1 #Líquido en E1 o producto
+T_s2 = T_1-dEPE_1 #Vapor hacia E2
+T_2 = T_s2-dT_2 #Líquido en E2
+T_c = T_2-dEPE_2 #Vapor hacia el condensador
+T_b = T_s2-dT_h #Líquido que entra a E2 después de b
+T_a = T_c-dT_h #líquido que entra a b después de a
+T_F = 25 #Líquido que entra a a
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \textrm{ Temperaturas en $^\circ$C}\\[10pt]
+T_{s} &amp;= 110 \; \;\textrm{(Vapor que entra a E1)}
+\\[10pt]
+T_{1} &amp;= T_{s} - \Delta T_{1}  = 110 - 22 &amp;= 88 \; \;\textrm{(Líquido en E1 o producto)}
+\\[10pt]
+T_{s2} &amp;= T_{1} - \Delta EPE_{1}  = 88 - 7 &amp;= 81 \; \;\textrm{(Vapor hacia E2)}
+\\[10pt]
+T_{2} &amp;= T_{s2} - \Delta T_{2}  = 81 - 15 &amp;= 66 \; \;\textrm{(Líquido en E2)}
+\\[10pt]
+T_{c} &amp;= T_{2} - \Delta EPE_{2}  = 66 - 4 &amp;= 62 \; \;\textrm{(Vapor hacia el condensador)}
+\\[10pt]
+T_{b} &amp;= T_{s2} - \Delta T_{h}  = 81 - 10 &amp;= 71 \; \;\textrm{(Líquido que entra a E2 después de b)}
+\\[10pt]
+T_{a} &amp;= T_{c} - \Delta T_{h}  = 62 - 10 &amp;= 52 \; \;\textrm{(líquido que entra a b después de a)}
+\\[10pt]
+T_{F} &amp;= 25 \; \;\textrm{(Líquido que entra a a)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Los balances de calor entonces serán:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_1</span> <span class="o">=</span> <span class="n">P</span>
+<span class="n">m_F</span> <span class="o">=</span> <span class="n">F</span>
+<span class="n">m_s</span><span class="p">,</span> <span class="n">m_2</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;\dot</span><span class="si">{m}</span><span class="s1">_s, \dot</span><span class="si">{m}</span><span class="s1">_2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para el primer efecto.</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{m}_s\lambda_s = (\dot{m}_2-\dot{m}_1)\lambda_1 + \dot{m}_2\left(\frac{c_p(T_1)\cdot c_p(T_2)}{2}\right)\left(T_1-T_2\right)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">m_s</span><span class="o">*</span><span class="n">lambda_s</span><span class="p">,</span> <span class="p">(</span><span class="n">m_2</span><span class="o">-</span><span class="n">m_1</span><span class="p">)</span><span class="o">*</span><span class="n">lambda_1</span><span class="o">+</span><span class="n">m_2</span><span class="o">*</span><span class="n">c_p</span><span class="p">(</span><span class="n">T_1</span><span class="p">,</span><span class="n">T_2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_1</span><span class="o">-</span><span class="n">T_2</span><span class="p">))</span>
+<span class="n">E1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2183000.0 \dot{m}_s = 2429104.8696 \dot{m}_2 - 94107244872.0\]</div>
+</div>
+</div>
+<p>Para el segundo efecto más el calentador <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+(\dot{m}_2-\dot{m}_1)\lambda_1 = (\dot{m}_F-\dot{m}_2)\lambda_2 + \dot{m}_F\left(\frac{c_p(T_2)\cdot c_p(T_b)}{2}\right)\left(T_2-T_b\right) + \dot{m}_F\left(\frac{c_p(T_b)\cdot c_p(T_a)}{2}\right)\left(T_b-T_a\right)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E2</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">((</span><span class="n">m_2</span><span class="o">-</span><span class="n">m_1</span><span class="p">)</span><span class="o">*</span><span class="n">lambda_1</span><span class="p">,</span> <span class="p">(</span><span class="n">m_F</span><span class="o">-</span><span class="n">m_2</span><span class="p">)</span><span class="o">*</span><span class="n">lambda_2</span> <span class="o">+</span> <span class="n">m_F</span><span class="o">*</span><span class="n">c_p</span><span class="p">(</span><span class="n">T_2</span><span class="p">,</span><span class="n">T_b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_2</span><span class="o">-</span><span class="n">T_b</span><span class="p">)</span><span class="o">+</span> <span class="n">m_F</span><span class="o">*</span><span class="n">c_p</span><span class="p">(</span><span class="n">T_b</span><span class="p">,</span><span class="n">T_a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_b</span><span class="o">-</span><span class="n">T_a</span><span class="p">))</span>
+<span class="n">E2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2341000.0 \dot{m}_2 - 94107244872.0 = 231245952445.871 - 2678000.0 \dot{m}_2\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">linsolve</span><span class="p">((</span><span class="n">E1</span><span class="p">,</span><span class="n">E2</span><span class="p">),</span> <span class="p">(</span><span class="n">m_s</span><span class="p">,</span> <span class="n">m_2</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">sol1</span><span class="p">,</span> <span class="n">sol2</span> <span class="ow">in</span> <span class="n">sol</span><span class="p">:</span>
+    <span class="n">dotm_s</span> <span class="o">=</span> <span class="n">sol1</span>
+    <span class="n">dotm_2</span> <span class="o">=</span> <span class="n">sol2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Luego de resolver el sistema de ecuaciones llegamos a los siguientes flujos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 0
+dotm_s = dotm_s #kg/h
+dotm_1 = m_1 #kg/h
+dotm_2 = dotm_2 #kg/h
+dotm_F = m_F #kg/h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{m_{s}} &amp;= 29023.0 \; \;\textrm{(kg/h)}
+\\[10pt]
+\dot{m_{1}} &amp;= 40200 \; \;\textrm{(kg/h)}
+\\[10pt]
+\dot{m_{2}} &amp;= 64824.0 \; \;\textrm{(kg/h)}
+\\[10pt]
+\dot{m_{F}} &amp;= 84631 \; \;\textrm{(kg/h)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>A partir de esta información podemos depejar la áreas en función de la ecuación característica.</p>
+<div class="math notranslate nohighlight">
+\[
+q = UA\Delta T
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+U_1 = 25555.12 #W/m$^2\cdot$K
+U_2 = 39974.8 #W/m$^2\cdot$K
+q_1 = (dotm_s/3600)*lambda_s #W
+A_1 = q_1/(U_1*dT_1) #m$^2$
+q_b = (dotm_F/3600)*c_p(T_b,T_a)*(T_b-T_a) #W
+q_2 = ((dotm_2-dotm_1)/3600)*lambda_2 - q_b #W
+A_2 = q_2/(U_2*dT_2) #m$^2$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+U_{1} &amp;= 25555.120 \; \;\textrm{(W/m$^2\cdot$K)}
+\\[10pt]
+U_{2} &amp;= 39974.800 \; \;\textrm{(W/m$^2\cdot$K)}
+\\[10pt]
+q_{1} &amp;= \left( \frac{ \dot{m_{s}} }{ 3600 } \right) \cdot \lambda_{s} \\&amp;= \left( \frac{ 29023.269 }{ 3600 } \right) \cdot 2183000.000 \\&amp;= 17599387.546 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+A_{1} &amp;= \frac{ q_{1} }{ U_{1} \cdot \Delta T_{1} } \\&amp;= \frac{ 17599387.546 }{ 25555.120 \cdot 22 } \\&amp;= 31.304 \; \;\textrm{(m$^2$)}\\[10pt]
+\\[10pt]
+q_{b} &amp;= \left( \frac{ \dot{m_{F}} }{ 3600 } \right) \cdot \operatorname{c_{p}} \left( T_{b} ,\  T_{a} \right) \cdot \left( T_{b} - T_{a} \right) \\&amp;= \left( \frac{ 84630.720 }{ 3600 } \right) \cdot \operatorname{c_{p}} \left( 71 ,\  52 \right) \cdot \left( 71 - 52 \right) \\&amp;= 1743302.921 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+q_{2} &amp;= \left( \frac{ \dot{m_{2}} - \dot{m_{1}} }{ 3600 } \right) \cdot \lambda_{2} - q_{b} \\&amp;= \left( \frac{ 64824.307 - 40199.592 }{ 3600 } \right) \cdot 2678000.000 - 1743302.921 \\&amp;= 16574749.031 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= \frac{ q_{2} }{ U_{2} \cdot \Delta T_{2} } \\&amp;= \frac{ 16574749.031 }{ 39974.800 \cdot 15 } \\&amp;= 27.642 \; \;\textrm{(m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Se debe cumplir que <span class="math notranslate nohighlight">\(A_1 = A_2\)</span>, por lo tanto los <span class="math notranslate nohighlight">\(\Delta T_1\)</span> y <span class="math notranslate nohighlight">\(\Delta T_2\)</span> no son los correspondientes a los efectos. Se debe hacer una corrección a las temperaturas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span>
+A_prom = (A_1+A_2)/2
+dT_c1 = dT_1 * (A_1/A_prom)
+dT_c2 = dT_2 * (A_2/A_prom)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A_{prom} &amp;= \frac{ A_{1} + A_{2} }{ 2 }  = \frac{ 31.304 + 27.642 }{ 2 } &amp;= 29.473  
+\\[10pt]
+\Delta T_{c1} &amp;= \Delta T_{1} \cdot \left( \frac{ A_{1} }{ A_{prom} } \right)  = 22 \cdot \left( \frac{ 31.304 }{ 29.473 } \right) &amp;= 23.367  
+\\[10pt]
+\Delta T_{c2} &amp;= \Delta T_{2} \cdot \left( \frac{ A_{2} }{ A_{prom} } \right)  = 15 \cdot \left( \frac{ 27.642 }{ 29.473 } \right) &amp;= 14.068  
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Con estas nuevas diferencias de temperaturas iteramos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> short
+## Temperaturas en $^\circ$C
+T_s = 110 #Vapor que entra a E1
+T_1 = T_s-dT_c1 #Líquido en E1 o producto
+T_s2 = T_1-dEPE_1 #Vapor hacia E2
+T_2 = T_s2-dT_c2 #Líquido en E2
+T_c = T_2-dEPE_2 #Vapor hacia el condensador
+T_b = T_s2-dT_h #Líquido que entra a E2 después de b
+T_a = T_c-dT_h #líquido que entra a b después de a
+T_F = 25 #Líquido que entra a a
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \textrm{ Temperaturas en $^\circ$C}\\[10pt]
+T_{s} &amp;= 110 \; \;\textrm{(Vapor que entra a E1)}
+\\[10pt]
+T_{1} &amp;= T_{s} - \Delta T_{c1}  = 110 - 23.367 &amp;= 86.633 \; \;\textrm{(Líquido en E1 o producto)}
+\\[10pt]
+T_{s2} &amp;= T_{1} - \Delta EPE_{1}  = 86.633 - 7 &amp;= 79.633 \; \;\textrm{(Vapor hacia E2)}
+\\[10pt]
+T_{2} &amp;= T_{s2} - \Delta T_{c2}  = 79.633 - 14.068 &amp;= 65.565 \; \;\textrm{(Líquido en E2)}
+\\[10pt]
+T_{c} &amp;= T_{2} - \Delta EPE_{2}  = 65.565 - 4 &amp;= 61.565 \; \;\textrm{(Vapor hacia el condensador)}
+\\[10pt]
+T_{b} &amp;= T_{s2} - \Delta T_{h}  = 79.633 - 10 &amp;= 69.633 \; \;\textrm{(Líquido que entra a E2 después de b)}
+\\[10pt]
+T_{a} &amp;= T_{c} - \Delta T_{h}  = 61.565 - 10 &amp;= 51.565 \; \;\textrm{(líquido que entra a b después de a)}
+\\[10pt]
+T_{F} &amp;= 25 \; \;\textrm{(Líquido que entra a a)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>El sistema de ecuaciones es el mismo, pero ahora cambian las temperaturas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_1</span> <span class="o">=</span> <span class="n">P</span>
+<span class="n">m_F</span> <span class="o">=</span> <span class="n">F</span>
+<span class="n">m_s</span><span class="p">,</span> <span class="n">m_2</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;\dot</span><span class="si">{m}</span><span class="s1">_s, \dot</span><span class="si">{m}</span><span class="s1">_2&#39;</span><span class="p">)</span>
+<span class="n">E1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">m_s</span><span class="o">*</span><span class="n">lambda_s</span><span class="p">,</span> <span class="p">(</span><span class="n">m_2</span><span class="o">-</span><span class="n">m_1</span><span class="p">)</span><span class="o">*</span><span class="n">lambda_1</span><span class="o">+</span><span class="n">m_2</span><span class="o">*</span><span class="n">c_p</span><span class="p">(</span><span class="n">T_1</span><span class="p">,</span><span class="n">T_2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_1</span><span class="o">-</span><span class="n">T_2</span><span class="p">))</span>
+<span class="n">E1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2183000.0 \dot{m}_s = 2425248.49178518 \dot{m}_2 - 94107244872.0\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E2</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">((</span><span class="n">m_2</span><span class="o">-</span><span class="n">m_1</span><span class="p">)</span><span class="o">*</span><span class="n">lambda_1</span><span class="p">,</span> <span class="p">(</span><span class="n">m_F</span><span class="o">-</span><span class="n">m_2</span><span class="p">)</span><span class="o">*</span><span class="n">lambda_2</span> <span class="o">+</span> <span class="n">m_F</span><span class="o">*</span><span class="n">c_p</span><span class="p">(</span><span class="n">T_2</span><span class="p">,</span><span class="n">T_b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_2</span><span class="o">-</span><span class="n">T_b</span><span class="p">)</span><span class="o">+</span> <span class="n">m_F</span><span class="o">*</span><span class="n">c_p</span><span class="p">(</span><span class="n">T_b</span><span class="p">,</span><span class="n">T_a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_b</span><span class="o">-</span><span class="n">T_a</span><span class="p">))</span>
+<span class="n">E2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2341000.0 \dot{m}_2 - 94107244872.0 = 231242568253.435 - 2678000.0 \dot{m}_2\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">linsolve</span><span class="p">((</span><span class="n">E1</span><span class="p">,</span><span class="n">E2</span><span class="p">),</span> <span class="p">(</span><span class="n">m_s</span><span class="p">,</span> <span class="n">m_2</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">sol1</span><span class="p">,</span> <span class="n">sol2</span> <span class="ow">in</span> <span class="n">sol</span><span class="p">:</span>
+    <span class="n">dotm_s</span> <span class="o">=</span> <span class="n">sol1</span>
+    <span class="n">dotm_2</span> <span class="o">=</span> <span class="n">sol2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los nuevos flujos serán:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 2
+dotm_s = dotm_s #kg/h
+dotm_1 = m_1 #kg/h
+dotm_2 = dotm_2 #kg/h
+dotm_F = m_F #kg/h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{m_{s}} &amp;= 28908.0 \; \;\textrm{(kg/h)}
+\\[10pt]
+\dot{m_{1}} &amp;= 40199.59 \; \;\textrm{(kg/h)}
+\\[10pt]
+\dot{m_{2}} &amp;= 64823.63 \; \;\textrm{(kg/h)}
+\\[10pt]
+\dot{m_{F}} &amp;= 84630.72 \; \;\textrm{(kg/h)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Por último comprobamos que las áreas sean las mismas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 1
+U_1 = 25555.12 #W/m$^2\cdot$K
+U_2 = 39974.8 #W/m$^2\cdot$K
+q_1 = (dotm_s/3600)*lambda_s #W
+A_1 = q_1/(U_1*dT_c1) #m$^2$
+q_b = (dotm_F/3600)*c_p(T_b,T_a)*(T_b-T_a) #W
+q_2 = ((dotm_2-dotm_1)/3600)*lambda_2 - q_b #W
+A_2 = q_2/(U_2*dT_c2) #m$^2$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+U_{1} &amp;= 25555.1 \; \;\textrm{(W/m$^2\cdot$K)}
+\\[10pt]
+U_{2} &amp;= 39974.8 \; \;\textrm{(W/m$^2\cdot$K)}
+\\[10pt]
+q_{1} &amp;= \left( \frac{ \dot{m_{s}} }{ 3600 } \right) \cdot \lambda_{s} \\&amp;= \left( \frac{ 28908.0 }{ 3600 } \right) \cdot 2183000.0 \\&amp;= 17529492.5 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+A_{1} &amp;= \frac{ q_{1} }{ U_{1} \cdot \Delta T_{c1} } \\&amp;= \frac{ 17529492.5 }{ 25555.1 \cdot 23.4 } \\&amp;= 29.4 \; \;\textrm{(m$^2$)}\\[10pt]
+\\[10pt]
+q_{b} &amp;= \left( \frac{ \dot{m_{F}} }{ 3600 } \right) \cdot \operatorname{c_{p}} \left( T_{b} ,\  T_{a} \right) \cdot \left( T_{b} - T_{a} \right) \\&amp;= \left( \frac{ 84630.7 }{ 3600 } \right) \cdot \operatorname{c_{p}} \left( 69.6 ,\  51.6 \right) \cdot \left( 69.6 - 51.6 \right) \\&amp;= 1655292.6 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+q_{2} &amp;= \left( \frac{ \dot{m_{2}} - \dot{m_{1}} }{ 3600 } \right) \cdot \lambda_{2} - q_{b} \\&amp;= \left( \frac{ 64823.6 - 40199.6 }{ 3600 } \right) \cdot 2678000.0 - 1655292.6 \\&amp;= 16662257.7 \; \;\textrm{(W)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= \frac{ q_{2} }{ U_{2} \cdot \Delta T_{c2} } \\&amp;= \frac{ 16662257.7 }{ 39974.8 \cdot 14.1 } \\&amp;= 29.6 \; \;\textrm{(m$^2$)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Las áreas son lo suficientemente parecidas. Por lo que podemos asumir que el área de los efectos será un promedio entre ambas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 1
+A_prom = (A_1+A_2)/2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+A_{prom} &amp;= \frac{ A_{1} + A_{2} }{ 2 }  = \frac{ 29.4 + 29.6 }{ 2 } &amp;= 29.5  
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>El flujo de vapor en la corriente <span class="math notranslate nohighlight">\(\text{S}\)</span> será <span class="math notranslate nohighlight">\(28908~\text{kg/h}\)</span>. El área de los efectos será <span class="math notranslate nohighlight">\(29.5~\text{m}^2\)</span>.</p>
+</section>
+<section id="inciso-4">
+<h3>Inciso 4<a class="headerlink" href="#inciso-4" title="Permalink to this heading">#</a></h3>
+<p>La economía del sistema completo viene dado por la división entre la cantidad evaporada <span class="math notranslate nohighlight">\(\text{V}\)</span> calculada en el inciso 1 y el flujo de vapor <span class="math notranslate nohighlight">\(\text{S}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 2
+E = V/dotm_s #kg/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+E &amp;= \frac{ V }{ \dot{m_{s}} }  = \frac{ 44431.13 }{ 28908.0 } &amp;= 1.54 \; \;\textrm{(kg/kg)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-5">
+<h3>Inciso 5<a class="headerlink" href="#inciso-5" title="Permalink to this heading">#</a></h3>
+<p>El calor removido en el condensador final será.</p>
+<div class="math notranslate nohighlight">
+\[
+q_C = \left(\dot{m}_F-\dot{m}_2\right)\lambda_2 - \dot{m}_F\left(\frac{c_p(T_a)\cdot c_p(T_F)}{2}\right)\left(T_a-T_F\right)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+q_C = ((dotm_F - dotm_2)/3600)*lambda_2 - (dotm_F/3600)*c_p(T_a,T_F)*(T_a-T_F) #W
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+q_{C} &amp;= \left( \frac{ \dot{m_{F}} - \dot{m_{2}} }{ 3600 } \right) \cdot \lambda_{2} - \left( \frac{ \dot{m_{F}} }{ 3600 } \right) \cdot \operatorname{c_{p}} \left( T_{a} ,\  T_{F} \right) \cdot \left( T_{a} - T_{F} \right) \\&amp;= \left( \frac{ 84630.720 - 64823.633 }{ 3600 } \right) \cdot 2678000.000 - \left( \frac{ 84630.720 }{ 3600 } \right) \cdot \operatorname{c_{p}} \left( 51.565 ,\  25 \right) \cdot \left( 51.565 - 25 \right) \\&amp;= 12392083.821 \; \;\textrm{(W)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params 1
+R = q_C/10**6 #MW
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+R &amp;= 12.4 \; \;\textrm{(MW)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./p2\c5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="e2_5_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ejercicio 2: Evaporador considerando entalpía de dilución</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../ec/intro_ejclases.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ejercicios clases IIQ2013</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2-y-3">Inciso 2 y 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-5">Inciso 5</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Equipo Docente, Operaciones Unitarias
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

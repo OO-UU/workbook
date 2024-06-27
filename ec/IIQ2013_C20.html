@@ -181,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,10 +220,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../p2/c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../p2/c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
@@ -698,7 +705,7 @@ A_{i} &amp;= \beta_{lat} \cdot \frac{ A_{ic} \cdot L_{ic} }{ m }  = 59.200 \cdot
 \\[10pt]
 \mathrm{NTU} &amp;= \frac{ U \cdot A_{i} }{ C_{h} }  = \frac{ 177.477\ \mathrm{kg} \cdot \mathrm{s}^{-3} \cdot \mathrm{K}^{-1} \cdot 17.050\ \mathrm{m}^{2} }{ 6126.629\ \mathrm{kg} \cdot \mathrm{m}^{2} \cdot \mathrm{s}^{-3} \cdot \mathrm{K}^{-1} } &amp;= 0.494  
 \\[10pt]
-\epsilon &amp;= 1 - \mathrm{np.exp} { \left( \frac{ \mathrm{np.exp} { \left( \left( - C_{r} \right) \cdot \mathrm{NTU} \right) } - 1 }{ C_{r} } \right) }  = 1 - np.exp { \left( \frac{ np.exp { \left( \left( - 0.147 \right) \cdot 0.494 \right) } - 1 }{ 0.147 } \right) } &amp;= 0.379  
+\epsilon &amp;= 1 - \mathrm{np.exp} \left( \frac{ \mathrm{np.exp} \left( \left( - C_{r} \right) \cdot \mathrm{NTU} \right) - 1 }{ C_{r} } \right)  = 1 - np.exp \left( \frac{ np.exp \left( \left( - 0.147 \right) \cdot 0.494 \right) - 1 }{ 0.147 } \right) &amp;= 0.379  
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -779,7 +786,7 @@ dT_ml = ((T_hi-T_co) - (T_ho-T_ci)) / np.log((T_hi-T_co)/(T_ho-T_ci))
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\mathrm{dT}_{ml} &amp;= \frac{ \left( T_{hi} - T_{co} \right) - \left( T_{ho} - T_{ci} \right) }{ \mathrm{np.log} { \left( \frac{ T_{hi} - T_{co} }{ T_{ho} - T_{ci} } \right) } } \\&amp;= \frac{ \left( 450.000\ \mathrm{°C} - 317.779\ \mathrm{°C} \right) - \left( 396.939\ \mathrm{°C} - 310.000\ \mathrm{°C} \right) }{ np.log { \left( \frac{ 450.000\ \mathrm{°C} - 317.779\ \mathrm{°C} }{ 396.939\ \mathrm{°C} - 310.000\ \mathrm{°C} } \right) } } \\&amp;= 108.002\ \mathrm{°C}  \\[10pt]
+\mathrm{dT}_{ml} &amp;= \frac{ \left( T_{hi} - T_{co} \right) - \left( T_{ho} - T_{ci} \right) }{ \mathrm{np.log} \left( \frac{ T_{hi} - T_{co} }{ T_{ho} - T_{ci} } \right) } \\&amp;= \frac{ \left( 450.000\ \mathrm{°C} - 317.779\ \mathrm{°C} \right) - \left( 396.939\ \mathrm{°C} - 310.000\ \mathrm{°C} \right) }{ np.log \left( \frac{ 450.000\ \mathrm{°C} - 317.779\ \mathrm{°C} }{ 396.939\ \mathrm{°C} - 310.000\ \mathrm{°C} } \right) } \\&amp;= 108.002\ \mathrm{°C}  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
