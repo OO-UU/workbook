@@ -181,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,10 +220,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
@@ -420,13 +427,22 @@ document.write(`
 <figure class="align-center" id="figura2-4-2">
 <img alt="../../_images/img2_4_2.png" src="../../_images/img2_4_2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Aleta cuadrada</span><a class="headerlink" href="#figura2-4-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Aleta cuadrada</span><a class="headerlink" href="#figura2-4-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Utilizando el mismo volumen de material, usted decide disminuir su grosor a favor de aumentar su ancho. Considere que el mínimo de grosor posible es de <span class="math notranslate nohighlight">\(3~\text{mm}\)</span> y el largo debe mantenerse constante. ¿Cuánto cambia la eficiencia de esta aleta?¿Qué haría usted si solo quisiera aumentar la transferencia de calor?</p>
+<p><a class="reference internal" href="#part2-cap4-ex2-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
 </section>
 <section id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part2-cap4-ex2-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">cosh</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">tanh</span>

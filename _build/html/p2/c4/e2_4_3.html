@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'p2/c4/e2_4_3';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ejercicios clases IIQ2013" href="../../ec/intro_ejclases.html" />
+    <link rel="next" title="Evaporadores" href="../c5/evaporadores.html" />
     <link rel="prev" title="Ejercicio 2: Aletas cuadradas" href="e2_4_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,10 +220,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 3: Arreglos de aletas</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
@@ -421,9 +428,18 @@ document.write(`
 <li><p>Para comprobar si las aletas funcionan, usted compra 15 y las coloca igualmente espaciadas a lo largo del tubo. ¿Cuál es el aumento en la transferencia de calor producto de las aletas?</p></li>
 <li><p>Si el mínimo espaciamiento entre aletas permitido es <span class="math notranslate nohighlight">\(13~\text{mm}\)</span>, ¿cuántas aletas puede añadir como máximo? ¿Es mejor colocar esta cantidad de aletas o mantener el número inicial (15)?</p></li>
 </ol>
+<p><a class="reference internal" href="#part2-cap4-ex3-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
 </section>
 <section id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<span id="part2-cap4-ex3-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
@@ -680,11 +696,11 @@ q_{t} &amp;= h \cdot A_{t} \cdot \left( 1 - \frac{ N \cdot A_{f} }{ A_{t} } \cdo
       </div>
     </a>
     <a class="right-next"
-       href="../../ec/intro_ejclases.html"
+       href="../c5/evaporadores.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ejercicios clases IIQ2013</p>
+        <p class="prev-next-title">Evaporadores</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

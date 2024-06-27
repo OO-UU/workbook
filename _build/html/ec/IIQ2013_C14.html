@@ -181,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,10 +220,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../p2/c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../p2/c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
@@ -687,7 +694,7 @@ T_{f} &amp;= 35 \cdot \mathrm{Celsius}  = 35 \cdot Celsius &amp;= 35.000\ \mathr
 \\[10pt]
 T_{s} &amp;= 100 \cdot \mathrm{Celsius}  = 100 \cdot Celsius &amp;= 100.000\ \mathrm{°C}  
 \\[10pt]
-\mathrm{DeltaT}_{ml} &amp;= \frac{ \left( T_{s} - T_{i} \right) - \left( T_{s} - T_{f} \right) }{ \mathrm{np.log} { \left( \frac{ T_{s} - T_{i} }{ T_{s} - T_{f} } \right) } }  = \frac{ \left( 100.000\ \mathrm{°C} - 25.000\ \mathrm{°C} \right) - \left( 100.000\ \mathrm{°C} - 35.000\ \mathrm{°C} \right) }{ np.log { \left( \frac{ 100.000\ \mathrm{°C} - 25.000\ \mathrm{°C} }{ 100.000\ \mathrm{°C} - 35.000\ \mathrm{°C} } \right) } } &amp;= 69.881\ \mathrm{°C}  
+\mathrm{DeltaT}_{ml} &amp;= \frac{ \left( T_{s} - T_{i} \right) - \left( T_{s} - T_{f} \right) }{ \mathrm{np.log} \left( \frac{ T_{s} - T_{i} }{ T_{s} - T_{f} } \right) }  = \frac{ \left( 100.000\ \mathrm{°C} - 25.000\ \mathrm{°C} \right) - \left( 100.000\ \mathrm{°C} - 35.000\ \mathrm{°C} \right) }{ np.log \left( \frac{ 100.000\ \mathrm{°C} - 25.000\ \mathrm{°C} }{ 100.000\ \mathrm{°C} - 35.000\ \mathrm{°C} } \right) } &amp;= 69.881\ \mathrm{°C}  
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -704,7 +711,7 @@ t_s = M*c_p / (U*A) * np.log((T_s-T_i)/(T_s-T_f))
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-t_{s} &amp;= M \cdot \frac{ c_{p} }{ U \cdot A } \cdot \mathrm{np.log} { \left( \frac{ T_{s} - T_{i} }{ T_{s} - T_{f} } \right) } \\&amp;= 12.600\ \mathrm{Mg} \cdot \frac{ 2437.000\ \mathrm{m}^{2} \cdot \mathrm{s}^{-2} \cdot \mathrm{K}^{-1} }{ 32.724\ \mathrm{kg} \cdot \mathrm{s}^{-3.0} \cdot \mathrm{K}^{-1.0} \cdot 17.130\ \mathrm{m}^{2.0} } \cdot np.log { \left( \frac{ 100.000\ \mathrm{°C} - 25.000\ \mathrm{°C} }{ 100.000\ \mathrm{°C} - 35.000\ \mathrm{°C} } \right) } \\&amp;= 7.839\ \mathrm{ks}  \\[10pt]
+t_{s} &amp;= M \cdot \frac{ c_{p} }{ U \cdot A } \cdot \mathrm{np.log} \left( \frac{ T_{s} - T_{i} }{ T_{s} - T_{f} } \right) \\&amp;= 12.600\ \mathrm{Mg} \cdot \frac{ 2437.000\ \mathrm{m}^{2} \cdot \mathrm{s}^{-2} \cdot \mathrm{K}^{-1} }{ 32.724\ \mathrm{kg} \cdot \mathrm{s}^{-3.0} \cdot \mathrm{K}^{-1.0} \cdot 17.130\ \mathrm{m}^{2.0} } \cdot np.log \left( \frac{ 100.000\ \mathrm{°C} - 25.000\ \mathrm{°C} }{ 100.000\ \mathrm{°C} - 35.000\ \mathrm{°C} } \right) \\&amp;= 7.839\ \mathrm{ks}  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>

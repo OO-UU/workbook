@@ -181,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../p1/c2/tuberias-y-bombas.html">Tuberías y bombas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p1/c2/e1_2_3.html">Ejercicio 3: Bombas y eficiencia</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../p1/c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,10 +220,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../p2/c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../p2/c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2/c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_ejclases.html">Ejercicios clases IIQ2013</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
@@ -565,7 +572,7 @@ D &amp;= 0.050 \; \;\textrm{(m)}
 \\[10pt]
 k_{1} &amp;= \left( \frac{ p_{1} }{ \frac{ 2 }{ \rho_{1} } } \right) \cdot \left( \left( \frac{ p_{2} }{ p_{1} } \right) ^{ 2 } - 1 \right) \\&amp;= \left( \frac{ 2600000.000 }{ \frac{ 2 }{ 2.135 } } \right) \cdot \left( \left( \frac{ 2000000.000 }{ 2600000.000 } \right) ^{ 2 } - 1 \right) \\&amp;= -1133003.996  \\[10pt]
 \\[10pt]
-k_{2} &amp;= \left( \left( 2 \cdot f \cdot \frac{ L }{ D } \right) - \mathrm{np.log} { \left( \frac{ p_{2} }{ p_{1} } \right) } \right) \\&amp;= \left( \left( 2 \cdot 0.005 \cdot \frac{ 500 }{ 0.050 } \right) - np.log { \left( \frac{ 2000000.000 }{ 2600000.000 } \right) } \right) \\&amp;= 102.409  \\[10pt]
+k_{2} &amp;= \left( \left( 2 \cdot f \cdot \frac{ L }{ D } \right) - \mathrm{np.log} \left( \frac{ p_{2} }{ p_{1} } \right) \right) \\&amp;= \left( \left( 2 \cdot 0.005 \cdot \frac{ 500 }{ 0.050 } \right) - np.log \left( \frac{ 2000000.000 }{ 2600000.000 } \right) \right) \\&amp;= 102.409  \\[10pt]
 \\[10pt]
 \mathrm{GA} &amp;= \sqrt { \frac{ \left( - k_{1} \right) }{ k_{2} } } \\&amp;= \sqrt { \frac{ \left( - -1133003.996 \right) }{ 102.409 } } \\&amp;= 105.183 \; \;\textrm{(kg$\cdot$s$^{-1}$$\cdot$m$^{-2}$)}\\[10pt]
 \end{aligned}

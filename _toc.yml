@@ -17,6 +17,7 @@ parts:
       sections:
       - file: p1/c2/e1_2_1
       - file: p1/c2/e1_2_2
+      - file: p1/c2/e1_2_3
     - file: p1/c3/fluidos-no-newtonianos
       sections:
       - file: p1/c3/e1_3_1
@@ -45,6 +46,11 @@ parts:
       - file: p2/c4/e2_4_1
       - file: p2/c4/e2_4_2
       - file: p2/c4/e2_4_3
+    - file: p2/c5/evaporadores
+      sections:
+      - file: p2/c5/e2_5_1
+      - file: p2/c5/e2_5_2
+      - file: p2/c5/e2_5_3
   - caption: Ejercicios adicionales
     chapters:
     - file: ec/intro_ejclases

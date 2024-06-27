@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ejercicio 3: Bombas y eficiencia &#8212; Libro OOUU-1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'p1/c2/e1_2_3';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fluidos no Newtonianos" href="../c3/fluidos-no-newtonianos.html" />
+    <link rel="prev" title="Ejercicio 2: Pérdidas por fricción y singularidades" href="e1_2_2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Libro OOUU-1 - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Libro OOUU-1 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducción al libro de ejercicios
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transporte de fluidos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c1/fundamentos-y-analisis-dim.html">Fundamentos de los fluidos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_1.html">Ejercicio 1: Momentum y Fuerza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_2.html">Ejercicio 2: Hidroestática 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c1/e1_1_3.html">Ejercicio 3: Hidroestática 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tuberias-y-bombas.html">Tuberías y bombas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="e1_2_1.html">Ejercicio 1: Ecuación de Bernoulli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e1_2_2.html">Ejercicio 2: Pérdidas por fricción y singularidades</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejercicio 3: Bombas y eficiencia</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3/fluidos-no-newtonianos.html">Fluidos no Newtonianos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3/e1_3_1.html">Ejercicio 1: Fluidos pseudoplásticos y dilatantes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c4/agitacion-y-mezclado.html">Agitación y mezclado</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e1_4_1.html">Ejercicio 1: Estanques agitados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c4/e1_4_2.html">Ejercicio 2: Escalamiento de estanques agitados</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c5/compresibles.html">Fluidos compresibles y compresores</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e1_5_1.html">Ejercicio 1: Fluidos compresibles en tuberías</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c5/e1_5_2.html">Ejercicio 2: Flujo compresible y compresores</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transferencia de Calor</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c1/ICDT.html">ICDT</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c1/e2_1_1.html">Ejercicio 1: ICDT</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c2/agitadores.html">Transferencia de calor en estanques agitados</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c2/e2_2_1.html">Ejercicio 1: Agitador con serpentín</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c3/ICTC.html">ICTC</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c3/e2_3_1.html">Ejercicio 1: ICTC y haces de tubos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c3/e2_3_2.html">Ejercicio 2: Método NTU - ICTC</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c4/superficies-extendidas.html">Superficies extendidas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c4/e2_4_1.html">Ejercicio 1: Aletas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c4/e2_4_2.html">Ejercicio 2: Aletas cuadradas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c4/e2_4_3.html">Ejercicio 3: Arreglos de aletas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../p2/c5/evaporadores.html">Evaporadores</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c5/e2_5_1.html">Ejercicio 1: Evaporador de 1 efecto simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c5/e2_5_2.html">Ejercicio 2: Evaporador considerando entalpía de dilución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../p2/c5/e2_5_3.html">Ejercicio 3: Evaporador de 2 efectos <em>backward</em></a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ejercicios adicionales</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ec/intro_ejclases.html">Ejercicios clases IIQ2013</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C1.html">IIQ2013 - Clase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C2.html">IIQ2013 - Clase 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C3.html">IIQ2013 - Clase 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C4.html">IIQ2013 - Clase 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C5.html">IIQ2013 - Clase 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C7.html">IIQ2013 - Clase 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C8.html">IIQ2013 - Clase 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C9.html">IIQ2013 - Clase 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C10.html">IIQ2013 - Clase 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C11.html">IIQ2013 - Clase 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C12.html">IIQ2013 - Clase 12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C13.html">IIQ2013 - Clase 13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C14.html">IIQ2013 - Clase 14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C15.html">IIQ2013 - Clase 15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C16.html">IIQ2013 - Clase 16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C17.html">IIQ2013 - Clase 17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C18.html">IIQ2013 - Clase 18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C19.html">IIQ2013 - Clase 19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C20.html">IIQ2013 - Clase 20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C21.html">IIQ2013 - Clase 21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ec/IIQ2013_C22.html">IIQ2013 - Clase 22</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc/documentacion.html">Bibliografía de apoyo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/p1/c2/e1_2_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ejercicio 3: Bombas y eficiencia</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ejercicio-3-bombas-y-eficiencia">
+<h1>Ejercicio 3: Bombas y eficiencia<a class="headerlink" href="#ejercicio-3-bombas-y-eficiencia" title="Permalink to this heading">#</a></h1>
+<section id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this heading">#</a></h2>
+<p>Entra benceno a <span class="math notranslate nohighlight">\(37.8~\text{°C}\)</span> el cual debe ser bombeado a caudal <span class="math notranslate nohighlight">\(11~\text{m}^3\text{/h}\)</span>. El modelo de la bomba es tipo <span class="math notranslate nohighlight">\(3656/3756~\text{Grupo-S}\)</span>, con un rodete <span class="math notranslate nohighlight">\(\text{B}\)</span> de diámetro <span class="math notranslate nohighlight">\(7.75~\text{in}\)</span>. El benceno se transporta desde un estanque hasta otro tal y como muestra la figura. Ambos estanques se encuentran a <span class="math notranslate nohighlight">\(3~\text{atm}\)</span>. La altura entre los puntos <span class="math notranslate nohighlight">\(\text{a'}\)</span> y <span class="math notranslate nohighlight">\(\text{a}\)</span> es <span class="math notranslate nohighlight">\(10~\text{m}\)</span> y la altura entre los puntos <span class="math notranslate nohighlight">\(\text{b}\)</span> y <span class="math notranslate nohighlight">\(\text{b'}\)</span> es de <span class="math notranslate nohighlight">\(2~\text{m}\)</span>. Las tuberías tienen un diámetro de <span class="math notranslate nohighlight">\(12~\text{cm}\)</span>. La densidad del benceno a la temperatura de operación es de <span class="math notranslate nohighlight">\(865~\text{kg/m}^3\)</span> y su presión de vapor es <span class="math notranslate nohighlight">\(26.2~\text{kPa}\)</span>. Si la altura asociada a las perdidas por fricción es <span class="math notranslate nohighlight">\(h_f = 3~\text{m}\)</span> y los codos son codos cuadrados.\</p>
+<figure class="align-center" id="fig123">
+<a class="reference internal image-reference" href="../../_images/img1_2_3.png"><img alt="../../_images/img1_2_3.png" src="../../_images/img1_2_3.png" style="width: 379.8px; height: 356.4px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Sistema de tuberías, bombas y estanques.</span><a class="headerlink" href="#fig123" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Responda lo siguiente:</p>
+<ol class="arabic simple">
+<li><p>Demuestre la ecuación que describe el trabajo de la bomba (<span class="math notranslate nohighlight">\(\eta W_p\)</span>) a partir de las ecuaciones de bernoulli para los puntos <span class="math notranslate nohighlight">\(\text{a'-a}\)</span>, <span class="math notranslate nohighlight">\(\text{a-b}\)</span> y <span class="math notranslate nohighlight">\(\text{b-b'}\)</span>.</p></li>
+<li><p>Encuentre la altura de la bomba (<span class="math notranslate nohighlight">\(h_B\)</span>) en <span class="math notranslate nohighlight">\(\text{m}\)</span>.</p></li>
+<li><p>Calcule la potencia requerida por la bomba (<span class="math notranslate nohighlight">\(P_m\)</span>) en <span class="math notranslate nohighlight">\(\text{W}\)</span>.</p></li>
+<li><p>Determine si la bomba cavita considerando que la altura asociada a las perdidas por fricción entre <span class="math notranslate nohighlight">\(\text{a'}\)</span> y <span class="math notranslate nohighlight">\(\text{a}\)</span> contribuyen <span class="math notranslate nohighlight">\(2/3\)</span> de las pérdidas totales por fricción.</p></li>
+</ol>
+<p><a class="reference internal" href="#part1-cap2-ex3-sol"><span class="std std-ref">Ver solución</span></a></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/></p>
+</section>
+<section id="solucion">
+<span id="part1-cap2-ex3-sol"></span><h2>Solución<a class="headerlink" href="#solucion" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="n">handcalcs</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;custom_symbols&quot;</span><span class="p">,{</span><span class="s2">&quot;ap&quot;</span><span class="p">:</span> <span class="s2">&quot;a&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;bp&quot;</span><span class="p">:</span> <span class="s2">&quot;b&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="s2">&quot;\eta &quot;</span><span class="p">,</span> <span class="s2">&quot;dotm&quot;</span><span class="p">:</span> <span class="s2">&quot;\dot m&quot;</span><span class="p">})</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="inciso-1">
+<h3>Inciso 1<a class="headerlink" href="#inciso-1" title="Permalink to this heading">#</a></h3>
+<p>Para el primer tramo (<span class="math notranslate nohighlight">\(\text{a'-a}\)</span>), la ecuación de bernoulli será:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{P_{a'}}{\rho} + g\cdot Z_{a'} + \frac{V_{a'}^2}{2}\right) = \left(\frac{P_a}{\rho} + g\cdot Z_a + \frac{V_a^2}{2}\right) + \left(\phi_s+\phi_f\right)_{a'-a}
+\]</div>
+<p>Para el tramo <span class="math notranslate nohighlight">\(\text{a-b}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{P_{a}}{\rho} + g\cdot Z_{a} + \frac{V_{a}^2}{2}\right) = \left(\frac{P_b}{\rho} + g\cdot Z_b + \frac{V_b^2}{2}\right) - \eta W_p
+\]</div>
+<p>Por último, para el tramo <span class="math notranslate nohighlight">\(\text{b-b'}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{P_{b}}{\rho} + g\cdot Z_{b} + \frac{V_{b}^2}{2}\right) = \left(\frac{P_{b'}}{\rho} + g\cdot Z_{b'} + \frac{V_{b'}^2}{2}\right) + \left(\phi_s+\phi_f\right)_{b-b'}
+\]</div>
+<p>Despejando en la ecuación de bernoulli entre los puntos <span class="math notranslate nohighlight">\(\text{a-b}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{P_{a'}}{\rho} + g\cdot Z_{a'} + \frac{V_{a'}^2}{2}\right) - \left(\phi_s+\phi_f\right)_{a'-a} = \left(\frac{P_{b'}}{\rho} + g\cdot Z_{b'} + \frac{V_{b'}^2}{2}\right) + \left(\phi_s+\phi_f\right)_{b-b'} - \eta W_p
+\]</div>
+<p>Luego, podemos entender la suma de las pérdidas de carga por fricción y singularidades entre <span class="math notranslate nohighlight">\(\text{a'-a}\)</span> y <span class="math notranslate nohighlight">\(\text{b-b'}\)</span> como las pérdidas de cargas en todo el sistema.</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\phi_s+\phi_f\right)_{a'-b'} = \left(\phi_s+\phi_f\right)_{a'-a} + \left(\phi_s+\phi_f\right)_{b-b'}
+\]</div>
+<p>Finalmente llegamos a la última ecuación:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{P_{a'}}{\rho} + g\cdot Z_{a'} + \frac{V_{a'}^2}{2}\right) = \left(\frac{P_{b'}}{\rho} + g\cdot Z_{b'} + \frac{V_{b'}^2}{2}\right) + \left(\phi_s+\phi_f\right)_{a'-b'} - \eta W_p
+\]</div>
+<p>Para que la ecuación sea consistente con la figura, consideremos que <span class="math notranslate nohighlight">\(Z_{a'}=0\)</span> y que ambos estanques se encuentran a la misma presión (<span class="math notranslate nohighlight">\(3~\text{atm}\)</span>), la cual será la referencia <span class="math notranslate nohighlight">\(P_{a'}=P_{b'}=0\)</span>. Además, el punto <span class="math notranslate nohighlight">\(\text{a'}\)</span> se considera sin movimiento (<span class="math notranslate nohighlight">\(V_{a'}=0\)</span>) por el supuesto de estanque muy grande. Reordenando:</p>
+<div class="math notranslate nohighlight">
+\[
+\eta W_p = \left(g\cdot Z_{b'} + \frac{V_{b'}^2}{2}\right) + \left(\phi_s+\phi_f\right)_{a'-b'}
+\]</div>
+<p>Luego, reemplazando las pérdidas de carga y asumiendo que la velocidad el todo el sistema (excluyendo el estanque) es constante:</p>
+<div class="math notranslate nohighlight">
+\[
+\eta W_p = g\cdot Z_{b'} + \left(1 + 4f\left(\frac{L}{D_e}\right) + K \right)\frac{V^2}{2}
+\]</div>
+</section>
+<section id="inciso-2">
+<h3>Inciso 2<a class="headerlink" href="#inciso-2" title="Permalink to this heading">#</a></h3>
+<p>Ya que en el enunciado nos entregan las pérdidas de carga por fricción en <span class="math notranslate nohighlight">\(\text{m}\)</span>, escribmos la función para <span class="math notranslate nohighlight">\(\eta W_p\)</span> de la siguiente manera:</p>
+<div class="math notranslate nohighlight">
+\[
+\eta W_p = g\cdot Z_{b'} + \left(1 + K \right)\frac{8Q^2}{\pi^2D^4} + g\cdot h_f
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+g = 9.81 #m/s$^2$
+Z_bp = 10-2 #m
+D = 12/100 #m
+K_codo = 1.2
+K_salida = 0.5
+K_entrada = 1.0
+Q = 11/3600 #m$^3$/s
+h_f = 3 #m
+rho = 865  #kg/m$^3$
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+g &amp;= 9.810 \; \;\textrm{(m/s$^2$)}
+ &amp;Z_{b'} &amp;= 8 \; \;\textrm{(m)}
+ &amp;D &amp;= 0.120 \; \;\textrm{(m)}
+\\[10pt]
+ K_{codo} &amp;= 1.200 \; 
+ &amp;K_{salida} &amp;= 0.500 \; 
+ &amp;K_{entrada} &amp;= 1.000 \; 
+\\[10pt]
+ Q &amp;= 0.003 \; \;\textrm{(m$^3$/s)}
+ &amp;h_{f} &amp;= 3 \; \;\textrm{(m)}
+ &amp;\rho &amp;= 865 \; \;\textrm{(kg/m$^3$)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+etaW_p = g*Z_bp + (1 + (K_salida + 4*K_codo + K_entrada))*(8*Q**2)/(pi**2*D**4) + g*h_f #J/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\eta W_{p} &amp;= g \cdot Z_{b'} + \left( 1 + \left( K_{salida} + 4 \cdot K_{codo} + K_{entrada} \right) \right) \cdot \frac{ 8 \cdot \left( Q \right) ^{ 2 } }{ \left( \pi \right) ^{ 2 } \cdot \left( D \right) ^{ 4 } } + g \cdot h_{f} \\&amp;= 9.810 \cdot 8 + \left( 1 + \left( 0.500 + 4 \cdot 1.200 + 1.000 \right) \right) \cdot \frac{ 8 \cdot \left( 0.003 \right) ^{ 2 } }{ \left( 3.142 \right) ^{ 2 } \cdot \left( 0.120 \right) ^{ 4 } } + 9.810 \cdot 3 \\&amp;= 108.176 \; \;\textrm{(J/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+h_B = etaW_p/g #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{B} &amp;= \frac{ \eta W_{p} }{ g } \\&amp;= \frac{ 108.176 }{ 9.810 } \\&amp;= 11.027 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-3">
+<h3>Inciso 3<a class="headerlink" href="#inciso-3" title="Permalink to this heading">#</a></h3>
+<p>Del gráfico para la bomba tipo <span class="math notranslate nohighlight">\(3656/3756~\text{Grupo-S}\)</span> con rodete <span class="math notranslate nohighlight">\(\text{B}\)</span> de diámetro <span class="math notranslate nohighlight">\(7.75~\text{in}\)</span>, vemos que para un caudal de <span class="math notranslate nohighlight">\(11~\text{m}^3\text{/h}\)</span> la eficiencia es aproximadamente de un <span class="math notranslate nohighlight">\(\eta = 65~\%\)</span>.</p>
+<p>La fórmula para la potencia requerida puede ser escrita como:</p>
+<div class="math notranslate nohighlight">
+\[
+P_B = \dot{m}W_p
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+eta = 0.65
+dotm = Q*rho #kg/s
+P_B = dotm*etaW_p/eta #W
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\eta  &amp;= 0.650 \; 
+\\[10pt]
+\dot m &amp;= Q \cdot \rho \\&amp;= 0.003 \cdot 865 \\&amp;= 2.643 \; \;\textrm{(kg/s)}\\[10pt]
+\\[10pt]
+P_{B} &amp;= \dot m \cdot \frac{ \eta W_{p} }{ \eta  } \\&amp;= 2.643 \cdot \frac{ 108.176 }{ 0.650 } \\&amp;= 439.871 \; \;\textrm{(W)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="inciso-4">
+<h3>Inciso 4<a class="headerlink" href="#inciso-4" title="Permalink to this heading">#</a></h3>
+<p>Debemos compara <span class="math notranslate nohighlight">\(\text{NPSH}_d\)</span> con <span class="math notranslate nohighlight">\(\text{NPSH}_r\)</span>. Del gráfico, <span class="math notranslate nohighlight">\(\text{NPSH}_r \approx 17.5~\text{m}\)</span>.</p>
+<p>Para la <span class="math notranslate nohighlight">\(\text{NPSH}_d\)</span> sabemos que:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{NPSH}_d = \frac{P_{a'}-P_v}{\rho g} - z_a - \left(1 + K \right)\frac{8Q^2}{g\pi^2D^4} - h_{f,a'-a}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> params
+P_v = 26.2*1000 #Pa
+P_ap = 3*101325 #Pa
+z_a = 10 #m
+h_f = 2 #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{v} &amp;= 26200.000 \; \;\textrm{(Pa)}
+ &amp;P_{a'} &amp;= 303975 \; \;\textrm{(Pa)}
+ &amp;z_{a} &amp;= 10 \; \;\textrm{(m)}
+\\[10pt]
+ h_{f} &amp;= 2 \; \;\textrm{(m)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+NPSH_d = (P_ap-P_v)/(rho*g) - z_a - (1+(K_salida+4*K_codo+K_entrada))*(8*Q**2)/(g*pi**2*D**4) - h_f #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{NPSH}_{d} &amp;= \frac{ P_{a'} - P_{v} }{ \rho \cdot g } - z_{a} - \left( 1 + \left( K_{salida} + 4 \cdot K_{codo} + K_{entrada} \right) \right) \cdot \frac{ 8 \cdot \left( Q \right) ^{ 2 } }{ g \cdot \left( \pi \right) ^{ 2 } \cdot \left( D \right) ^{ 4 } } - h_{f} \\&amp;= \frac{ 303975 - 26200.000 }{ 865 \cdot 9.810 } - 10 - \left( 1 + \left( 0.500 + 4 \cdot 1.200 + 1.000 \right) \right) \cdot \frac{ 8 \cdot \left( 0.003 \right) ^{ 2 } }{ 9.810 \cdot \left( 3.142 \right) ^{ 2 } \cdot \left( 0.120 \right) ^{ 4 } } - 2 \\&amp;= 20.708 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Ya que <span class="math notranslate nohighlight">\(\text{NPSH}_d&gt;\text{NPSH}_r\)</span>, la bomba no cavita.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./p1\c2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="e1_2_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ejercicio 2: Pérdidas por fricción y singularidades</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../c3/fluidos-no-newtonianos.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fluidos no Newtonianos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-1">Inciso 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-2">Inciso 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-3">Inciso 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inciso-4">Inciso 4</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Equipo Docente, Operaciones Unitarias
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
