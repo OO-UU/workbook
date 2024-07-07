@@ -608,9 +608,9 @@ T_{F} &amp;= 100.000\ \mathrm{°C} \;
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span>
 V = F*(1-w_F/w_L) 
-H_V = cp_l * (T) + lambda_lvT + cp_g*(T-T_v)
-H_F = 90 * J/ kg 
-H_L = 95  * J / kg 
+H_V = cp_l * (T_v) + lambda_lvT + cp_g*(T-T_v)
+H_F = 96 * J/ kg 
+H_L = 88  * J / kg 
 S = (V*H_V + L*H_L - F*H_F)/lambda_s
 </pre></div>
 </div>
@@ -621,13 +621,13 @@ S = (V*H_V + L*H_L - F*H_F)/lambda_s
 \begin{aligned}
 V &amp;= F \cdot \left( 1 - \frac{ w_{F} }{ w_{L} } \right)  = 8.333\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot \left( 1 - \frac{ 0.050 }{ 0.400 } \right) &amp;= 7.292\ \mathrm{kg} \cdot \mathrm{s}^{-1}  
 \\[10pt]
-H_{V} &amp;= \mathrm{cp}_{l} \cdot T + \mathrm{lambda}_{lvT} + \mathrm{cp}_{g} \cdot \left( T - T_{v} \right) \\&amp;= 1.000\ \mathrm{m}^{2} \cdot \mathrm{s}^{-2} \cdot \mathrm{K}^{-1} \cdot 79.500\ \mathrm{°C} + 567.900\ \mathrm{Gy} + 0.450\ \mathrm{m}^{2} \cdot \mathrm{s}^{-2} \cdot \mathrm{K}^{-1} \cdot \left( 79.500\ \mathrm{°C} - 52.000\ \mathrm{°C} \right) \\&amp;= 659.775\ \mathrm{Gy}  \\[10pt]
+H_{V} &amp;= \mathrm{cp}_{l} \cdot T_{v} + \mathrm{lambda}_{lvT} + \mathrm{cp}_{g} \cdot \left( T - T_{v} \right) \\&amp;= 1.000\ \mathrm{m}^{2} \cdot \mathrm{s}^{-2} \cdot \mathrm{K}^{-1} \cdot 52.000\ \mathrm{°C} + 567.900\ \mathrm{Gy} + 0.450\ \mathrm{m}^{2} \cdot \mathrm{s}^{-2} \cdot \mathrm{K}^{-1} \cdot \left( 79.500\ \mathrm{°C} - 52.000\ \mathrm{°C} \right) \\&amp;= 632.275\ \mathrm{Gy}  \\[10pt]
 \\[10pt]
-H_{F} &amp;= 90 \cdot \frac{ J }{ \mathrm{kg} }  = 90 \cdot \frac{ J }{ kg } &amp;= 90.000\ \mathrm{Gy}  
+H_{F} &amp;= 96 \cdot \frac{ J }{ \mathrm{kg} }  = 96 \cdot \frac{ J }{ kg } &amp;= 96.000\ \mathrm{Gy}  
 \\[10pt]
-H_{L} &amp;= 95 \cdot \frac{ J }{ \mathrm{kg} }  = 95 \cdot \frac{ J }{ kg } &amp;= 95.000\ \mathrm{Gy}  
+H_{L} &amp;= 88 \cdot \frac{ J }{ \mathrm{kg} }  = 88 \cdot \frac{ J }{ kg } &amp;= 88.000\ \mathrm{Gy}  
 \\[10pt]
-S &amp;= \frac{ V \cdot H_{V} + L \cdot H_{L} - F \cdot H_{F} }{ \mathrm{lambda}_{s} }  = \frac{ 7.292\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 659.775\ \mathrm{Gy} + 1.042\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 95.000\ \mathrm{Gy} - 8.333\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 90.000\ \mathrm{Gy} }{ 483.400\ \mathrm{Gy} } &amp;= 8.605\ \mathrm{kg} \cdot \mathrm{s}^{-1}  
+S &amp;= \frac{ V \cdot H_{V} + L \cdot H_{L} - F \cdot H_{F} }{ \mathrm{lambda}_{s} }  = \frac{ 7.292\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 632.275\ \mathrm{Gy} + 1.042\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 88.000\ \mathrm{Gy} - 8.333\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 96.000\ \mathrm{Gy} }{ 483.400\ \mathrm{Gy} } &amp;= 8.072\ \mathrm{kg} \cdot \mathrm{s}^{-1}  
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -639,7 +639,7 @@ S &amp;= \frac{ V \cdot H_{V} + L \cdot H_{L} - F \cdot H_{F} }{ \mathrm{lambda}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S = 30.979 ton/h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S = 29.059 ton/h
 </pre></div>
 </div>
 </div>
@@ -687,7 +687,7 @@ D_{o} &amp;= 0.025 \cdot m  = 0.025 \cdot m &amp;= 25.000\ \mathrm{mm}
 \\[10pt]
 A &amp;= N_{t} \cdot \pi \cdot D_{o} \cdot L_{t}  = 1200 \cdot 3.142 \cdot 25.000\ \mathrm{mm} \cdot 1.000\ \mathrm{m} &amp;= 94.248\ \mathrm{m}^{2}  
 \\[10pt]
-U &amp;= \frac{ S \cdot \mathrm{lambda}_{s} }{ A \cdot \left( T_{s} - T \right) } \\&amp;= \frac{ 8.605\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 483.400\ \mathrm{Gy} }{ 94.248\ \mathrm{m}^{2} \cdot \left( 177.000\ \mathrm{°C} - 79.500\ \mathrm{°C} \right) } \\&amp;= 0.453\ \mathrm{kg} \cdot \mathrm{s}^{-3} \cdot \mathrm{K}^{-1}  \\[10pt]
+U &amp;= \frac{ S \cdot \mathrm{lambda}_{s} }{ A \cdot \left( T_{s} - T \right) } \\&amp;= \frac{ 8.072\ \mathrm{kg} \cdot \mathrm{s}^{-1} \cdot 483.400\ \mathrm{Gy} }{ 94.248\ \mathrm{m}^{2} \cdot \left( 177.000\ \mathrm{°C} - 79.500\ \mathrm{°C} \right) } \\&amp;= 0.425\ \mathrm{kg} \cdot \mathrm{s}^{-3} \cdot \mathrm{K}^{-1}  \\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -700,7 +700,7 @@ U &amp;= \frac{ S \cdot \mathrm{lambda}_{s} }{ A \cdot \left( T_{s} - T \right) 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>U = 1629.675 kcal h^-1 m^-2 °C^-1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>U = 1528.673 kcal h^-1 m^-2 °C^-1
 </pre></div>
 </div>
 </div>
